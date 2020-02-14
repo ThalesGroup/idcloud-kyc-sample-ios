@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner View Controller-->
+        <scene sceneID="K5t-Fi-Vo7">
+            <objects>
+                <viewController storyboardIdentifier="KYCScannerViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0yW-Cs-ttC" customClass="KYCScannerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSq-h6-lMj" customClass="IdCloudBackground">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrO-dT-3sE" customClass="CaptureView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nw-Ih-FYn" userLabel="Tutorial Steps">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="610-Rd-GpI" userLabel="button_back">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="gqw-uI-q7y"/>
+                                            <constraint firstAttribute="height" constant="68" id="zLZ-Eb-cJJ"/>
+                                        </constraints>
+                                        <color key="tintColor" name="TextPrimary"/>
+                                        <state key="normal" image="200px_ArrowLeft"/>
+                                        <connections>
+                                            <action selector="onButtonPressedBack:" destination="0yW-Cs-ttC" eventType="touchUpInside" id="eW0-C7-Am2"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="syG-ul-xZU">
+                                        <rect key="frame" x="68" y="0.0" width="346" height="96"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="610-Rd-GpI" firstAttribute="leading" secondItem="7nw-Ih-FYn" secondAttribute="leading" id="3Lg-G5-1RZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="syG-ul-xZU" secondAttribute="trailing" placeholder="YES" id="3l9-dd-vUZ"/>
+                                    <constraint firstItem="syG-ul-xZU" firstAttribute="leading" secondItem="610-Rd-GpI" secondAttribute="trailing" placeholder="YES" id="C9h-sj-mmv"/>
+                                    <constraint firstItem="syG-ul-xZU" firstAttribute="top" secondItem="7nw-Ih-FYn" secondAttribute="top" placeholder="YES" id="KCY-BD-cfm"/>
+                                    <constraint firstAttribute="height" constant="96" placeholder="YES" id="ix8-UF-eoh"/>
+                                    <constraint firstItem="610-Rd-GpI" firstAttribute="top" secondItem="7nw-Ih-FYn" secondAttribute="top" id="sWh-uV-Udk"/>
+                                    <constraint firstAttribute="bottom" secondItem="syG-ul-xZU" secondAttribute="bottom" placeholder="YES" id="uFX-QL-XTV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnf-bV-7T1">
+                                <rect key="frame" x="173" y="780" width="67" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="KYC_ShutterButtonNormal"/>
+                                <state key="disabled" image="KYC_ShutterButtonDisabled"/>
+                                <state key="selected" image="KYC_ShutterButtonPressed"/>
+                                <state key="highlighted" image="KYC_ShutterButtonPressed"/>
+                                <connections>
+                                    <action selector="onButtonPressedShutter:" destination="0yW-Cs-ttC" eventType="touchUpInside" id="5fM-Oi-TRL"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KYC_ScanOverlay_Fit" translatesAutoresizingMaskIntoConstraints="NO" id="Xlc-04-CMI" userLabel="Scan Overlay">
+                                <rect key="frame" x="-59.5" y="250.5" width="533" height="405"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jyg-0k-Mte" firstAttribute="bottom" secondItem="zrO-dT-3sE" secondAttribute="bottom" id="2yx-8F-blR"/>
+                            <constraint firstItem="Xlc-04-CMI" firstAttribute="centerX" secondItem="zrO-dT-3sE" secondAttribute="centerX" id="8Zr-sq-s2P"/>
+                            <constraint firstItem="Xlc-04-CMI" firstAttribute="centerY" secondItem="zrO-dT-3sE" secondAttribute="centerY" id="BqY-4g-pUN"/>
+                            <constraint firstItem="zrO-dT-3sE" firstAttribute="leading" secondItem="Jyg-0k-Mte" secondAttribute="leading" id="DbP-QL-tuH"/>
+                            <constraint firstItem="zrO-dT-3sE" firstAttribute="top" secondItem="Jyg-0k-Mte" secondAttribute="top" id="Ebo-H1-4IN"/>
+                            <constraint firstItem="Jyg-0k-Mte" firstAttribute="trailing" secondItem="zrO-dT-3sE" secondAttribute="trailing" id="Ifw-Fa-5jb"/>
+                            <constraint firstItem="7nw-Ih-FYn" firstAttribute="top" secondItem="zrO-dT-3sE" secondAttribute="top" placeholder="YES" id="MIY-4g-Qwr"/>
+                            <constraint firstItem="7nw-Ih-FYn" firstAttribute="leading" secondItem="zrO-dT-3sE" secondAttribute="leading" placeholder="YES" id="k6s-tF-ves"/>
+                            <constraint firstItem="7nw-Ih-FYn" firstAttribute="trailing" secondItem="zrO-dT-3sE" secondAttribute="trailing" placeholder="YES" id="kJf-P8-H49"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jyg-0k-Mte"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="modalTransitionStyle">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="buttonBack" destination="610-Rd-GpI" id="md9-Fd-NZN"/>
+                        <outlet property="buttonShutter" destination="qnf-bV-7T1" id="W9d-C8-l3B"/>
+                        <outlet property="captureView" destination="zrO-dT-3sE" id="RcI-ZO-DJU"/>
+                        <outlet property="imageOverlayStatus" destination="Xlc-04-CMI" id="8O4-FI-fRI"/>
+                        <outlet property="stackTutorialSteps" destination="syG-ul-xZU" id="n1E-0M-Pff"/>
+                        <outlet property="viewTutorialSteps" destination="7nw-Ih-FYn" id="9EJ-kH-iGS"/>
+                        <segue destination="CV1-18-sJF" kind="show" identifier="sequeScannerFaceId" id="1yt-ps-5Ww"/>
+                        <segue destination="8ug-uD-CUH" kind="show" identifier="sequeKYCOverview" id="r57-YN-Jdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbo-os-1Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1015" y="777"/>
+        </scene>
+        <!--KYCFaceIdTutorialViewController-->
+        <scene sceneID="dmx-qh-zVX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KYCFace" referencedIdentifier="KYCFaceIdTutorialViewController" id="CV1-18-sJF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cUQ-PQ-suR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rja-K5-Lrd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376" y="677"/>
+        </scene>
+        <!--KYCOverviewViewController-->
+        <scene sceneID="yeb-mN-iqh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KYC" referencedIdentifier="KYCOverviewViewController" id="8ug-uD-CUH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h41-Ut-wUC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhw-cI-tW8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376" y="961"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="200px_ArrowLeft" width="66.5" height="66.5"/>
+        <image name="KYC_ScanOverlay_Fit" width="266.5" height="202.5"/>
+        <image name="KYC_ShutterButtonDisabled" width="66.5" height="66.5"/>
+        <image name="KYC_ShutterButtonNormal" width="66.5" height="66.5"/>
+        <image name="KYC_ShutterButtonPressed" width="66.5" height="66.5"/>
+        <namedColor name="TextPrimary">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
