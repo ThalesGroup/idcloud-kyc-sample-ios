@@ -1,0 +1,1059 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D00E9B022E85BF30064B1F8 /* KYCPassportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E9AF22E85BF30064B1F8 /* KYCPassportViewController.m */; };
+		6D00F33C2329222600EC3B51 /* IdCloudSegmentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D00F3392329222600EC3B51 /* IdCloudSegmentTVC.xib */; };
+		6D00F33D2329222600EC3B51 /* IdCloudSegmentTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D00F33B2329222600EC3B51 /* IdCloudSegmentTVC.m */; };
+		6D00F3412329337700EC3B51 /* IdCloudButtonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D00F33F2329337600EC3B51 /* IdCloudButtonTVC.m */; };
+		6D00F3422329337700EC3B51 /* IdCloudButtonTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D00F3402329337600EC3B51 /* IdCloudButtonTVC.xib */; };
+		6D2C857A22F4567500204377 /* NotifyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D2C857822F4567500204377 /* NotifyAction.m */; };
+		6D3F18D423DB30030010914B /* KYCTermsOfUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3F18D323DB30030010914B /* KYCTermsOfUseViewController.m */; };
+		6D5FCD4722FD67AC00FC320E /* IdCloudNumberTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5FCD4522FD67AC00FC320E /* IdCloudNumberTVC.m */; };
+		6D5FCD4A22FD6A6900FC320E /* IdCloudNumberTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D5FCD4922FD692500FC320E /* IdCloudNumberTVC.xib */; };
+		6DAF0A2D23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF0A2C23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.m */; };
+		6DAF1CF023D09A2000C01092 /* KYCTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF1CEF23D09A2000C01092 /* KYCTemplate.m */; };
+		6DAF1CF323D09AD000C01092 /* KYCAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF1CF223D09AD000C01092 /* KYCAlert.m */; };
+		6DAF1CF623D09D2D00C01092 /* KYCVerificationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF1CF523D09D2D00C01092 /* KYCVerificationResult.m */; };
+		6DAF1CFA23D09FBA00C01092 /* KYCNameValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF1CF923D09FBA00C01092 /* KYCNameValue.m */; };
+		6DAF1CFD23D09FFD00C01092 /* KYCFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF1CFC23D09FFD00C01092 /* KYCFields.m */; };
+		6DB1FA0022E6F9780031B4F3 /* IdCloudLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9C20ECD234005A045F /* IdCloudLoadingIndicator.m */; };
+		6DB1FA0522E6F9780031B4F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA5720EB61E8005A045F /* AppDelegate.m */; };
+		6DB1FA0A22E6F9780031B4F3 /* IdCloudNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCA4BF922CCC4D40082F969 /* IdCloudNotification.m */; };
+		6DB1FA1222E6F9780031B4F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6820EB61EA005A045F /* main.m */; };
+		6DB1FA1322E6F9780031B4F3 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCFC71F22E1C4BC00B1FD4E /* SideMenuViewController.m */; };
+		6DB1FA1922E6F9780031B4F3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D40D9462109DBAC003E6F48 /* BaseViewController.m */; };
+		6DB1FA2622E6F9780031B4F3 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */; };
+		6DB1FA2722E6F9780031B4F3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D999210B5173003E6F48 /* libc++.tbd */; };
+		6DB1FA2822E6F9780031B4F3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D978210B2FFB003E6F48 /* Accelerate.framework */; };
+		6DB1FA2922E6F9780031B4F3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D997210B5165003E6F48 /* CoreMedia.framework */; };
+		6DB1FA2A22E6F9780031B4F3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D995210B5160003E6F48 /* AVFoundation.framework */; };
+		6DB1FA2B22E6F9780031B4F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D993210B515B003E6F48 /* Security.framework */; };
+		6DB1FA2C22E6F9780031B4F3 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D991210B5157003E6F48 /* LocalAuthentication.framework */; };
+		6DB1FA2E22E6F9780031B4F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98F210B5151003E6F48 /* UIKit.framework */; };
+		6DB1FA2F22E6F9780031B4F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */; };
+		6DB1FA3022E6F9780031B4F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D40D98B210B5142003E6F48 /* Foundation.framework */; };
+		6DB1FA3522E6F9780031B4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D40D9522109F350003E6F48 /* Localizable.strings */; };
+		6DB1FA3A22E6F9780031B4F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */; };
+		6DB1FA3B22E6F9780031B4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA6220EB61EA005A045F /* Assets.xcassets */; };
+		6DB1FA4122E6F9780031B4F3 /* IdCloudLoadingIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE0DA9820EBC579005A045F /* IdCloudLoadingIndicator.xib */; };
+		6DB1FA5322E703690031B4F3 /* KYC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1FA5122E703690031B4F3 /* KYC.storyboard */; };
+		6DB1FA5622E722310031B4F3 /* KYCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FA5522E722310031B4F3 /* KYCSettingsViewController.m */; };
+		6DB1FA5922E72C4C0031B4F3 /* KYCIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FA5822E72C4C0031B4F3 /* KYCIntroViewController.m */; };
+		6DB1FA5C22E738990031B4F3 /* KYCFirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FA5B22E738990031B4F3 /* KYCFirstStepViewController.m */; };
+		6DB1FAB322E73E9F0031B4F3 /* IdCloudDesignable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */; };
+		6DB1FAB422E73E9F0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DB1FAC622E745FB0031B4F3 /* KYCSecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FAC522E745FB0031B4F3 /* KYCSecondStepViewController.m */; };
+		6DB1FACE22E746FA0031B4F3 /* KYCIdCardPassportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FACD22E746FA0031B4F3 /* KYCIdCardPassportViewController.m */; };
+		6DBD344223E9B0CA00232EAA /* IdCloudTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBD343F23E9B0C900232EAA /* IdCloudTextTVC.xib */; };
+		6DBD344323E9B0CA00232EAA /* IdCloudTextTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD344123E9B0C900232EAA /* IdCloudTextTVC.m */; };
+		6DBD344623E9B22E00232EAA /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBD344423E9B1E300232EAA /* JWTDecode.framework */; };
+		6DBD344723E9B22E00232EAA /* JWTDecode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBD344423E9B1E300232EAA /* JWTDecode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298023BE35A000D503AD /* AcuantCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296A23BE357D00D503AD /* AcuantCamera.framework */; };
+		6DC4298123BE35A000D503AD /* AcuantCamera.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296A23BE357D00D503AD /* AcuantCamera.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298223BE35A700D503AD /* AcuantCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297223BE357D00D503AD /* AcuantCommon.framework */; };
+		6DC4298323BE35A700D503AD /* AcuantCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297223BE357D00D503AD /* AcuantCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298423BE35AD00D503AD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296823BE357D00D503AD /* SwiftyJSON.framework */; };
+		6DC4298523BE35AD00D503AD /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296823BE357D00D503AD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298623BE35B200D503AD /* AcuantFaceMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296923BE357D00D503AD /* AcuantFaceMatch.framework */; };
+		6DC4298723BE35B200D503AD /* AcuantFaceMatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296923BE357D00D503AD /* AcuantFaceMatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298823BE35C300D503AD /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296B23BE357D00D503AD /* KeychainAccess.framework */; };
+		6DC4298A23BE35D100D503AD /* AcuantIPLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296C23BE357D00D503AD /* AcuantIPLiveness.framework */; };
+		6DC4298B23BE35D200D503AD /* AcuantIPLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296C23BE357D00D503AD /* AcuantIPLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298C23BE35DA00D503AD /* AcuantDocumentProcessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296D23BE357D00D503AD /* AcuantDocumentProcessing.framework */; };
+		6DC4298D23BE35DA00D503AD /* AcuantDocumentProcessing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296D23BE357D00D503AD /* AcuantDocumentProcessing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4298E23BE35E500D503AD /* AcuantHGLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296E23BE357D00D503AD /* AcuantHGLiveness.framework */; };
+		6DC4298F23BE35E500D503AD /* AcuantHGLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296E23BE357D00D503AD /* AcuantHGLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4299023BE35EA00D503AD /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296F23BE357D00D503AD /* SocketIO.framework */; };
+		6DC4299123BE35EA00D503AD /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4296F23BE357D00D503AD /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4299223BE35EE00D503AD /* AcuantImagePreparation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297023BE357D00D503AD /* AcuantImagePreparation.framework */; };
+		6DC4299323BE35EE00D503AD /* AcuantImagePreparation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297023BE357D00D503AD /* AcuantImagePreparation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4299423BE35F400D503AD /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297123BE357D00D503AD /* Starscream.framework */; };
+		6DC4299523BE35F400D503AD /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297123BE357D00D503AD /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4299623BE360100D503AD /* iProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297323BE357D00D503AD /* iProov.framework */; };
+		6DC4299723BE360100D503AD /* iProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC4297323BE357D00D503AD /* iProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DC4299D23BF3FD700D503AD /* KYCDocumentScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC4299C23BF3FD700D503AD /* KYCDocumentScannerViewController.m */; };
+		6DC429A523BF750500D503AD /* FaceLivenessCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC429A423BF750500D503AD /* FaceLivenessCameraController.m */; };
+		6DC98A1123CF1BF30016F988 /* IdCloudHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC98A1023CF1BF30016F988 /* IdCloudHelper.m */; };
+		6DD5EB5A2386D4E8001912C4 /* KYCDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB592386D4E8001912C4 /* KYCDocument.m */; };
+		6DD5EB5D2386D505001912C4 /* KYCFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB5C2386D505001912C4 /* KYCFace.m */; };
+		6DD5EB602386D53A001912C4 /* KYCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB5F2386D53A001912C4 /* KYCResponse.m */; };
+		6DD5EB632386D555001912C4 /* KYCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB622386D555001912C4 /* KYCSession.m */; };
+		6DD5EB662386D580001912C4 /* KYCCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB652386D580001912C4 /* KYCCommunication.m */; };
+		6DD5EB692386E0A1001912C4 /* KYCOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB682386E0A1001912C4 /* KYCOverviewViewController.m */; };
+		6DDBAD6222EEE2E5009079C6 /* KYCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBAD6122EEE2E5009079C6 /* KYCManager.m */; };
+		6DDBAD6722EF1D1C009079C6 /* IdCloudOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBAD6622EF1D1C009079C6 /* IdCloudOption.m */; };
+		6DDBAD6F22EF2140009079C6 /* IdCloudBoolenTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBAD6D22EF2140009079C6 /* IdCloudBoolenTVC.m */; };
+		6DDBAD7022EF2140009079C6 /* IdCloudBoolenTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DDBAD6E22EF2140009079C6 /* IdCloudBoolenTVC.xib */; };
+		6DDBAD7822F0370B009079C6 /* IdCloudVersionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBAD7622F0370B009079C6 /* IdCloudVersionTVC.m */; };
+		6DDBAD7922F0370B009079C6 /* IdCloudVersionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DDBAD7722F0370B009079C6 /* IdCloudVersionTVC.xib */; };
+		6DDBADD522F099A9009079C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDBADD422F099A8009079C6 /* AudioToolbox.framework */; };
+		F47B273D2304200A00AC11AE /* KYCFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47B273C2304200A00AC11AE /* KYCFace.storyboard */; };
+		F4846EB9230D3E340034D115 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4846EB7230D3E340034D115 /* Root.storyboard */; };
+		F4846EBD230D3EB10034D115 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4846EBB230D3EB10034D115 /* RootViewController.m */; };
+		F4AB30FA23152503002CE4E8 /* IdCloudIncomingMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AB30F923152503002CE4E8 /* IdCloudIncomingMessage.m */; };
+		F4AB30FE23152533002CE4E8 /* IdCloudIncomingMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4AB30FC23152533002CE4E8 /* IdCloudIncomingMessage.xib */; };
+		F4EE07B1230AC72400344DEE /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EE07B0230AC72300344DEE /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F4EFD5E72305640100DB122C /* KYCFaceIdTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EFD5E62305640100DB122C /* KYCFaceIdTutorialViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DB1FAAF22E73E6E0031B4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6DB1FA6722E73C720031B4F3;
+			remoteInfo = IdCloudDesignable;
+		};
+		6DB1FAB522E73E9F0031B4F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DB1FA6622E73C720031B4F3;
+			remoteInfo = IdCloudDesignable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DB1FAB722E73EA00031B4F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DC4298F23BE35E500D503AD /* AcuantHGLiveness.framework in Embed Frameworks */,
+				6DC4299323BE35EE00D503AD /* AcuantImagePreparation.framework in Embed Frameworks */,
+				6DC4298123BE35A000D503AD /* AcuantCamera.framework in Embed Frameworks */,
+				6DC4299523BE35F400D503AD /* Starscream.framework in Embed Frameworks */,
+				6DC4299723BE360100D503AD /* iProov.framework in Embed Frameworks */,
+				6DC4298B23BE35D200D503AD /* AcuantIPLiveness.framework in Embed Frameworks */,
+				6DC4298523BE35AD00D503AD /* SwiftyJSON.framework in Embed Frameworks */,
+				6DC4298D23BE35DA00D503AD /* AcuantDocumentProcessing.framework in Embed Frameworks */,
+				6DC4299123BE35EA00D503AD /* SocketIO.framework in Embed Frameworks */,
+				6DBD344723E9B22E00232EAA /* JWTDecode.framework in Embed Frameworks */,
+				6DC4298723BE35B200D503AD /* AcuantFaceMatch.framework in Embed Frameworks */,
+				6DC4298323BE35A700D503AD /* AcuantCommon.framework in Embed Frameworks */,
+				6DB1FAB422E73E9F0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6D00E9AE22E85BF30064B1F8 /* KYCPassportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCPassportViewController.h; sourceTree = "<group>"; };
+		6D00E9AF22E85BF30064B1F8 /* KYCPassportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCPassportViewController.m; sourceTree = "<group>"; };
+		6D00F3392329222600EC3B51 /* IdCloudSegmentTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudSegmentTVC.xib; sourceTree = "<group>"; };
+		6D00F33A2329222600EC3B51 /* IdCloudSegmentTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdCloudSegmentTVC.h; sourceTree = "<group>"; };
+		6D00F33B2329222600EC3B51 /* IdCloudSegmentTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdCloudSegmentTVC.m; sourceTree = "<group>"; };
+		6D00F33E2329337600EC3B51 /* IdCloudButtonTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdCloudButtonTVC.h; sourceTree = "<group>"; };
+		6D00F33F2329337600EC3B51 /* IdCloudButtonTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdCloudButtonTVC.m; sourceTree = "<group>"; };
+		6D00F3402329337600EC3B51 /* IdCloudButtonTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudButtonTVC.xib; sourceTree = "<group>"; };
+		6D2C857722F4567500204377 /* NotifyAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifyAction.h; sourceTree = "<group>"; };
+		6D2C857822F4567500204377 /* NotifyAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyAction.m; sourceTree = "<group>"; };
+		6D3F18D223DB30030010914B /* KYCTermsOfUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCTermsOfUseViewController.h; sourceTree = "<group>"; };
+		6D3F18D323DB30030010914B /* KYCTermsOfUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCTermsOfUseViewController.m; sourceTree = "<group>"; };
+		6D40D9452109DBAC003E6F48 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6D40D9462109DBAC003E6F48 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6D40D9542109F433003E6F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D40D978210B2FFB003E6F48 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		6D40D98B210B5142003E6F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6D40D98F210B5151003E6F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D40D991210B5157003E6F48 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		6D40D993210B515B003E6F48 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6D40D995210B5160003E6F48 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6D40D997210B5165003E6F48 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6D40D999210B5173003E6F48 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6D5FCD4422FD67AC00FC320E /* IdCloudNumberTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudNumberTVC.h; sourceTree = "<group>"; };
+		6D5FCD4522FD67AC00FC320E /* IdCloudNumberTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudNumberTVC.m; sourceTree = "<group>"; };
+		6D5FCD4922FD692500FC320E /* IdCloudNumberTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudNumberTVC.xib; sourceTree = "<group>"; };
+		6DAF0A2B23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCPrivacyPolicyViewController.h; sourceTree = "<group>"; };
+		6DAF0A2C23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCPrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		6DAF1CEE23D09A2000C01092 /* KYCTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCTemplate.h; sourceTree = "<group>"; };
+		6DAF1CEF23D09A2000C01092 /* KYCTemplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCTemplate.m; sourceTree = "<group>"; };
+		6DAF1CF123D09AD000C01092 /* KYCAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCAlert.h; sourceTree = "<group>"; };
+		6DAF1CF223D09AD000C01092 /* KYCAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCAlert.m; sourceTree = "<group>"; };
+		6DAF1CF423D09D2D00C01092 /* KYCVerificationResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCVerificationResult.h; sourceTree = "<group>"; };
+		6DAF1CF523D09D2D00C01092 /* KYCVerificationResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCVerificationResult.m; sourceTree = "<group>"; };
+		6DAF1CF823D09FBA00C01092 /* KYCNameValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCNameValue.h; sourceTree = "<group>"; };
+		6DAF1CF923D09FBA00C01092 /* KYCNameValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCNameValue.m; sourceTree = "<group>"; };
+		6DAF1CFB23D09FFD00C01092 /* KYCFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCFields.h; sourceTree = "<group>"; };
+		6DAF1CFC23D09FFD00C01092 /* KYCFields.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCFields.m; sourceTree = "<group>"; };
+		6DB1FA4822E6F9780031B4F3 /* IdCloud KYC Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IdCloud KYC Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB1FA5222E703690031B4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KYC.storyboard; sourceTree = "<group>"; };
+		6DB1FA5422E722310031B4F3 /* KYCSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCSettingsViewController.h; sourceTree = "<group>"; };
+		6DB1FA5522E722310031B4F3 /* KYCSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCSettingsViewController.m; sourceTree = "<group>"; };
+		6DB1FA5722E72C4C0031B4F3 /* KYCIntroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCIntroViewController.h; sourceTree = "<group>"; };
+		6DB1FA5822E72C4C0031B4F3 /* KYCIntroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCIntroViewController.m; sourceTree = "<group>"; };
+		6DB1FA5A22E738990031B4F3 /* KYCFirstStepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCFirstStepViewController.h; sourceTree = "<group>"; };
+		6DB1FA5B22E738990031B4F3 /* KYCFirstStepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCFirstStepViewController.m; sourceTree = "<group>"; };
+		6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IdCloudDesignable.xcodeproj; path = IdCloudDesignable/IdCloudDesignable.xcodeproj; sourceTree = "<group>"; };
+		6DB1FAC422E745FB0031B4F3 /* KYCSecondStepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCSecondStepViewController.h; sourceTree = "<group>"; };
+		6DB1FAC522E745FB0031B4F3 /* KYCSecondStepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCSecondStepViewController.m; sourceTree = "<group>"; };
+		6DB1FACC22E746FA0031B4F3 /* KYCIdCardPassportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCIdCardPassportViewController.h; sourceTree = "<group>"; };
+		6DB1FACD22E746FA0031B4F3 /* KYCIdCardPassportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCIdCardPassportViewController.m; sourceTree = "<group>"; };
+		6DBD343F23E9B0C900232EAA /* IdCloudTextTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudTextTVC.xib; sourceTree = "<group>"; };
+		6DBD344023E9B0C900232EAA /* IdCloudTextTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdCloudTextTVC.h; sourceTree = "<group>"; };
+		6DBD344123E9B0C900232EAA /* IdCloudTextTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdCloudTextTVC.m; sourceTree = "<group>"; };
+		6DBD344423E9B1E300232EAA /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Frameworks/JWTDecode.framework; sourceTree = "<group>"; };
+		6DC4296823BE357D00D503AD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		6DC4296923BE357D00D503AD /* AcuantFaceMatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantFaceMatch.framework; sourceTree = "<group>"; };
+		6DC4296A23BE357D00D503AD /* AcuantCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCamera.framework; sourceTree = "<group>"; };
+		6DC4296B23BE357D00D503AD /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
+		6DC4296C23BE357D00D503AD /* AcuantIPLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantIPLiveness.framework; sourceTree = "<group>"; };
+		6DC4296D23BE357D00D503AD /* AcuantDocumentProcessing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantDocumentProcessing.framework; sourceTree = "<group>"; };
+		6DC4296E23BE357D00D503AD /* AcuantHGLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantHGLiveness.framework; sourceTree = "<group>"; };
+		6DC4296F23BE357D00D503AD /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketIO.framework; sourceTree = "<group>"; };
+		6DC4297023BE357D00D503AD /* AcuantImagePreparation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantImagePreparation.framework; sourceTree = "<group>"; };
+		6DC4297123BE357D00D503AD /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
+		6DC4297223BE357D00D503AD /* AcuantCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCommon.framework; sourceTree = "<group>"; };
+		6DC4297323BE357D00D503AD /* iProov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iProov.framework; sourceTree = "<group>"; };
+		6DC4299B23BF3FD700D503AD /* KYCDocumentScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCDocumentScannerViewController.h; sourceTree = "<group>"; };
+		6DC4299C23BF3FD700D503AD /* KYCDocumentScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCDocumentScannerViewController.m; sourceTree = "<group>"; };
+		6DC429A323BF750500D503AD /* FaceLivenessCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceLivenessCameraController.h; sourceTree = "<group>"; };
+		6DC429A423BF750500D503AD /* FaceLivenessCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceLivenessCameraController.m; sourceTree = "<group>"; };
+		6DC98A0823CDEFA70016F988 /* IdCloudStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudStyle.h; sourceTree = "<group>"; };
+		6DC98A0E23CE05530016F988 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		6DC98A0F23CF1BF30016F988 /* IdCloudHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudHelper.h; sourceTree = "<group>"; };
+		6DC98A1023CF1BF30016F988 /* IdCloudHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudHelper.m; sourceTree = "<group>"; };
+		6DCA4BF822CCC4D40082F969 /* IdCloudNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudNotification.h; sourceTree = "<group>"; };
+		6DCA4BF922CCC4D40082F969 /* IdCloudNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudNotification.m; sourceTree = "<group>"; };
+		6DCFC71E22E1C4BC00B1FD4E /* SideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		6DCFC71F22E1C4BC00B1FD4E /* SideMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		6DD5EB582386D4E8001912C4 /* KYCDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCDocument.h; sourceTree = "<group>"; };
+		6DD5EB592386D4E8001912C4 /* KYCDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCDocument.m; sourceTree = "<group>"; };
+		6DD5EB5B2386D505001912C4 /* KYCFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCFace.h; sourceTree = "<group>"; };
+		6DD5EB5C2386D505001912C4 /* KYCFace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCFace.m; sourceTree = "<group>"; };
+		6DD5EB5E2386D53A001912C4 /* KYCResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCResponse.h; sourceTree = "<group>"; };
+		6DD5EB5F2386D53A001912C4 /* KYCResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCResponse.m; sourceTree = "<group>"; };
+		6DD5EB612386D555001912C4 /* KYCSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCSession.h; sourceTree = "<group>"; };
+		6DD5EB622386D555001912C4 /* KYCSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCSession.m; sourceTree = "<group>"; };
+		6DD5EB642386D580001912C4 /* KYCCommunication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCCommunication.h; sourceTree = "<group>"; };
+		6DD5EB652386D580001912C4 /* KYCCommunication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCCommunication.m; sourceTree = "<group>"; };
+		6DD5EB672386E0A1001912C4 /* KYCOverviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCOverviewViewController.h; sourceTree = "<group>"; };
+		6DD5EB682386E0A1001912C4 /* KYCOverviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCOverviewViewController.m; sourceTree = "<group>"; };
+		6DDBAD6022EEE2E5009079C6 /* KYCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCManager.h; sourceTree = "<group>"; };
+		6DDBAD6122EEE2E5009079C6 /* KYCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCManager.m; sourceTree = "<group>"; };
+		6DDBAD6522EF1D1C009079C6 /* IdCloudOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudOption.h; sourceTree = "<group>"; };
+		6DDBAD6622EF1D1C009079C6 /* IdCloudOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudOption.m; sourceTree = "<group>"; };
+		6DDBAD6C22EF2140009079C6 /* IdCloudBoolenTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudBoolenTVC.h; sourceTree = "<group>"; };
+		6DDBAD6D22EF2140009079C6 /* IdCloudBoolenTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudBoolenTVC.m; sourceTree = "<group>"; };
+		6DDBAD6E22EF2140009079C6 /* IdCloudBoolenTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudBoolenTVC.xib; sourceTree = "<group>"; };
+		6DDBAD7122EF253F009079C6 /* IdCloudCellProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudCellProtocol.h; sourceTree = "<group>"; };
+		6DDBAD7522F0370B009079C6 /* IdCloudVersionTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudVersionTVC.h; sourceTree = "<group>"; };
+		6DDBAD7622F0370B009079C6 /* IdCloudVersionTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudVersionTVC.m; sourceTree = "<group>"; };
+		6DDBAD7722F0370B009079C6 /* IdCloudVersionTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudVersionTVC.xib; sourceTree = "<group>"; };
+		6DDBADD422F099A8009079C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6DE0DA5620EB61E8005A045F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6DE0DA5720EB61E8005A045F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6DE0DA6220EB61EA005A045F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DE0DA6520EB61EA005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6DE0DA6820EB61EA005A045F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DE0DA6F20EB629D005A045F /* stdafx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		6DE0DA9920EBC579005A045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/IdCloudLoadingIndicator.xib; sourceTree = "<group>"; };
+		6DE0DA9B20ECD234005A045F /* IdCloudLoadingIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudLoadingIndicator.h; sourceTree = "<group>"; };
+		6DE0DA9C20ECD234005A045F /* IdCloudLoadingIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudLoadingIndicator.m; sourceTree = "<group>"; };
+		6DE0DACC20F2168E005A045F /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		F47B273C2304200A00AC11AE /* KYCFace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KYCFace.storyboard; sourceTree = "<group>"; };
+		F4846EB7230D3E340034D115 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		F4846EBA230D3EB10034D115 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F4846EBB230D3EB10034D115 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F4AB30F823152503002CE4E8 /* IdCloudIncomingMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudIncomingMessage.h; sourceTree = "<group>"; };
+		F4AB30F923152503002CE4E8 /* IdCloudIncomingMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudIncomingMessage.m; sourceTree = "<group>"; };
+		F4AB30FC23152533002CE4E8 /* IdCloudIncomingMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudIncomingMessage.xib; sourceTree = "<group>"; };
+		F4EE07B0230AC72300344DEE /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
+		F4EFD5E52305640100DB122C /* KYCFaceIdTutorialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCFaceIdTutorialViewController.h; sourceTree = "<group>"; };
+		F4EFD5E62305640100DB122C /* KYCFaceIdTutorialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCFaceIdTutorialViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DB1FA2522E6F9780031B4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EE07B1230AC72400344DEE /* CoreNFC.framework in Frameworks */,
+				6DC4299423BE35F400D503AD /* Starscream.framework in Frameworks */,
+				6DDBADD522F099A9009079C6 /* AudioToolbox.framework in Frameworks */,
+				6DC4298423BE35AD00D503AD /* SwiftyJSON.framework in Frameworks */,
+				6DC4298623BE35B200D503AD /* AcuantFaceMatch.framework in Frameworks */,
+				6DC4298E23BE35E500D503AD /* AcuantHGLiveness.framework in Frameworks */,
+				6DB1FA2622E6F9780031B4F3 /* libsqlite3.0.tbd in Frameworks */,
+				6DC4298023BE35A000D503AD /* AcuantCamera.framework in Frameworks */,
+				6DC4298823BE35C300D503AD /* KeychainAccess.framework in Frameworks */,
+				6DB1FA2722E6F9780031B4F3 /* libc++.tbd in Frameworks */,
+				6DB1FA2822E6F9780031B4F3 /* Accelerate.framework in Frameworks */,
+				6DB1FA2922E6F9780031B4F3 /* CoreMedia.framework in Frameworks */,
+				6DB1FA2A22E6F9780031B4F3 /* AVFoundation.framework in Frameworks */,
+				6DB1FA2B22E6F9780031B4F3 /* Security.framework in Frameworks */,
+				6DC4298C23BE35DA00D503AD /* AcuantDocumentProcessing.framework in Frameworks */,
+				6DB1FA2C22E6F9780031B4F3 /* LocalAuthentication.framework in Frameworks */,
+				6DB1FA2E22E6F9780031B4F3 /* UIKit.framework in Frameworks */,
+				6DB1FAB322E73E9F0031B4F3 /* IdCloudDesignable.framework in Frameworks */,
+				6DB1FA2F22E6F9780031B4F3 /* SystemConfiguration.framework in Frameworks */,
+				6DC4299023BE35EA00D503AD /* SocketIO.framework in Frameworks */,
+				6DC4299623BE360100D503AD /* iProov.framework in Frameworks */,
+				6DC4298A23BE35D100D503AD /* AcuantIPLiveness.framework in Frameworks */,
+				6DBD344623E9B22E00232EAA /* JWTDecode.framework in Frameworks */,
+				6DC4299223BE35EE00D503AD /* AcuantImagePreparation.framework in Frameworks */,
+				6DB1FA3022E6F9780031B4F3 /* Foundation.framework in Frameworks */,
+				6DC4298223BE35A700D503AD /* AcuantCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D00E9B122E85E5C0064B1F8 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1FACC22E746FA0031B4F3 /* KYCIdCardPassportViewController.h */,
+				6DB1FACD22E746FA0031B4F3 /* KYCIdCardPassportViewController.m */,
+				6D00E9AE22E85BF30064B1F8 /* KYCPassportViewController.h */,
+				6D00E9AF22E85BF30064B1F8 /* KYCPassportViewController.m */,
+				6DC4299B23BF3FD700D503AD /* KYCDocumentScannerViewController.h */,
+				6DC4299C23BF3FD700D503AD /* KYCDocumentScannerViewController.m */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		6DAF1CF723D09EE900C01092 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5EB582386D4E8001912C4 /* KYCDocument.h */,
+				6DD5EB592386D4E8001912C4 /* KYCDocument.m */,
+				6DD5EB5B2386D505001912C4 /* KYCFace.h */,
+				6DD5EB5C2386D505001912C4 /* KYCFace.m */,
+				6DAF1CEE23D09A2000C01092 /* KYCTemplate.h */,
+				6DAF1CEF23D09A2000C01092 /* KYCTemplate.m */,
+				6DAF1CF423D09D2D00C01092 /* KYCVerificationResult.h */,
+				6DAF1CF523D09D2D00C01092 /* KYCVerificationResult.m */,
+				6DAF1CF123D09AD000C01092 /* KYCAlert.h */,
+				6DAF1CF223D09AD000C01092 /* KYCAlert.m */,
+				6DAF1CFB23D09FFD00C01092 /* KYCFields.h */,
+				6DAF1CFC23D09FFD00C01092 /* KYCFields.m */,
+				6DAF1CF823D09FBA00C01092 /* KYCNameValue.h */,
+				6DAF1CF923D09FBA00C01092 /* KYCNameValue.m */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		6DB1FA4C22E6FF220031B4F3 /* KYC */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFD5F0230589BB00DB122C /* FaceId */,
+				6D00E9B122E85E5C0064B1F8 /* Documents */,
+				6DB1FA5A22E738990031B4F3 /* KYCFirstStepViewController.h */,
+				6DB1FA5B22E738990031B4F3 /* KYCFirstStepViewController.m */,
+				6DB1FAC422E745FB0031B4F3 /* KYCSecondStepViewController.h */,
+				6DB1FAC522E745FB0031B4F3 /* KYCSecondStepViewController.m */,
+				6DB1FA5422E722310031B4F3 /* KYCSettingsViewController.h */,
+				6DB1FA5522E722310031B4F3 /* KYCSettingsViewController.m */,
+				6DB1FA5722E72C4C0031B4F3 /* KYCIntroViewController.h */,
+				6DB1FA5822E72C4C0031B4F3 /* KYCIntroViewController.m */,
+				6DD5EB672386E0A1001912C4 /* KYCOverviewViewController.h */,
+				6DD5EB682386E0A1001912C4 /* KYCOverviewViewController.m */,
+				6DAF0A2B23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.h */,
+				6DAF0A2C23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.m */,
+				6D3F18D223DB30030010914B /* KYCTermsOfUseViewController.h */,
+				6D3F18D323DB30030010914B /* KYCTermsOfUseViewController.m */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+		6DB1FA4E22E7005B0031B4F3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA6220EB61EA005A045F /* Assets.xcassets */,
+				6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */,
+				6D40D9522109F350003E6F48 /* Localizable.strings */,
+				6DE0DA6820EB61EA005A045F /* main.m */,
+				6DC98A0E23CE05530016F988 /* info.plist */,
+				6DE0DA6F20EB629D005A045F /* stdafx.h */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		6DB1FAAC22E73E6E0031B4F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DC4296723BE357D00D503AD /* Acuant */ = {
+			isa = PBXGroup;
+			children = (
+				6DC4296823BE357D00D503AD /* SwiftyJSON.framework */,
+				6DC4296923BE357D00D503AD /* AcuantFaceMatch.framework */,
+				6DC4296A23BE357D00D503AD /* AcuantCamera.framework */,
+				6DC4296B23BE357D00D503AD /* KeychainAccess.framework */,
+				6DC4296C23BE357D00D503AD /* AcuantIPLiveness.framework */,
+				6DC4296D23BE357D00D503AD /* AcuantDocumentProcessing.framework */,
+				6DC4296E23BE357D00D503AD /* AcuantHGLiveness.framework */,
+				6DC4296F23BE357D00D503AD /* SocketIO.framework */,
+				6DC4297023BE357D00D503AD /* AcuantImagePreparation.framework */,
+				6DC4297123BE357D00D503AD /* Starscream.framework */,
+				6DC4297223BE357D00D503AD /* AcuantCommon.framework */,
+				6DC4297323BE357D00D503AD /* iProov.framework */,
+			);
+			name = Acuant;
+			path = Frameworks/Acuant;
+			sourceTree = "<group>";
+		};
+		6DCA4BF522CCC49F0082F969 /* IdCloudNotification */ = {
+			isa = PBXGroup;
+			children = (
+				6D2C857722F4567500204377 /* NotifyAction.h */,
+				6D2C857822F4567500204377 /* NotifyAction.m */,
+				6DCA4BF822CCC4D40082F969 /* IdCloudNotification.h */,
+				6DCA4BF922CCC4D40082F969 /* IdCloudNotification.m */,
+			);
+			path = IdCloudNotification;
+			sourceTree = "<group>";
+		};
+		6DCA4BFF22CCF4180082F969 /* IdCloudLoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA9B20ECD234005A045F /* IdCloudLoadingIndicator.h */,
+				6DE0DA9C20ECD234005A045F /* IdCloudLoadingIndicator.m */,
+				6DE0DA9820EBC579005A045F /* IdCloudLoadingIndicator.xib */,
+			);
+			path = IdCloudLoadingIndicator;
+			sourceTree = "<group>";
+		};
+		6DCA4C0422CDF3C60082F969 /* IdCloudStyle */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */,
+				6DCA4BFF22CCF4180082F969 /* IdCloudLoadingIndicator */,
+				6DCA4BF522CCC49F0082F969 /* IdCloudNotification */,
+				F4AB30F7231524D3002CE4E8 /* IdCloudIncomingMessage */,
+				6DDBAD6822EF2103009079C6 /* TableCells */,
+				6DC98A0823CDEFA70016F988 /* IdCloudStyle.h */,
+				6DC98A0F23CF1BF30016F988 /* IdCloudHelper.h */,
+				6DC98A1023CF1BF30016F988 /* IdCloudHelper.m */,
+			);
+			path = IdCloudStyle;
+			sourceTree = "<group>";
+		};
+		6DD5EB572386D4CF001912C4 /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				6DAF1CF723D09EE900C01092 /* Structures */,
+				6DD5EB5E2386D53A001912C4 /* KYCResponse.h */,
+				6DD5EB5F2386D53A001912C4 /* KYCResponse.m */,
+				6DD5EB612386D555001912C4 /* KYCSession.h */,
+				6DD5EB622386D555001912C4 /* KYCSession.m */,
+				6DD5EB642386D580001912C4 /* KYCCommunication.h */,
+				6DD5EB652386D580001912C4 /* KYCCommunication.m */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		6DDBAD6822EF2103009079C6 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				6DBD344023E9B0C900232EAA /* IdCloudTextTVC.h */,
+				6DBD344123E9B0C900232EAA /* IdCloudTextTVC.m */,
+				6DBD343F23E9B0C900232EAA /* IdCloudTextTVC.xib */,
+				6DDBAD6522EF1D1C009079C6 /* IdCloudOption.h */,
+				6DDBAD6622EF1D1C009079C6 /* IdCloudOption.m */,
+				6DDBAD7122EF253F009079C6 /* IdCloudCellProtocol.h */,
+				6DDBAD6C22EF2140009079C6 /* IdCloudBoolenTVC.h */,
+				6DDBAD6D22EF2140009079C6 /* IdCloudBoolenTVC.m */,
+				6DDBAD6E22EF2140009079C6 /* IdCloudBoolenTVC.xib */,
+				6D00F33E2329337600EC3B51 /* IdCloudButtonTVC.h */,
+				6D00F33F2329337600EC3B51 /* IdCloudButtonTVC.m */,
+				6D00F3402329337600EC3B51 /* IdCloudButtonTVC.xib */,
+				6DDBAD7522F0370B009079C6 /* IdCloudVersionTVC.h */,
+				6DDBAD7622F0370B009079C6 /* IdCloudVersionTVC.m */,
+				6DDBAD7722F0370B009079C6 /* IdCloudVersionTVC.xib */,
+				6D5FCD4422FD67AC00FC320E /* IdCloudNumberTVC.h */,
+				6D5FCD4522FD67AC00FC320E /* IdCloudNumberTVC.m */,
+				6D5FCD4922FD692500FC320E /* IdCloudNumberTVC.xib */,
+				6D00F33A2329222600EC3B51 /* IdCloudSegmentTVC.h */,
+				6D00F33B2329222600EC3B51 /* IdCloudSegmentTVC.m */,
+				6D00F3392329222600EC3B51 /* IdCloudSegmentTVC.xib */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		6DE0DA4A20EB61E8005A045F = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA5520EB61E8005A045F /* IdCloudKYCConnect */,
+				6DE0DA5420EB61E8005A045F /* Products */,
+				6DE0DA7320EB640B005A045F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6DE0DA5420EB61E8005A045F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DB1FA4822E6F9780031B4F3 /* IdCloud KYC Connect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DE0DA5520EB61E8005A045F /* IdCloudKYCConnect */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0DA7720EB66B0005A045F /* GUI */,
+				6DE0DAAE20F213F0005A045F /* Helpers */,
+				6DB1FA4E22E7005B0031B4F3 /* Support Files */,
+				6DE0DA5620EB61E8005A045F /* AppDelegate.h */,
+				6DE0DA5720EB61E8005A045F /* AppDelegate.m */,
+				6DB1FA5122E703690031B4F3 /* KYC.storyboard */,
+				F47B273C2304200A00AC11AE /* KYCFace.storyboard */,
+				F4846EB7230D3E340034D115 /* Root.storyboard */,
+			);
+			path = IdCloudKYCConnect;
+			sourceTree = "<group>";
+		};
+		6DE0DA7320EB640B005A045F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DBD344423E9B1E300232EAA /* JWTDecode.framework */,
+				6DC4296723BE357D00D503AD /* Acuant */,
+				F4EE07B0230AC72300344DEE /* CoreNFC.framework */,
+				6DDBADD422F099A8009079C6 /* AudioToolbox.framework */,
+				6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */,
+				6D40D999210B5173003E6F48 /* libc++.tbd */,
+				6D40D997210B5165003E6F48 /* CoreMedia.framework */,
+				6D40D995210B5160003E6F48 /* AVFoundation.framework */,
+				6D40D993210B515B003E6F48 /* Security.framework */,
+				6D40D991210B5157003E6F48 /* LocalAuthentication.framework */,
+				6D40D98F210B5151003E6F48 /* UIKit.framework */,
+				6D40D98D210B514C003E6F48 /* SystemConfiguration.framework */,
+				6D40D98B210B5142003E6F48 /* Foundation.framework */,
+				6D40D978210B2FFB003E6F48 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DE0DA7720EB66B0005A045F /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				6DCA4C0422CDF3C60082F969 /* IdCloudStyle */,
+				6DB1FA4C22E6FF220031B4F3 /* KYC */,
+				6D40D9452109DBAC003E6F48 /* BaseViewController.h */,
+				6D40D9462109DBAC003E6F48 /* BaseViewController.m */,
+				F4846EBA230D3EB10034D115 /* RootViewController.h */,
+				F4846EBB230D3EB10034D115 /* RootViewController.m */,
+				6DCFC71E22E1C4BC00B1FD4E /* SideMenuViewController.h */,
+				6DCFC71F22E1C4BC00B1FD4E /* SideMenuViewController.m */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		6DE0DAAE20F213F0005A045F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5EB572386D4CF001912C4 /* Communication */,
+				6DDBAD6022EEE2E5009079C6 /* KYCManager.h */,
+				6DDBAD6122EEE2E5009079C6 /* KYCManager.m */,
+				6DE0DACC20F2168E005A045F /* Configuration.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F4AB30F7231524D3002CE4E8 /* IdCloudIncomingMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB30F823152503002CE4E8 /* IdCloudIncomingMessage.h */,
+				F4AB30F923152503002CE4E8 /* IdCloudIncomingMessage.m */,
+				F4AB30FC23152533002CE4E8 /* IdCloudIncomingMessage.xib */,
+			);
+			path = IdCloudIncomingMessage;
+			sourceTree = "<group>";
+		};
+		F4EFD5F0230589BB00DB122C /* FaceId */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFD5E52305640100DB122C /* KYCFaceIdTutorialViewController.h */,
+				F4EFD5E62305640100DB122C /* KYCFaceIdTutorialViewController.m */,
+				6DC429A323BF750500D503AD /* FaceLivenessCameraController.h */,
+				6DC429A423BF750500D503AD /* FaceLivenessCameraController.m */,
+			);
+			path = FaceId;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DB1F9F522E6F9780031B4F3 /* IdCloud KYC Connect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB1FA4522E6F9780031B4F3 /* Build configuration list for PBXNativeTarget "IdCloud KYC Connect" */;
+			buildPhases = (
+				6DB1F9F622E6F9780031B4F3 /* Sources */,
+				6DB1FA2522E6F9780031B4F3 /* Frameworks */,
+				6DB1FA3122E6F9780031B4F3 /* Resources */,
+				6DB1FA4422E6F9780031B4F3 /* Mark interesting parts of code */,
+				6DB1FAB722E73EA00031B4F3 /* Embed Frameworks */,
+				6DC4299823BE370500D503AD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DB1FAB622E73E9F0031B4F3 /* PBXTargetDependency */,
+			);
+			name = "IdCloud KYC Connect";
+			productName = EzioMobileSampleApp;
+			productReference = 6DB1FA4822E6F9780031B4F3 /* IdCloud KYC Connect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DE0DA4B20EB61E8005A045F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Gemalto;
+				TargetAttributes = {
+					6DB1F9F522E6F9780031B4F3 = {
+						LastSwiftMigration = 1130;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6DE0DA4E20EB61E8005A045F /* Build configuration list for PBXProject "IdCloud KYC Connect" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6DE0DA4A20EB61E8005A045F;
+			productRefGroup = 6DE0DA5420EB61E8005A045F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6DB1FAAC22E73E6E0031B4F3 /* Products */;
+					ProjectRef = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6DB1F9F522E6F9780031B4F3 /* IdCloud KYC Connect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IdCloudDesignable.framework;
+			remoteRef = 6DB1FAAF22E73E6E0031B4F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DB1FA3122E6F9780031B4F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB1FA3522E6F9780031B4F3 /* Localizable.strings in Resources */,
+				6D00F33C2329222600EC3B51 /* IdCloudSegmentTVC.xib in Resources */,
+				6D00F3422329337700EC3B51 /* IdCloudButtonTVC.xib in Resources */,
+				F47B273D2304200A00AC11AE /* KYCFace.storyboard in Resources */,
+				6DB1FA3A22E6F9780031B4F3 /* LaunchScreen.storyboard in Resources */,
+				6DBD344223E9B0CA00232EAA /* IdCloudTextTVC.xib in Resources */,
+				6DB1FA3B22E6F9780031B4F3 /* Assets.xcassets in Resources */,
+				6DB1FA5322E703690031B4F3 /* KYC.storyboard in Resources */,
+				6DDBAD7922F0370B009079C6 /* IdCloudVersionTVC.xib in Resources */,
+				6D5FCD4A22FD6A6900FC320E /* IdCloudNumberTVC.xib in Resources */,
+				6DDBAD7022EF2140009079C6 /* IdCloudBoolenTVC.xib in Resources */,
+				F4846EB9230D3E340034D115 /* Root.storyboard in Resources */,
+				6DB1FA4122E6F9780031B4F3 /* IdCloudLoadingIndicator.xib in Resources */,
+				F4AB30FE23152533002CE4E8 /* IdCloudIncomingMessage.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DB1FA4422E6F9780031B4F3 /* Mark interesting parts of code */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Mark interesting parts of code";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"SAMPLE:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.m\" -o -name \"*.h\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
+		6DC4299823BE370500D503AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Frameworks/Acuant/KeychainAccess.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DB1F9F622E6F9780031B4F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DAF1CF623D09D2D00C01092 /* KYCVerificationResult.m in Sources */,
+				6DB1FACE22E746FA0031B4F3 /* KYCIdCardPassportViewController.m in Sources */,
+				6D00F3412329337700EC3B51 /* IdCloudButtonTVC.m in Sources */,
+				6D00E9B022E85BF30064B1F8 /* KYCPassportViewController.m in Sources */,
+				6DC429A523BF750500D503AD /* FaceLivenessCameraController.m in Sources */,
+				6DD5EB5A2386D4E8001912C4 /* KYCDocument.m in Sources */,
+				6DB1FA0022E6F9780031B4F3 /* IdCloudLoadingIndicator.m in Sources */,
+				6DDBAD6F22EF2140009079C6 /* IdCloudBoolenTVC.m in Sources */,
+				6DDBAD7822F0370B009079C6 /* IdCloudVersionTVC.m in Sources */,
+				6DBD344323E9B0CA00232EAA /* IdCloudTextTVC.m in Sources */,
+				6DAF0A2D23CCA67F0059C6E8 /* KYCPrivacyPolicyViewController.m in Sources */,
+				6DB1FA5C22E738990031B4F3 /* KYCFirstStepViewController.m in Sources */,
+				6DB1FA0522E6F9780031B4F3 /* AppDelegate.m in Sources */,
+				6DB1FAC622E745FB0031B4F3 /* KYCSecondStepViewController.m in Sources */,
+				6D00F33D2329222600EC3B51 /* IdCloudSegmentTVC.m in Sources */,
+				F4EFD5E72305640100DB122C /* KYCFaceIdTutorialViewController.m in Sources */,
+				6DB1FA0A22E6F9780031B4F3 /* IdCloudNotification.m in Sources */,
+				6DD5EB692386E0A1001912C4 /* KYCOverviewViewController.m in Sources */,
+				6DB1FA5922E72C4C0031B4F3 /* KYCIntroViewController.m in Sources */,
+				6DAF1CFD23D09FFD00C01092 /* KYCFields.m in Sources */,
+				6DC4299D23BF3FD700D503AD /* KYCDocumentScannerViewController.m in Sources */,
+				6D5FCD4722FD67AC00FC320E /* IdCloudNumberTVC.m in Sources */,
+				6D2C857A22F4567500204377 /* NotifyAction.m in Sources */,
+				6DB1FA1222E6F9780031B4F3 /* main.m in Sources */,
+				6DDBAD6722EF1D1C009079C6 /* IdCloudOption.m in Sources */,
+				6DDBAD6222EEE2E5009079C6 /* KYCManager.m in Sources */,
+				6DB1FA1322E6F9780031B4F3 /* SideMenuViewController.m in Sources */,
+				F4846EBD230D3EB10034D115 /* RootViewController.m in Sources */,
+				6DD5EB602386D53A001912C4 /* KYCResponse.m in Sources */,
+				6DAF1CF023D09A2000C01092 /* KYCTemplate.m in Sources */,
+				6DC98A1123CF1BF30016F988 /* IdCloudHelper.m in Sources */,
+				6DD5EB632386D555001912C4 /* KYCSession.m in Sources */,
+				6DB1FA1922E6F9780031B4F3 /* BaseViewController.m in Sources */,
+				6DB1FA5622E722310031B4F3 /* KYCSettingsViewController.m in Sources */,
+				6DAF1CFA23D09FBA00C01092 /* KYCNameValue.m in Sources */,
+				6DD5EB5D2386D505001912C4 /* KYCFace.m in Sources */,
+				6D3F18D423DB30030010914B /* KYCTermsOfUseViewController.m in Sources */,
+				6DAF1CF323D09AD000C01092 /* KYCAlert.m in Sources */,
+				F4AB30FA23152503002CE4E8 /* IdCloudIncomingMessage.m in Sources */,
+				6DD5EB662386D580001912C4 /* KYCCommunication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DB1FAB622E73E9F0031B4F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IdCloudDesignable;
+			targetProxy = 6DB1FAB522E73E9F0031B4F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D40D9522109F350003E6F48 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D40D9542109F433003E6F48 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6DB1FA5122E703690031B4F3 /* KYC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DB1FA5222E703690031B4F3 /* Base */,
+			);
+			name = KYC.storyboard;
+			sourceTree = "<group>";
+		};
+		6DE0DA6420EB61EA005A045F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE0DA6520EB61EA005A045F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6DE0DA9820EBC579005A045F /* IdCloudLoadingIndicator.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE0DA9920EBC579005A045F /* Base */,
+			);
+			name = IdCloudLoadingIndicator.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DB1FA4622E6F9780031B4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "IdCloudKYCConnect/Support Files/IdCloudKYCConnect.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 28;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Acuant",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					KYC,
+				);
+				INFOPLIST_FILE = "IdCloudKYCConnect/Support Files/info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.kyc.idvconnect;
+				PRODUCT_NAME = "IdCloud KYC Connect";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DB1FA4722E6F9780031B4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "IdCloudKYCConnect/Support Files/IdCloudKYCConnect.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 28;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Acuant",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					KYC,
+				);
+				INFOPLIST_FILE = "IdCloudKYCConnect/Support Files/info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thalesgroup.kyc.idvconnect;
+				PRODUCT_NAME = "IdCloud KYC Connect";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6DE0DA6A20EB61EA005A045F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IdCloudKYCConnect/Support Files/stdafx.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-fstack-protector-all",
+					"-finline-functions",
+				);
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6DE0DA6B20EB61EA005A045F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IdCloudKYCConnect/Support Files/stdafx.h";
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-fstack-protector-all",
+					"-finline-functions",
+				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DB1FA4522E6F9780031B4F3 /* Build configuration list for PBXNativeTarget "IdCloud KYC Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB1FA4622E6F9780031B4F3 /* Debug */,
+				6DB1FA4722E6F9780031B4F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DE0DA4E20EB61E8005A045F /* Build configuration list for PBXProject "IdCloud KYC Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE0DA6A20EB61EA005A045F /* Debug */,
+				6DE0DA6B20EB61EA005A045F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DE0DA4B20EB61E8005A045F /* Project object */;
+}
