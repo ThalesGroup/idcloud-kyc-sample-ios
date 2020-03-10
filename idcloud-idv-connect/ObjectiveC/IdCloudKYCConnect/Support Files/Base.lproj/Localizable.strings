@@ -1,0 +1,493 @@
+/*
+ MIT License
+ 
+ Copyright (c) 2020 Thales DIS
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+ IMPORTANT: This source code is intended to serve training information purposes only.
+ Please make sure to review our IdCloud documentation, including security guidelines.
+ */
+
+
+// MARK: - Loading messages
+"STRING_LOADING_SUBMITTING"                     = "Submitting...";
+
+// MARK: - Pin
+"STRING_PIN_CHANGE_SUCCESSFULLY"                = "Pin changed sucesfully.";
+"STRING_PIN_CHANGE_FAILED_DIFFERENT"            = "Entered passwords are different.";
+"STRING_PIN_CHANGE_LABEL_ENTERY_PIN"            = "Enter Pin";
+"STRING_PIN_CHANGE_LABEL_FIRST"                 = "New Pin";
+"STRING_PIN_CHANGE_LABEL_SECOND"                = "Confirm Pin";
+"STRING_PIN_VERIFICATION_FAILED"                = "Failed to verify pin. Make sure your internet connection is working.";
+
+
+// MARK: - Common
+"STRING_COMMON_OK"                              = "Ok";
+"STRING_COMMON_DONE"                            = "Done";
+"STRING_COMMON_CANCEL"                          = "Cancel";
+"STRING_COMMON_DELETE"                          = "Delete";
+
+// MARK: - Messaging
+"STRING_MESSAGING_INCOMING_MESSAGE"             = "Incoming message";
+"STRING_MESSAGING_QUESTION_APPROVE"             = "Approve";
+"STRING_MESSAGING_QUESTION_DENY"                = "Deny";
+"STRING_MESSAGING_NO_MESSAGES"                  = "Nothing to fetch.";
+"STRING_MESSAGING_SENT"                         = "Request was successfully sent.";
+"STRING_MESSAGING_MISSING_TOKEN"                = "Missing push token.";
+"STRING_MESSAGING_MISSING_CLIENT_ID"            = "Missing Client Id.";
+
+"STRING_MESSAGING_BUTTON_PULL"                  = "Pull message";
+"STRING_MESSAGING_BUTTON_OPEN"                  = "Open message";
+
+// MARK: - Biometric Id
+"STRING_BIO_ID_FACE_ID"                         = "Authenticate with Face Id";
+"STRING_BIO_ID_TOUCH_ID"                        = "Authenticate with Touch Id";
+
+// MARK: - Server Messages
+"message_subject_authentication"                = "Please authenticate to login to the tutorial site.";
+"message_subject_transaction"                   = "Please approve the transaction of $%amount to %beneficiary";
+
+// MARK: - UI Elements
+"STRING_SETTINGS_VERSION"                       = "App Version: %@\nSDK Version: %@";
+"STRING_DOMAIN"                                 = "Domain: %@";
+
+
+// MARK: - KYC
+"STRING_KYC_DOCUMENT_CAPTURE"                   = "Document Capture: %@";
+"STRING_KYC_ID_CARD"                            = "ID Card";
+"STRING_KYC_PASSPORT"                           = "Passport";
+
+"STRING_KYC_FIRST_STEP_ID"                      = "Capture your ID card or Passport";
+"STRING_KYC_FIRST_STEP_FACE"                    = "Take a selfie for facial check";
+"STRING_KYC_FIRST_STEP_REVIEW"                  = "Review and submit your information";
+
+"STRING_KYC_OPTION_SECTION_GENERAL"             = "General settings";
+"STRING_KYC_OPTION_WEB_TOKEN"                   = "Update JSON Web Token";
+"STRING_KYC_OPTION_FACE_REC_CAP"                = "Facial recognition";
+"STRING_KYC_OPTION_FACE_REC_DES"                = "Take a selfie after ID verification step.\nThe facial recognition is done by a server.";
+"STRING_KYC_OPTION_VOICE_INSTR_CAP"             = "Voice Instructions";
+"STRING_KYC_OPTION_VOICE_INSTR_DES"             = "Activate voice instructions during capture.";
+
+"STRING_KYC_OPTION_SECTION_RISK"                = "Risk Management";
+"STRING_KYC_OPTION_IGNORE_DATE_CAP"             = "Ignore expiration date";
+"STRING_KYC_OPTION_IGNORE_DATE_DES"             = "Ignore if document has expired.";
+
+"STRING_KYC_OPTION_SECTION_SCAN"                = "Identity Document Scan";
+"STRING_KYC_OPTION_MANUAL_MODE_CAP"             = "Manual capture";
+"STRING_KYC_OPTION_MANUAL_MODE_DES"             = "Set Manual/Automatic capture mode for document scan.";
+"STRING_KYC_OPTION_AUTO_DETECTION_CAP"          = "Automatic Type Detection";
+"STRING_KYC_OPTION_AUTO_DETECTION_DES"          = "Set Manual/Automatic document type detection.";
+"STRING_KYC_OPTION_CAMERA_ORIENT_CAP"           = "Camera Orientation";
+"STRING_KYC_OPTION_CAMERA_ORIENT_DES"           = "Set the camera orientation to portrait.";
+"STRING_KYC_OPTION_DETECTION_ZONE_CAP"          = "ID Capture Detection Zone";
+"STRING_KYC_OPTION_DETECTION_ZONE_DES"          = "Set a detection zone (80%) and display a rectangle.";
+"STRING_KYC_OPTION_BW_PHOTO_COPY_CAP"           = "BW Photo copy";
+"STRING_KYC_OPTION_BW_PHOTO_COPY_DES"           = "Enable or disable the Black and white photocopy QA check.";
+
+
+"STRING_KYC_OPTION_SECTION_FACEID"              = "Face capture";
+"STRING_KYC_OPTION_FACE_LIVENESS_MODE_CAP"      = "Liveness Mode";
+"STRING_KYC_OPTION_FACE_LIVENESS_MODE_PASSIVE"  = "Passive";
+"STRING_KYC_OPTION_FACE_LIVENESS_MODE_ACTIVE"   = "Active";
+"STRING_KYC_OPTION_FACE_QUALITY_THRESHOLD_CAP"  = "Quality threshold";
+"STRING_KYC_OPTION_FACE_QUALITY_THRESHOLD_DES"  = "From 0 to 100";
+"STRING_KYC_OPTION_FACE_LIVENESS_THRESHOLD_CAP" = "Liveness threshold";
+"STRING_KYC_OPTION_FACE_LIVENESS_THRESHOLD_DES" = "From 0 to 100";
+"STRING_KYC_OPTION_FACE_BLINK_TIMEOUT_CAP"      = "Blink timeout";
+"STRING_KYC_OPTION_FACE_BLINK_TIMEOUT_DES"      = "From 0 to 100s";
+
+"STRING_KYC_OPTION_SECTION_VERSION"             = "Versions";
+"STRING_KYC_OPTION_VERSION_APP"                 = "Application Version";
+"STRING_KYC_OPTION_VERSION_ID_SDK"              = "ID SDK Version";
+"STRING_KYC_OPTION_VERSION_LIVENESS"            = "Liveness SDK Version";
+"STRING_KYC_OPTION_PRIVACY_POLICY"              = "Privacy Policy";
+"STRING_KYC_OPTION_VERSION_PROTECTOR"           = "Protector SDK Version";
+"STRING_KYC_OPTION_VERSION_ACUANT_SDK"          = "Acuant SDK Version";
+
+"STRING_KYC_RESULT_NAME_SURNAME"                = "Name, surname:";
+"STRING_KYC_RESULT_BIRTH_DATE"                  = "Birth date:";
+"STRING_KYC_RESULT_NATIONALITY"                 = "Nationality:";
+"STRING_KYC_RESULT_GENDER"                      = "Gender:";
+"STRING_KYC_RESULT_DOC_TYPE"                    = "Document type:";
+"STRING_KYC_RESULT_DOC_NUMBER"                  = "Document number:";
+"STRING_KYC_RESULT_EXOIRY_DATE"                 = "Expiry date:";
+"STRING_KYC_RESULT_TOTAL_VERIFICATIONS"         = "Total verifications:";
+
+// MARK: - KYC Document Scan
+"STRING_KYC_DOC_SCAN_CAPTION_IDCARD"            = "Document Capture: ID Card";
+"STRING_KYC_DOC_SCAN_CAPTION_PASSPORT"          = "Document Capture: Passport";
+
+"STRING_KYC_DOC_SCAN_01_AUTO"                   = "• Please make sure to take the picture with the following instructions\n\n• Position you document flat, take the picture in landscape mode, fit the picture in the white rectangle";
+"STRING_KYC_DOC_SCAN_01_MANUAL"                 = "• Please make sure to take the picture with the following instructions\n\n• Capture conly the area of the document containing personal information.";
+
+"STRING_KYC_DOC_SCAN_02_AUTO"                   = "• Avoid light hotpost, wait automatic detection and follow live instuctions";
+"STRING_KYC_DOC_SCAN_02_MANUAL"                 = "• Validate the corpping area, turn the document over and tap on screen.";
+
+"STRING_KYC_DOC_TURN_DETAIL_TOP"                = "Turn the document over";
+"STRING_KYC_DOC_TURN_DETAIL_BOTTOM"             = "Click on document to continue";
+
+"STRING_KYC_DOC_SCAN_DETAIL_TOP"                = "Present the document\non the same orientation as below";
+"STRING_KYC_DOC_SCAN_DETAIL_BOTTOM"             = "Click on document to start scanning";
+
+"STRING_KYC_DOC_SCAN_STEP_01"                   = "1: Scan\nFront doc:";
+"STRING_KYC_DOC_SCAN_STEP_02"                   = "2: Turn\nDoc over:";
+"STRING_KYC_DOC_SCAN_STEP_03"                   = "3: Scan\nBack doc:";
+
+
+"STRING_KYC_DOC_SCAN_WARNING_CONTRAST"          = "Please choose a more contrasting background";
+"STRING_KYC_DOC_SCAN_WARNING_FOCUSING"          = "Focusing...";
+"STRING_KYC_DOC_SCAN_WARNING_HOTSPOT"           = "Hotspot detected";
+"STRING_KYC_DOC_SCAN_WARNING_LIGHT"             = "Picture is too dark";
+"STRING_KYC_DOC_SCAN_WARNING_BLUR"              = "Picture is blurry";
+"STRING_KYC_DOC_SCAN_WARNING_FIT"               = "Document not detected";
+
+"STRING_KYC_DOC_SCAN_ERROR_ROOT"               = "Detected rooted device";
+"STRING_KYC_DOC_SCAN_ERROR_ARCHITECTURE"       = "Detected invalid architecture";
+"STRING_KYC_DOC_SCAN_ERROR_BACKGROUND"         = "App has gone to background";
+
+
+// MARK: - KYC Face Id
+"STRING_KYC_FACE_ACTION_NONE"                   = "No liveness action required.";
+"STRING_KYC_FACE_ACTION_KEEP_STILL"             = "Do not move the head.";
+"STRING_KYC_FACE_ACTION_BLINK"                  = "Blink eyes.";
+"STRING_KYC_FACE_ACTION_MOVE_UP"                = "Turn your head up.";
+"STRING_KYC_FACE_ACTION_MOVE_DOWN"              = "Turn your head down.";
+"STRING_KYC_FACE_ACTION_MOVE_LEFT"              = "Turn your head left.";
+"STRING_KYC_FACE_ACTION_MOVE_RIGHT"             = "Turn your head right.";
+"STRING_KYC_FACE_ACTION_MOVE_TO_CENTER"         = "Turn your head to the center of the screen.";
+"STRING_KYC_FACE_ACTION_SIDE_TO_SIDE"           = "Turn your head side to side.";
+"STRING_KYC_FACE_ACTION_ROTATE_YAW"             = "Turn your head side to side.";
+
+// MARK: - JSON Web Token Dialog
+"STRING_JSON_WEB_TOKEN_CAP"                     = "Update JSON Web Token";
+"STRING_JSON_WEB_TOKEN_DES"                     = "Paste new token.";
+"STRING_JSON_WEB_TOKEN_PLACEHOLDER"             = "JSON Web Token";
+"STRING_JSON_WEB_TOKEN_INVALID"                 = "Invalid JWT. Value was not stored.";
+"STRING_JSON_WEB_TOKEN_EXPIRATION"              = "JWT Expiration";
+"STRING_JSON_WEB_TOKEN_NO_EXPIRATION"           = "Failed to get expiration date.";
+
+// MARK: - Acuant
+
+// SampleApp
+"Back Side?" = "Back Side?";
+"Scan the back side of the health insurance card" = "Scan the back side of the health insurance card";
+"Scan the back side of the ID document" = "Scan the back side of the ID document";
+
+// Acuant Camera
+"acuant_camera_align" = "ALIGN";
+"acuant_camera_manual_capture" = "ALIGN & TAP";
+"acuant_camera_move_closer" = "MOVE CLOSER";
+"acuant_camera_hold_steady" = "HOLD STEADY";
+"acuant_camera_capturing" = "CAPTURING";
+"acuant_camera_outside_view" = "ALIGN";
+
+// Acuant Face Capture
+"acuant_face_camera_initial" = "Align face to start capture";
+"acuant_face_camera_face_too_close" = "Too Close! Move Away";
+"acuant_face_camera_face_too_far" = "Move Closer";
+"acuant_face_camera_face_has_angle" =  "Face has Angle. Do not tilt";
+"acuant_face_camera_face_not_in_frame" =  "Move in Frame";
+"acuant_face_camera_face_moved" = "Hold Steady";
+"acuant_face_camera_capturing_2" = "Capturing\n2...";
+"acuant_face_camera_capturing_1" = "Capturing\n1...";
+
+/* loco:5b56f1d17ec8ae43575e40f2
+ * app_name */
+"IProov_AppName" = "iProov";
+
+/* loco:5b56f1d17ec8ae43575e40f4
+ * error */
+"IProov_Error" = "Error";
+
+/* loco:5b56f1d17ec8ae43575e40f5
+ * prompt_hold_still */
+"IProov_PromptHoldStill" = "Put your face in the oval";
+
+/* loco:5b56f1d17ec8ae43575e40f6
+ * prompt_loading */
+"IProov_PromptLoading" = "Please wait…";
+
+/* loco:5b56f1d17ec8ae43575e40f7
+ * prompt_loading_slow */
+"IProov_PromptLoadingSlow" = "Connecting, network is slow…";
+
+/* loco:5b56f1d17ec8ae43575e40f8
+ * prompt_connecting */
+"IProov_PromptConnecting" = "Connecting…";
+
+/* loco:5b56f1d17ec8ae43575e40f9
+ * prompt_connecting_slow */
+"IProov_PromptConnectingSlow" = "Connecting, network is slow…";
+
+/* loco:5b56f1d17ec8ae43575e40fa
+ * prompt_tap_to_begin */
+"IProov_PromptTapToBegin" = "Tap the screen to begin";
+
+/* loco:5b56f1d17ec8ae43575e40fb
+ * prompt_too_far */
+"IProov_PromptTooFar" = "Move closer";
+
+/* loco:5b56f1d17ec8ae43575e40fc
+ * prompt_too_bright */
+"IProov_PromptTooBright" = "Go somewhere shadier";
+
+/* loco:5b56f1d17ec8ae43575e4107
+ * progress_streaming */
+"IProov_ProgressStreaming" = "Streaming…";
+
+/* loco:5b56f1d17ec8ae43575e4108
+ * progress_streaming_slow */
+"IProov_ProgressStreamingSlow" = "Streaming, network is slow…";
+
+/* loco:5b56f1d17ec8ae43575e4109
+ * progress_processing */
+"IProov_ProgressProcessing" = "Processing…";
+
+/* loco:5b56f1d17ec8ae43575e4111
+ * iproov_success */
+"IProov_IProovSuccess" = "You have iProoved successfully";
+
+/* loco:5b56f1d17ec8ae43575e4112
+ * prompt_scanning */
+"IProov_PromptScanning" = "Scanning…";
+
+/* loco:5b56f1d17ec8ae43575e411a
+ * unknown_error */
+"IProov_UnknownError" = "Unknown Error";
+
+/* loco:5b56f1d17ec8ae43575e411b
+ * starting_detector */
+"IProov_StartingDetector" = "Starting detector…";
+
+/* loco:5b56f1d17ec8ae43575e411c
+ * error_ssl_exception */
+"IProov_ErrorSSLException" = "SSL Exception";
+
+/* loco:5bbb68727ec8ae0b0e45faf4
+ * progress_identifying_face */
+"IProov_ProgressIdentifyingFace" = "Identifying face…";
+
+/* loco:5bbb68d07ec8ae0b84680992
+ * progress_confirming_identity */
+"IProov_ProgressConfirmingIdentity" = "Confirming identity…";
+
+/* loco:5bbb68f17ec8ae0b7e546063
+ * progress_assessing_genuine_presence */
+"IProov_ProgressAssessingGenuinePresence" = "Assessing genuine presence…";
+
+/* loco:5bbb69067ec8ae0b9856ffe2
+ * progress_loading */
+"IProov_ProgressLoading" = "Loading…";
+
+/* loco:5bbb69267ec8ae0b7d6eaa23
+ * progress_creating_identity */
+"IProov_ProgressCreatingIdentity" = "Creating identity…";
+
+/* loco:5bbb6b0c7ec8ae0c0c50c744
+ * progress_finding_face */
+"IProov_ProgressFindingFace" = "Finding face…";
+
+/* loco:5bbb816b7ec8ae109642c8c2
+ * authenticate */
+"IProov_Authenticate" = "Authenticate";
+
+/* loco:5bbb81777ec8ae109c2a3952
+ * enrol */
+"IProov_Enrol" = "Enrol";
+
+/* loco:5bbb81dd7ec8ae10ba335193
+ * message_format */
+"IProov_MessageFormat" = "%@ to %@";
+
+/* loco:5bcdab237ec8ae743c2490c3
+ * prompt_too_close */
+"IProov_PromptTooClose" = "Too close";
+
+/* loco:5bcf26b9a08ef1469d2129cd
+ * failure_motion_too_much_movement */
+"IProov_FailureMotionTooMuchMovement" = "Please do not move while iProoving";
+
+/* loco:5bcf26d5a08ef1469a501327
+ * failure_lighting_flash_reflection_too_low */
+"IProov_FailureLightingFlashReflectionTooLow" = "Ambient light too strong or screen brightness too low";
+
+/* loco:5bcf26f6a08ef1469b5c6c93
+ * failure_lighting_backlit */
+"IProov_FailureLightingBacklit" = "Strong light source detected behind you";
+
+/* loco:5bcf2713a08ef146991980c7
+ * failure_lighting_too_dark */
+"IProov_FailureLightingTooDark" = "Your environment appears too dark";
+
+/* loco:5bcf2735a08ef1473c75eb52
+ * failure_lighting_face_too_bright */
+"IProov_FailureLightingFaceTooBright" = "Too much light detected on your face";
+
+/* loco:5bcf2752a08ef147420f6f72
+ * failure_motion_too_much_mouth_movement */
+"IProov_FailureMotionTooMuchMouthMovement" = "Please do not talk while iProoving";
+
+/* loco:5c470a3d7ec8ae70494fb632
+ * message_format_with_username */
+"IProov_MessageFormatWithUsername" = "%@ as %@ to %@";
+
+/* loco:5ce7afc34d3dd75c910205a2
+ * prompt_roll_too_high */
+"IProov_PromptRollTooHigh" = "Avoid tilting your head";
+
+/* loco:5ce7b1154d3dd75cea6b4852
+ * prompt_roll_too_low */
+"IProov_PromptRollTooLow" = "Avoid tilting your head";
+
+/* loco:5ce7b1414d3dd75ce5786ea4
+ * prompt_yaw_too_low */
+"IProov_PromptYawTooLow" = "Turn slightly to your right";
+
+/* loco:5ce7b1614d3dd75d0c3caef2
+ * prompt_yaw_too_high */
+"IProov_PromptYawTooHigh" = "Turn slightly to your left";
+
+/* loco:5ce7b18c4d3dd75ce93af262
+ * prompt_pitch_too_high */
+"IProov_PromptPitchTooHigh" = "Hold the device at eye level";
+
+/* loco:5ce7b1a84d3dd75d06361922
+ * prompt_pitch_too_low */
+"IProov_PromptPitchTooLow" = "Hold the device at eye level";
+
+/* loco:5ce7b7ca4d3dd75e1f603933
+ * error_streaming */
+"IProov_ErrorStreaming" = "Streaming error";
+
+/* loco:5ce7b7e44d3dd75e2d0a79d3
+ * error_encoder */
+"IProov_ErrorEncoder" = "Encoder error";
+
+/* loco:5ce7b80d4d3dd75e1f603935
+ * error_camera */
+"IProov_ErrorCamera" = "Camera error";
+
+/* loco:5ce7b8344d3dd75e216b9dd4
+ * error_camera_permission_denied */
+"IProov_ErrorCameraPermissionDenied" = "Camera permission denied";
+
+/* loco:5ce7b87c4d3dd75e1d6465c5
+ * error_camera_permission_denied_message_ios */
+"IProov_ErrorCameraPermissionDeniedMessageIos" = "Please allow camera access for this app in iOS Settings";
+
+/* loco:5ce7b8a04d3dd75e216b9dd6
+ * error_server_abort */
+"IProov_ErrorServerAbort" = "Server abort";
+
+/* loco:5ce7b8ba4d3dd75e720a06b2
+ * error_server */
+"IProov_ErrorServer" = "Server error";
+
+/* loco:5ce7b8cf4d3dd75e744b9512
+ * error_lighting_model */
+"IProov_ErrorLightingModel" = "Lighting model error";
+
+/* loco:5ce7bb614d3dd75f10391ce2
+ * error_encoder_unknown_message */
+"IProov_ErrorEncoderUnknownMessage" = "Unknown encoder error";
+
+/* loco:5ce7bbd74d3dd75ecb1bed63
+ * error_encoder_code_message */
+"IProov_ErrorEncoderCodeMessage" = "Error code %@";
+
+/* loco:5d286656ed0cfa14ef7a4832
+ * error_capture_already_active */
+"IProov_ErrorCaptureAlreadyActive" = "An existing capture is already in progress";
+
+/* loco:5d6e453aed0cfa48b04d8944
+ * prompt_get_ready */
+"IProov_PromptGetReady" = "Get ready…";
+
+/* loco:5d7b9ba4c38e0f552773dd42
+ * prompt_too_right */
+"IProov_PromptTooRight" = "Move left";
+
+/* loco:5d7b9ca9c38e0f552a433fb6
+ * prompt_too_left */
+"IProov_PromptTooLeft" = "Move right";
+
+/* loco:5d7b9cd7c38e0f552a433fb8
+ * prompt_too_high */
+"IProov_PromptTooHigh" = "Move down";
+
+/* loco:5d7b9d09c38e0f55016e9b47
+ * prompt_too_low */
+"IProov_PromptTooLow" = "Move up";
+
+/* loco:5d7b9d4dc38e0f5525429e25
+ * prompt_beginning_in */
+"IProov_PromptBeginningIn" = "Starting in…";
+
+/* loco:5d7b9d7dc38e0f556e716462
+ * prompt_grant_permission */
+"IProov_PromptGrantPermission" = "Grant Camera Access";
+
+/* loco:5d7b9df6c38e0f552459601c
+ * prompt_grant_permission_message */
+"IProov_PromptGrantPermissionMessage" = "Camera access must be granted to use iProov";
+
+/* loco:5d7ba03bc38e0f559401b322
+ * passed */
+"IProov_Passed" = "Passed";
+
+/* loco:5d7ba066c38e0f55a9275a85
+ * failed */
+"IProov_Failed" = "Failed";
+
+/* loco:5d7ba098c38e0f5612366b52
+ * failure_user_timeout */
+"IProov_FailureUserTimeout" = "Sorry, your session has timed out";
+
+/* loco:5d7ba9ccc38e0f5746769f85
+ * failure_network_problem */
+"IProov_FailureNetworkProblem" = "Sorry, network problem";
+
+/* loco:5d7baa0dc38e0f57200ed694
+ * failure_ambiguous_outcome */
+"IProov_FailureAmbiguousOutcome" = "Sorry, ambiguous outcome";
+
+/* loco:5d7bab13c38e0f5747306457
+ * error_not_supported */
+"IProov_ErrorNotSupported" = "Unsupported";
+
+/* loco:5d7bab4dc38e0f57bc04d3b3
+ * error_not_supported_message */
+"IProov_ErrorNotSupportedMessage" = "Your device is not supported";
+
+/* loco:5d7babb8c38e0f57bf000183
+ * error_fullscreen_change */
+"IProov_ErrorFullscreenChange" = "Exited full-screen without completing iProov";
+
+/* loco:5d7bac00c38e0f579518c1e4
+ * error_no_camera */
+"IProov_ErrorNoCamera" = "No Camera Detected";
+
+/* loco:5d7bac40c38e0f57bc04d3b6
+ * error_no_camera_message */
+"IProov_ErrorNoCameraMessage" = "A camera must be available to use iProov";
+
+/* loco:5d7bacc8c38e0f57bc04d3b9
+ * error_camera_permission_denied_message */
+"IProov_ErrorCameraPermissionDeniedMessage" = "Permission to access the camera has been denied. Please allow camera access to use iProov. If you have already allowed access, please reload the page.";
+
+/* loco:5d7bacf9c38e0f57c048c734
+ * error_user_timeout */
+"IProov_ErrorUserTimeout" = "Your session has expired";
+

@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D98E286240025AC00243663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E285240025AC00243663 /* AppDelegate.swift */; };
+		6D98E28A240025AC00243663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E289240025AC00243663 /* ViewController.swift */; };
+		6D98E28F240025AE00243663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D98E28E240025AE00243663 /* Assets.xcassets */; };
+		6D98E292240025AE00243663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D98E290240025AE00243663 /* LaunchScreen.storyboard */; };
+		6D98E2E72403CA2F00243663 /* IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D98E29E2403CA2E00243663 /* IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib */; };
+		6D98E2EC2403CA2F00243663 /* IdCloudBoolenTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D98E2A52403CA2E00243663 /* IdCloudBoolenTVC.xib */; };
+		6D98E3112403CC5D00243663 /* IdCloudDesignable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D98E30F2403CC2E00243663 /* IdCloudDesignable.framework */; };
+		6D98E3122403CC5D00243663 /* IdCloudDesignable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D98E30F2403CC2E00243663 /* IdCloudDesignable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D98E31F2403D0EF00243663 /* IdCloudHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E31E2403D0EF00243663 /* IdCloudHelper.swift */; };
+		6D98E3212403DB9C00243663 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3202403DB9C00243663 /* BaseViewController.swift */; };
+		6D98E3432403E6F600243663 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3422403E6F600243663 /* SideMenuViewController.swift */; };
+		6D98E3462403E73200243663 /* KYC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D98E3442403E73200243663 /* KYC.storyboard */; };
+		6D98E34A2403E9CA00243663 /* KYCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3492403E9CA00243663 /* KYCSettingsViewController.swift */; };
+		6D98E3552403F3F100243663 /* KYCNameValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E34E2403F3F000243663 /* KYCNameValue.swift */; };
+		6D98E3562403F3F100243663 /* KYCVerificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E34F2403F3F000243663 /* KYCVerificationResult.swift */; };
+		6D98E3572403F3F100243663 /* KYCDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3502403F3F000243663 /* KYCDocument.swift */; };
+		6D98E3582403F3F100243663 /* KYCFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3512403F3F000243663 /* KYCFace.swift */; };
+		6D98E3592403F3F100243663 /* KYCFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3522403F3F100243663 /* KYCFields.swift */; };
+		6D98E35A2403F3F100243663 /* KYCTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3532403F3F100243663 /* KYCTemplate.swift */; };
+		6D98E35B2403F3F100243663 /* KYCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3542403F3F100243663 /* KYCAlert.swift */; };
+		6D98E35D2404013E00243663 /* KYCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E35C2404013E00243663 /* KYCResponse.swift */; };
+		6D98E35F2404059800243663 /* KYCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E35E2404059800243663 /* KYCSession.swift */; };
+		6DE55BA824042B9900D7BA38 /* KYCIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BA724042B9900D7BA38 /* KYCIntroViewController.swift */; };
+		6DE55BAA24042D0700D7BA38 /* KYCFirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BA924042D0700D7BA38 /* KYCFirstStepViewController.swift */; };
+		6DE55BAC2405232E00D7BA38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55BAB2405232E00D7BA38 /* Localizable.strings */; };
+		6DE55BAE2405244C00D7BA38 /* KYCSecondStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BAD2405244C00D7BA38 /* KYCSecondStepViewController.swift */; };
+		6DE55BB02405253100D7BA38 /* KYCTermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BAF2405253100D7BA38 /* KYCTermsOfUseViewController.swift */; };
+		6DE55BB2240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BB1240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift */; };
+		6DE55BBD240526ED00D7BA38 /* KYCDocumentScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BBC240526ED00D7BA38 /* KYCDocumentScannerViewController.swift */; };
+		6DE55BD124052C1B00D7BA38 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC324052C1B00D7BA38 /* KeychainAccess.framework */; };
+		6DE55BDB24052C2E00D7BA38 /* AcuantCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */; };
+		6DE55BDC24052C2E00D7BA38 /* AcuantCamera.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BDD24052C3300D7BA38 /* AcuantCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */; };
+		6DE55BDE24052C3300D7BA38 /* AcuantCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BDF24052C4300D7BA38 /* AcuantDocumentProcessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */; };
+		6DE55BE024052C4300D7BA38 /* AcuantDocumentProcessing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BE124052C4600D7BA38 /* AcuantFaceMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */; };
+		6DE55BE224052C4600D7BA38 /* AcuantFaceMatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BE324052C4700D7BA38 /* AcuantHGLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */; };
+		6DE55BE424052C4700D7BA38 /* AcuantHGLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BE524052C4A00D7BA38 /* AcuantImagePreparation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */; };
+		6DE55BE624052C4A00D7BA38 /* AcuantImagePreparation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BE724052C5000D7BA38 /* AcuantIPLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */; };
+		6DE55BE824052C5000D7BA38 /* AcuantIPLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BE924052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */; };
+		6DE55BEA24052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BEB24052C6100D7BA38 /* iProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCC24052C1B00D7BA38 /* iProov.framework */; };
+		6DE55BEC24052C6100D7BA38 /* iProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCC24052C1B00D7BA38 /* iProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BED24052C6300D7BA38 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */; };
+		6DE55BEE24052C6300D7BA38 /* JWTDecode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BEF24052C6A00D7BA38 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC724052C1B00D7BA38 /* SocketIO.framework */; };
+		6DE55BF024052C6A00D7BA38 /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC724052C1B00D7BA38 /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BF124052C6E00D7BA38 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC924052C1B00D7BA38 /* Starscream.framework */; };
+		6DE55BF224052C6E00D7BA38 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC924052C1B00D7BA38 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BF324052C7000D7BA38 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */; };
+		6DE55BF424052C7000D7BA38 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE55BF724052E4900D7BA38 /* KYCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BF624052E4900D7BA38 /* KYCManager.swift */; };
+		6DE55BF924052E6100D7BA38 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BF824052E6100D7BA38 /* Configuration.swift */; };
+		6DE55BFB240541F200D7BA38 /* IdCloudLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BFA240541F200D7BA38 /* IdCloudLoadingIndicator.swift */; };
+		6DE55BFD24054F2800D7BA38 /* KYCIdCardPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BFC24054F2800D7BA38 /* KYCIdCardPassportViewController.swift */; };
+		6DE55C00240556D700D7BA38 /* KYCFaceIdTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BFF240556D700D7BA38 /* KYCFaceIdTutorialViewController.swift */; };
+		6DE55C022405576400D7BA38 /* FaceLivenessCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C012405576400D7BA38 /* FaceLivenessCameraController.swift */; };
+		6DE55C0A240564D400D7BA38 /* KYCFace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55C08240564D400D7BA38 /* KYCFace.storyboard */; };
+		6DE55C0C24056A7A00D7BA38 /* KYCOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C0B24056A7A00D7BA38 /* KYCOverviewViewController.swift */; };
+		6DE55C0F24057BCC00D7BA38 /* KYCCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C0E24057BCC00D7BA38 /* KYCCommunication.swift */; };
+		6DE55C162407DB6000D7BA38 /* IdCloudNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C152407DB6000D7BA38 /* IdCloudNotification.swift */; };
+		6DE55C1A2407F60A00D7BA38 /* NotifyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C192407F60A00D7BA38 /* NotifyAction.swift */; };
+		6DE55C1C2407FD1F00D7BA38 /* IdCloudBoolenTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C1B2407FD1F00D7BA38 /* IdCloudBoolenTVC.swift */; };
+		6DE55C1E240807EA00D7BA38 /* IdCloudOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C1D240807EA00D7BA38 /* IdCloudOption.swift */; };
+		6DE55C212408088000D7BA38 /* IdCloudCellProtocol.h.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C202408088000D7BA38 /* IdCloudCellProtocol.h.swift */; };
+		6DE55C242408152800D7BA38 /* IdCloudButtonTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55C222408152800D7BA38 /* IdCloudButtonTVC.xib */; };
+		6DE55C252408152800D7BA38 /* IdCloudButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C232408152800D7BA38 /* IdCloudButtonTVC.swift */; };
+		6DE55C282408174900D7BA38 /* IdCloudNumberTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C262408174900D7BA38 /* IdCloudNumberTVC.swift */; };
+		6DE55C292408174900D7BA38 /* IdCloudNumberTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55C272408174900D7BA38 /* IdCloudNumberTVC.xib */; };
+		6DE55C2C24081CCF00D7BA38 /* IdCloudVersionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C2A24081CCF00D7BA38 /* IdCloudVersionTVC.swift */; };
+		6DE55C2D24081CCF00D7BA38 /* IdCloudVersionTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55C2B24081CCF00D7BA38 /* IdCloudVersionTVC.xib */; };
+		6DE55C3024081DE700D7BA38 /* IdCloudTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55C2E24081DE600D7BA38 /* IdCloudTextTVC.xib */; };
+		6DE55C3124081DE700D7BA38 /* IdCloudTextTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C2F24081DE700D7BA38 /* IdCloudTextTVC.swift */; };
+		6DE55C3424081F9400D7BA38 /* IdCloudSegmentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55C3224081F9400D7BA38 /* IdCloudSegmentTVC.swift */; };
+		6DE55C3524081F9400D7BA38 /* IdCloudSegmentTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55C3324081F9400D7BA38 /* IdCloudSegmentTVC.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D98E30E2403CC2E00243663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6DB1FA6722E73C720031B4F3;
+			remoteInfo = IdCloudDesignable;
+		};
+		6D98E3192403CD6F00243663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DB1FA6622E73C720031B4F3;
+			remoteInfo = IdCloudDesignable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D98E3132403CC5D00243663 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DE55BE424052C4700D7BA38 /* AcuantHGLiveness.framework in Embed Frameworks */,
+				6D98E3122403CC5D00243663 /* IdCloudDesignable.framework in Embed Frameworks */,
+				6DE55BDC24052C2E00D7BA38 /* AcuantCamera.framework in Embed Frameworks */,
+				6DE55BF024052C6A00D7BA38 /* SocketIO.framework in Embed Frameworks */,
+				6DE55BF424052C7000D7BA38 /* SwiftyJSON.framework in Embed Frameworks */,
+				6DE55BE624052C4A00D7BA38 /* AcuantImagePreparation.framework in Embed Frameworks */,
+				6DE55BE824052C5000D7BA38 /* AcuantIPLiveness.framework in Embed Frameworks */,
+				6DE55BEC24052C6100D7BA38 /* iProov.framework in Embed Frameworks */,
+				6DE55BE024052C4300D7BA38 /* AcuantDocumentProcessing.framework in Embed Frameworks */,
+				6DE55BE224052C4600D7BA38 /* AcuantFaceMatch.framework in Embed Frameworks */,
+				6DE55BEE24052C6300D7BA38 /* JWTDecode.framework in Embed Frameworks */,
+				6DE55BDE24052C3300D7BA38 /* AcuantCommon.framework in Embed Frameworks */,
+				6DE55BEA24052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Embed Frameworks */,
+				6DE55BF224052C6E00D7BA38 /* Starscream.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6D98E282240025AC00243663 /* IdCloud KYC Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IdCloud KYC Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D98E285240025AC00243663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D98E289240025AC00243663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D98E28E240025AE00243663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D98E291240025AE00243663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D98E293240025AE00243663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D98E29F2403CA2E00243663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib; sourceTree = "<group>"; };
+		6D98E2A52403CA2E00243663 /* IdCloudBoolenTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudBoolenTVC.xib; sourceTree = "<group>"; };
+		6D98E3092403CBB000243663 /* IdCloudBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudBridging.h; sourceTree = "<group>"; };
+		6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = IdCloudDesignable.xcodeproj; sourceTree = "<group>"; };
+		6D98E31E2403D0EF00243663 /* IdCloudHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudHelper.swift; sourceTree = "<group>"; };
+		6D98E3202403DB9C00243663 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6D98E3422403E6F600243663 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		6D98E3452403E73200243663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KYC.storyboard; sourceTree = "<group>"; };
+		6D98E3492403E9CA00243663 /* KYCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCSettingsViewController.swift; sourceTree = "<group>"; };
+		6D98E34E2403F3F000243663 /* KYCNameValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCNameValue.swift; sourceTree = "<group>"; };
+		6D98E34F2403F3F000243663 /* KYCVerificationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCVerificationResult.swift; sourceTree = "<group>"; };
+		6D98E3502403F3F000243663 /* KYCDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCDocument.swift; sourceTree = "<group>"; };
+		6D98E3512403F3F000243663 /* KYCFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCFace.swift; sourceTree = "<group>"; };
+		6D98E3522403F3F100243663 /* KYCFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCFields.swift; sourceTree = "<group>"; };
+		6D98E3532403F3F100243663 /* KYCTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCTemplate.swift; sourceTree = "<group>"; };
+		6D98E3542403F3F100243663 /* KYCAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCAlert.swift; sourceTree = "<group>"; };
+		6D98E35C2404013E00243663 /* KYCResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCResponse.swift; sourceTree = "<group>"; };
+		6D98E35E2404059800243663 /* KYCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCSession.swift; sourceTree = "<group>"; };
+		6DE55BA724042B9900D7BA38 /* KYCIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCIntroViewController.swift; sourceTree = "<group>"; };
+		6DE55BA924042D0700D7BA38 /* KYCFirstStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCFirstStepViewController.swift; sourceTree = "<group>"; };
+		6DE55BAB2405232E00D7BA38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6DE55BAD2405244C00D7BA38 /* KYCSecondStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCSecondStepViewController.swift; sourceTree = "<group>"; };
+		6DE55BAF2405253100D7BA38 /* KYCTermsOfUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCTermsOfUseViewController.swift; sourceTree = "<group>"; };
+		6DE55BB1240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCPrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		6DE55BBC240526ED00D7BA38 /* KYCDocumentScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCDocumentScannerViewController.swift; sourceTree = "<group>"; };
+		6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Frameworks/JWTDecode.framework; sourceTree = "<group>"; };
+		6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantFaceMatch.framework; sourceTree = "<group>"; };
+		6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCamera.framework; sourceTree = "<group>"; };
+		6DE55BC324052C1B00D7BA38 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
+		6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantIPLiveness.framework; sourceTree = "<group>"; };
+		6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantDocumentProcessing.framework; sourceTree = "<group>"; };
+		6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantHGLiveness.framework; sourceTree = "<group>"; };
+		6DE55BC724052C1B00D7BA38 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketIO.framework; sourceTree = "<group>"; };
+		6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantImagePreparation.framework; sourceTree = "<group>"; };
+		6DE55BC924052C1B00D7BA38 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
+		6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantPassiveLiveness.framework; sourceTree = "<group>"; };
+		6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCommon.framework; sourceTree = "<group>"; };
+		6DE55BCC24052C1B00D7BA38 /* iProov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iProov.framework; sourceTree = "<group>"; };
+		6DE55BF624052E4900D7BA38 /* KYCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCManager.swift; sourceTree = "<group>"; };
+		6DE55BF824052E6100D7BA38 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		6DE55BFA240541F200D7BA38 /* IdCloudLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudLoadingIndicator.swift; sourceTree = "<group>"; };
+		6DE55BFC24054F2800D7BA38 /* KYCIdCardPassportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCIdCardPassportViewController.swift; sourceTree = "<group>"; };
+		6DE55BFF240556D700D7BA38 /* KYCFaceIdTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCFaceIdTutorialViewController.swift; sourceTree = "<group>"; };
+		6DE55C012405576400D7BA38 /* FaceLivenessCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceLivenessCameraController.swift; sourceTree = "<group>"; };
+		6DE55C09240564D400D7BA38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/KYCFace.storyboard; sourceTree = "<group>"; };
+		6DE55C0B24056A7A00D7BA38 /* KYCOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCOverviewViewController.swift; sourceTree = "<group>"; };
+		6DE55C0E24057BCC00D7BA38 /* KYCCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCCommunication.swift; sourceTree = "<group>"; };
+		6DE55C152407DB6000D7BA38 /* IdCloudNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudNotification.swift; sourceTree = "<group>"; };
+		6DE55C192407F60A00D7BA38 /* NotifyAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyAction.swift; sourceTree = "<group>"; };
+		6DE55C1B2407FD1F00D7BA38 /* IdCloudBoolenTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudBoolenTVC.swift; sourceTree = "<group>"; };
+		6DE55C1D240807EA00D7BA38 /* IdCloudOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudOption.swift; sourceTree = "<group>"; };
+		6DE55C202408088000D7BA38 /* IdCloudCellProtocol.h.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudCellProtocol.h.swift; sourceTree = "<group>"; };
+		6DE55C222408152800D7BA38 /* IdCloudButtonTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudButtonTVC.xib; sourceTree = "<group>"; };
+		6DE55C232408152800D7BA38 /* IdCloudButtonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudButtonTVC.swift; sourceTree = "<group>"; };
+		6DE55C262408174900D7BA38 /* IdCloudNumberTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudNumberTVC.swift; sourceTree = "<group>"; };
+		6DE55C272408174900D7BA38 /* IdCloudNumberTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudNumberTVC.xib; sourceTree = "<group>"; };
+		6DE55C2A24081CCF00D7BA38 /* IdCloudVersionTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudVersionTVC.swift; sourceTree = "<group>"; };
+		6DE55C2B24081CCF00D7BA38 /* IdCloudVersionTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudVersionTVC.xib; sourceTree = "<group>"; };
+		6DE55C2E24081DE600D7BA38 /* IdCloudTextTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudTextTVC.xib; sourceTree = "<group>"; };
+		6DE55C2F24081DE700D7BA38 /* IdCloudTextTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudTextTVC.swift; sourceTree = "<group>"; };
+		6DE55C3224081F9400D7BA38 /* IdCloudSegmentTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudSegmentTVC.swift; sourceTree = "<group>"; };
+		6DE55C3324081F9400D7BA38 /* IdCloudSegmentTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudSegmentTVC.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D98E27F240025AC00243663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DE55BEB24052C6100D7BA38 /* iProov.framework in Frameworks */,
+				6DE55BD124052C1B00D7BA38 /* KeychainAccess.framework in Frameworks */,
+				6DE55BDD24052C3300D7BA38 /* AcuantCommon.framework in Frameworks */,
+				6DE55BEF24052C6A00D7BA38 /* SocketIO.framework in Frameworks */,
+				6DE55BE524052C4A00D7BA38 /* AcuantImagePreparation.framework in Frameworks */,
+				6DE55BE724052C5000D7BA38 /* AcuantIPLiveness.framework in Frameworks */,
+				6DE55BDF24052C4300D7BA38 /* AcuantDocumentProcessing.framework in Frameworks */,
+				6DE55BE924052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Frameworks */,
+				6D98E3112403CC5D00243663 /* IdCloudDesignable.framework in Frameworks */,
+				6DE55BDB24052C2E00D7BA38 /* AcuantCamera.framework in Frameworks */,
+				6DE55BE324052C4700D7BA38 /* AcuantHGLiveness.framework in Frameworks */,
+				6DE55BED24052C6300D7BA38 /* JWTDecode.framework in Frameworks */,
+				6DE55BE124052C4600D7BA38 /* AcuantFaceMatch.framework in Frameworks */,
+				6DE55BF124052C6E00D7BA38 /* Starscream.framework in Frameworks */,
+				6DE55BF324052C7000D7BA38 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D98E279240025AC00243663 = {
+			isa = PBXGroup;
+			children = (
+				6D98E284240025AC00243663 /* IdCloud KYC Connect */,
+				6D98E283240025AC00243663 /* Products */,
+				6D98E3102403CC5D00243663 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D98E283240025AC00243663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E282240025AC00243663 /* IdCloud KYC Connect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D98E284240025AC00243663 /* IdCloud KYC Connect */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E29A2403CA1F00243663 /* GUI */,
+				6D98E34B2403F37500243663 /* Helpers */,
+				6D98E285240025AC00243663 /* AppDelegate.swift */,
+				6D98E289240025AC00243663 /* ViewController.swift */,
+				6D98E28E240025AE00243663 /* Assets.xcassets */,
+				6D98E290240025AE00243663 /* LaunchScreen.storyboard */,
+				6D98E3442403E73200243663 /* KYC.storyboard */,
+				6DE55C08240564D400D7BA38 /* KYCFace.storyboard */,
+				6DE55BAB2405232E00D7BA38 /* Localizable.strings */,
+				6D98E293240025AE00243663 /* Info.plist */,
+				6D98E3092403CBB000243663 /* IdCloudBridging.h */,
+			);
+			path = "IdCloud KYC Connect";
+			sourceTree = "<group>";
+		};
+		6D98E29A2403CA1F00243663 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E29B2403CA2E00243663 /* IdCloudStyle */,
+				6D98E3482403E98000243663 /* KYC */,
+				6D98E3202403DB9C00243663 /* BaseViewController.swift */,
+				6D98E3422403E6F600243663 /* SideMenuViewController.swift */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		6D98E29B2403CA2E00243663 /* IdCloudStyle */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E2C42403CA2E00243663 /* IdCloudDesignable */,
+				6D98E29C2403CA2E00243663 /* IdCloudLoadingIndicator */,
+				6D98E2BA2403CA2E00243663 /* IdCloudNotification */,
+				6D98E2A22403CA2E00243663 /* TableCells */,
+				6D98E31E2403D0EF00243663 /* IdCloudHelper.swift */,
+			);
+			path = IdCloudStyle;
+			sourceTree = "<group>";
+		};
+		6D98E29C2403CA2E00243663 /* IdCloudLoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E29E2403CA2E00243663 /* IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib */,
+				6DE55BFA240541F200D7BA38 /* IdCloudLoadingIndicator.swift */,
+			);
+			path = IdCloudLoadingIndicator;
+			sourceTree = "<group>";
+		};
+		6D98E2A22403CA2E00243663 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55C1B2407FD1F00D7BA38 /* IdCloudBoolenTVC.swift */,
+				6D98E2A52403CA2E00243663 /* IdCloudBoolenTVC.xib */,
+				6DE55C232408152800D7BA38 /* IdCloudButtonTVC.swift */,
+				6DE55C222408152800D7BA38 /* IdCloudButtonTVC.xib */,
+				6DE55C262408174900D7BA38 /* IdCloudNumberTVC.swift */,
+				6DE55C272408174900D7BA38 /* IdCloudNumberTVC.xib */,
+				6DE55C202408088000D7BA38 /* IdCloudCellProtocol.h.swift */,
+				6DE55C1D240807EA00D7BA38 /* IdCloudOption.swift */,
+				6DE55C3224081F9400D7BA38 /* IdCloudSegmentTVC.swift */,
+				6DE55C3324081F9400D7BA38 /* IdCloudSegmentTVC.xib */,
+				6DE55C2F24081DE700D7BA38 /* IdCloudTextTVC.swift */,
+				6DE55C2E24081DE600D7BA38 /* IdCloudTextTVC.xib */,
+				6DE55C2A24081CCF00D7BA38 /* IdCloudVersionTVC.swift */,
+				6DE55C2B24081CCF00D7BA38 /* IdCloudVersionTVC.xib */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		6D98E2BA2403CA2E00243663 /* IdCloudNotification */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55C152407DB6000D7BA38 /* IdCloudNotification.swift */,
+				6DE55C192407F60A00D7BA38 /* NotifyAction.swift */,
+			);
+			path = IdCloudNotification;
+			sourceTree = "<group>";
+		};
+		6D98E2C42403CA2E00243663 /* IdCloudDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */,
+			);
+			path = IdCloudDesignable;
+			sourceTree = "<group>";
+		};
+		6D98E30B2403CC2E00243663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E30F2403CC2E00243663 /* IdCloudDesignable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D98E3102403CC5D00243663 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55BBF24052C1A00D7BA38 /* Acuant */,
+				6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D98E3482403E98000243663 /* KYC */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55BFE2405568D00D7BA38 /* FaceId */,
+				6DE55BB3240526A000D7BA38 /* Documents */,
+				6DE55BA924042D0700D7BA38 /* KYCFirstStepViewController.swift */,
+				6DE55BA724042B9900D7BA38 /* KYCIntroViewController.swift */,
+				6DE55C0B24056A7A00D7BA38 /* KYCOverviewViewController.swift */,
+				6DE55BB1240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift */,
+				6DE55BAD2405244C00D7BA38 /* KYCSecondStepViewController.swift */,
+				6D98E3492403E9CA00243663 /* KYCSettingsViewController.swift */,
+				6DE55BAF2405253100D7BA38 /* KYCTermsOfUseViewController.swift */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+		6D98E34B2403F37500243663 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E34C2403F37F00243663 /* Communication */,
+				6DE55BF824052E6100D7BA38 /* Configuration.swift */,
+				6DE55BF624052E4900D7BA38 /* KYCManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6D98E34C2403F37F00243663 /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E34D2403F38800243663 /* Structures */,
+				6DE55C0E24057BCC00D7BA38 /* KYCCommunication.swift */,
+				6D98E35C2404013E00243663 /* KYCResponse.swift */,
+				6D98E35E2404059800243663 /* KYCSession.swift */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		6D98E34D2403F38800243663 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				6D98E3542403F3F100243663 /* KYCAlert.swift */,
+				6D98E3502403F3F000243663 /* KYCDocument.swift */,
+				6D98E3512403F3F000243663 /* KYCFace.swift */,
+				6D98E3522403F3F100243663 /* KYCFields.swift */,
+				6D98E34E2403F3F000243663 /* KYCNameValue.swift */,
+				6D98E3532403F3F100243663 /* KYCTemplate.swift */,
+				6D98E34F2403F3F000243663 /* KYCVerificationResult.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		6DE55BB3240526A000D7BA38 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55BBC240526ED00D7BA38 /* KYCDocumentScannerViewController.swift */,
+				6DE55BFC24054F2800D7BA38 /* KYCIdCardPassportViewController.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		6DE55BBF24052C1A00D7BA38 /* Acuant */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */,
+				6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */,
+				6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */,
+				6DE55BC324052C1B00D7BA38 /* KeychainAccess.framework */,
+				6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */,
+				6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */,
+				6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */,
+				6DE55BC724052C1B00D7BA38 /* SocketIO.framework */,
+				6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */,
+				6DE55BC924052C1B00D7BA38 /* Starscream.framework */,
+				6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */,
+				6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */,
+				6DE55BCC24052C1B00D7BA38 /* iProov.framework */,
+			);
+			name = Acuant;
+			path = Frameworks/Acuant;
+			sourceTree = "<group>";
+		};
+		6DE55BFE2405568D00D7BA38 /* FaceId */ = {
+			isa = PBXGroup;
+			children = (
+				6DE55C012405576400D7BA38 /* FaceLivenessCameraController.swift */,
+				6DE55BFF240556D700D7BA38 /* KYCFaceIdTutorialViewController.swift */,
+			);
+			path = FaceId;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D98E281240025AC00243663 /* IdCloud KYC Connect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D98E296240025AE00243663 /* Build configuration list for PBXNativeTarget "IdCloud KYC Connect" */;
+			buildPhases = (
+				6D98E27E240025AC00243663 /* Sources */,
+				6D98E27F240025AC00243663 /* Frameworks */,
+				6D98E280240025AC00243663 /* Resources */,
+				6D98E3132403CC5D00243663 /* Embed Frameworks */,
+				6DE55BF524052C9700D7BA38 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D98E31A2403CD6F00243663 /* PBXTargetDependency */,
+			);
+			name = "IdCloud KYC Connect";
+			productName = "IdCloud KYC Connect";
+			productReference = 6D98E282240025AC00243663 /* IdCloud KYC Connect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D98E27A240025AC00243663 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Thalesgroup;
+				TargetAttributes = {
+					6D98E281240025AC00243663 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 6D98E27D240025AC00243663 /* Build configuration list for PBXProject "IdCloud KYC Connect" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D98E279240025AC00243663;
+			productRefGroup = 6D98E283240025AC00243663 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6D98E30B2403CC2E00243663 /* Products */;
+					ProjectRef = 6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6D98E281240025AC00243663 /* IdCloud KYC Connect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6D98E30F2403CC2E00243663 /* IdCloudDesignable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = IdCloudDesignable.framework;
+			remoteRef = 6D98E30E2403CC2E00243663 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D98E280240025AC00243663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DE55BAC2405232E00D7BA38 /* Localizable.strings in Resources */,
+				6DE55C2D24081CCF00D7BA38 /* IdCloudVersionTVC.xib in Resources */,
+				6DE55C3524081F9400D7BA38 /* IdCloudSegmentTVC.xib in Resources */,
+				6D98E292240025AE00243663 /* LaunchScreen.storyboard in Resources */,
+				6DE55C242408152800D7BA38 /* IdCloudButtonTVC.xib in Resources */,
+				6D98E3462403E73200243663 /* KYC.storyboard in Resources */,
+				6DE55C0A240564D400D7BA38 /* KYCFace.storyboard in Resources */,
+				6DE55C3024081DE700D7BA38 /* IdCloudTextTVC.xib in Resources */,
+				6DE55C292408174900D7BA38 /* IdCloudNumberTVC.xib in Resources */,
+				6D98E28F240025AE00243663 /* Assets.xcassets in Resources */,
+				6D98E2EC2403CA2F00243663 /* IdCloudBoolenTVC.xib in Resources */,
+				6D98E2E72403CA2F00243663 /* IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DE55BF524052C9700D7BA38 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Frameworks/Acuant/KeychainAccess.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D98E27E240025AC00243663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D98E35B2403F3F100243663 /* KYCAlert.swift in Sources */,
+				6DE55BF724052E4900D7BA38 /* KYCManager.swift in Sources */,
+				6DE55BB2240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift in Sources */,
+				6D98E31F2403D0EF00243663 /* IdCloudHelper.swift in Sources */,
+				6D98E28A240025AC00243663 /* ViewController.swift in Sources */,
+				6D98E35F2404059800243663 /* KYCSession.swift in Sources */,
+				6DE55C252408152800D7BA38 /* IdCloudButtonTVC.swift in Sources */,
+				6DE55BFD24054F2800D7BA38 /* KYCIdCardPassportViewController.swift in Sources */,
+				6DE55C162407DB6000D7BA38 /* IdCloudNotification.swift in Sources */,
+				6D98E286240025AC00243663 /* AppDelegate.swift in Sources */,
+				6DE55C1A2407F60A00D7BA38 /* NotifyAction.swift in Sources */,
+				6DE55C2C24081CCF00D7BA38 /* IdCloudVersionTVC.swift in Sources */,
+				6D98E3582403F3F100243663 /* KYCFace.swift in Sources */,
+				6DE55C0F24057BCC00D7BA38 /* KYCCommunication.swift in Sources */,
+				6D98E3552403F3F100243663 /* KYCNameValue.swift in Sources */,
+				6DE55BBD240526ED00D7BA38 /* KYCDocumentScannerViewController.swift in Sources */,
+				6DE55BB02405253100D7BA38 /* KYCTermsOfUseViewController.swift in Sources */,
+				6DE55BFB240541F200D7BA38 /* IdCloudLoadingIndicator.swift in Sources */,
+				6D98E3432403E6F600243663 /* SideMenuViewController.swift in Sources */,
+				6D98E35A2403F3F100243663 /* KYCTemplate.swift in Sources */,
+				6D98E35D2404013E00243663 /* KYCResponse.swift in Sources */,
+				6DE55BAE2405244C00D7BA38 /* KYCSecondStepViewController.swift in Sources */,
+				6DE55C0C24056A7A00D7BA38 /* KYCOverviewViewController.swift in Sources */,
+				6DE55C212408088000D7BA38 /* IdCloudCellProtocol.h.swift in Sources */,
+				6D98E3212403DB9C00243663 /* BaseViewController.swift in Sources */,
+				6DE55C1E240807EA00D7BA38 /* IdCloudOption.swift in Sources */,
+				6DE55BA824042B9900D7BA38 /* KYCIntroViewController.swift in Sources */,
+				6D98E3592403F3F100243663 /* KYCFields.swift in Sources */,
+				6DE55C282408174900D7BA38 /* IdCloudNumberTVC.swift in Sources */,
+				6DE55C3424081F9400D7BA38 /* IdCloudSegmentTVC.swift in Sources */,
+				6DE55BF924052E6100D7BA38 /* Configuration.swift in Sources */,
+				6D98E3572403F3F100243663 /* KYCDocument.swift in Sources */,
+				6DE55C1C2407FD1F00D7BA38 /* IdCloudBoolenTVC.swift in Sources */,
+				6D98E34A2403E9CA00243663 /* KYCSettingsViewController.swift in Sources */,
+				6DE55C022405576400D7BA38 /* FaceLivenessCameraController.swift in Sources */,
+				6DE55BAA24042D0700D7BA38 /* KYCFirstStepViewController.swift in Sources */,
+				6DE55C00240556D700D7BA38 /* KYCFaceIdTutorialViewController.swift in Sources */,
+				6D98E3562403F3F100243663 /* KYCVerificationResult.swift in Sources */,
+				6DE55C3124081DE700D7BA38 /* IdCloudTextTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D98E31A2403CD6F00243663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IdCloudDesignable;
+			targetProxy = 6D98E3192403CD6F00243663 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D98E290240025AE00243663 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D98E291240025AE00243663 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6D98E29E2403CA2E00243663 /* IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D98E29F2403CA2E00243663 /* Base */,
+			);
+			name = IdCloud_KYC_Connect.IdCloudLoadingIndicator.xib;
+			sourceTree = "<group>";
+		};
+		6D98E3442403E73200243663 /* KYC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D98E3452403E73200243663 /* Base */,
+			);
+			name = KYC.storyboard;
+			sourceTree = "<group>";
+		};
+		6DE55C08240564D400D7BA38 /* KYCFace.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE55C09240564D400D7BA38 /* Base */,
+			);
+			name = KYCFace.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D98E294240025AE00243663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D98E295240025AE00243663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D98E297240025AE00243663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/Acuant",
+				);
+				INFOPLIST_FILE = "IdCloud KYC Connect/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thalesgroup.IdCloud-KYC-Connect";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IdCloud KYC Connect/IdCloudBridging.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D98E298240025AE00243663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/Acuant",
+				);
+				INFOPLIST_FILE = "IdCloud KYC Connect/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thalesgroup.IdCloud-KYC-Connect";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IdCloud KYC Connect/IdCloudBridging.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D98E27D240025AC00243663 /* Build configuration list for PBXProject "IdCloud KYC Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D98E294240025AE00243663 /* Debug */,
+				6D98E295240025AE00243663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D98E296240025AE00243663 /* Build configuration list for PBXNativeTarget "IdCloud KYC Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D98E297240025AE00243663 /* Debug */,
+				6D98E298240025AE00243663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D98E27A240025AC00243663 /* Project object */;
+}
