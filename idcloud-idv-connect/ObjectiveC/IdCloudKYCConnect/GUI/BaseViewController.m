@@ -47,6 +47,10 @@
     }
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 // MARK: - Loading Indicator
 
 - (void)loadingIndicatorShowWithCaption:(NSString *)caption {

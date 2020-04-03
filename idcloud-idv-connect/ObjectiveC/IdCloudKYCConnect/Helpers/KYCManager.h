@@ -40,6 +40,8 @@ typedef NSArray<NSArray <IdCloudOption *> *> OptionArray;
 @property (nonatomic, strong, readonly) NSArray <NSString *>    *optionCaptions;
 @property (nonatomic, strong, readonly) OptionArray             *options;
 @property (nonatomic, copy, readonly)   NSString                *jsonWebToken;
+@property (nonatomic, copy, readonly)   NSString                *apiKey;
+@property (nonatomic, assign, readonly) NSInteger               maxImageWidth;
 
 // Scanned elements
 @property (nonatomic, strong) NSData                            *scannedDocFront;
@@ -59,8 +61,12 @@ typedef NSArray<NSArray <IdCloudOption *> *> OptionArray;
 + (void)end;
 
 /**
- Switch to proper View Controller based on SDK state.
+Display QR Code scanner to load JWT and API Key
+*/
+- (void)displayQRcodeScannerForInit;
 
+/**
+ Switch to proper View Controller based on SDK state.
  */
 - (void)updateRootViewController;
 

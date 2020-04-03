@@ -104,16 +104,24 @@
     }];
 }
 
-- (NSData *)getCropedImage:(Image *)image {
+- (Image *)getCropedImage:(Image *)image {
     CroppingData *data = [CroppingData new];
     data.image = image.image;
     
-    UIImage *cropedImage = [AcuantImagePreparation cropWithData:data].image;
-    
-    return UIImageJPEGRepresentation(cropedImage, .8f);
+    return [AcuantImagePreparation cropWithData:data];
 }
 
-
+- (void)tryAgainWithMessage:(NSString *)message {
+    [self displayOnCancelDialog:@"Try Again"
+                        message:message
+                       okButton:@"Try Again"
+                   cancelButton:@"Cancel"
+              completionHandler:^(BOOL result) {
+        if (result) {
+            [self showDocumentCaptureCamera];
+        }
+    }];
+}
 
 // MARK: - CameraCaptureDelegate
 
@@ -122,22 +130,44 @@
     // Hide current scanner.
     _shouldAnimate = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
-
-    // Get manager and encode image.
-    KYCManager  *manager    = [KYCManager sharedInstance];
-    NSData      *imageData  = [self getCropedImage:image];
     
-    // Update current step.
-    if (_documentType == KYCDocumentTypeIdCard && manager.scannedDocFront) {
-        manager.scannedDocBack = imageData;
-        [self nextStepAfterDocumentScanning];
+    // Get manager and crop image.
+    KYCManager  *manager        = [KYCManager sharedInstance];
+    Image       *croppedImage   = [self getCropedImage:image];
+    
+    if (!croppedImage.image || (croppedImage.error && croppedImage.error.errorCode == AcuantErrorCodes.ERROR_LowResolutionImage)) {
+        [self tryAgainWithMessage:croppedImage.error.errorDescription];
     } else {
-        manager.scannedDocFront = imageData;
-        if (_documentType == KYCDocumentTypePassport) {
-            [self nextStepAfterDocumentScanning];
+        // Check image sharpness, glare and minimum DPI.
+        NSInteger sharpness = [AcuantImagePreparation sharpnessWithImage:croppedImage.image];
+        NSInteger glare     = [AcuantImagePreparation glareWithImage:croppedImage.image];
+        if (sharpness < CaptureConstants.SHARPNESS_THRESHOLD || glare < CaptureConstants.GLARE_THRESHOLD ||
+            croppedImage.dpi < CaptureConstants.MANDATORY_RESOLUTION_THRESHOLD_SMALL) {
+            NSString *message = [NSString stringWithFormat:@"Image did not meet basic criteria.\nSharpness: %ld(%ld)\nGlare: %ld(%ld)\nDPI: %ld(%ld)",
+                                 sharpness, CaptureConstants.SHARPNESS_THRESHOLD,
+                                 glare, CaptureConstants.GLARE_THRESHOLD,
+                                 croppedImage.dpi, CaptureConstants.MANDATORY_RESOLUTION_THRESHOLD_SMALL];
+            [self tryAgainWithMessage:message];
         } else {
-            // First page is scanned continue with another one.
-            [self showDocumentCaptureCamera];
+            UIImage *scaledImage = croppedImage.image;
+            if (scaledImage.size.width > KYCManager.sharedInstance.maxImageWidth) {
+                scaledImage = [IdCloudHelper imageWithImage:scaledImage scaledToWidth:KYCManager.sharedInstance.maxImageWidth];
+            }
+            
+            NSData *croppedImageData = UIImageJPEGRepresentation(scaledImage, 1.f);
+            // Update current step.
+            if (_documentType == KYCDocumentTypeIdCard && manager.scannedDocFront) {
+                manager.scannedDocBack = croppedImageData;
+                [self nextStepAfterDocumentScanning];
+            } else {
+                manager.scannedDocFront = croppedImageData;
+                if (_documentType == KYCDocumentTypePassport) {
+                    [self nextStepAfterDocumentScanning];
+                } else {
+                    // First page is scanned continue with another one.
+                    [self showDocumentCaptureCamera];
+                }
+            }
         }
     }
 }

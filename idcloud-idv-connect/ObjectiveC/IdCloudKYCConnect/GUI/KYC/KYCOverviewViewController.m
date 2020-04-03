@@ -46,8 +46,7 @@ Please make sure to review our IdCloud documentation, including security guideli
 // MARK: - Life Cycle
 
 + (instancetype)viewController {
-    KYCOverviewViewController *retValue = CreateVC(@"KYC", self);
-    return retValue;
+    return CreateVC(@"KYC", self);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

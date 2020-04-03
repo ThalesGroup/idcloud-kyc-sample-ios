@@ -23,9 +23,6 @@
 // IdCloud demo endpoint url.
 #define CFG_IDCLOUD_BASE_URL @""
 
-// Default value for IdCloud communication web token. It can be updated from app menu.
-#define CFG_JSON_WEB_TOKEN_DEFAULT @""
-
 // Acuant account username.
 #define CFG_ACUANT_USERNAME @""
 
@@ -34,15 +31,6 @@
 
 // Acuant account subscription id.
 #define CFG_ACUANT_SUBSCRIPTION_ID @""
-
-// Acuant facial recognition endpoint url.
-#define CFG_ACUANT_FRM_ENDPOINT @""
-
-// Acuant Document Authentication & Identity Verification endpoint url.
-#define CFG_ACUANT_ASSURE_ID_ENDPOINT @""
-
-// Acuant mediscan endpoint url.
-#define CFG_ACUANT_MEDISCAN_ENDPOINT @""
 
 // URL to company privacy policy.
 #define CFG_PRIVACY_POLICY_URL [NSURL URLWithString:@""]

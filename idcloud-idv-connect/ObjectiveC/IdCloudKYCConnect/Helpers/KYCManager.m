@@ -28,17 +28,29 @@
 #import "SideMenuViewController.h"
 #import "KYCCommunication.h"
 #import <JWTDecode/JWTDecode-Swift.h>
+#import "IdCloudQrCodeReader.h"
 
 // KYC Generic values
 #define KEY_KYC_ENROLLED            @"KycPreferenceKeyEnrolled"
 
 // GeneralSettings
 #define KEY_FACIAL_RECOGNITION      @"KycPreferenceKeyFacalRecognition"
-#define KEY_JSON_WEB_TOKEN          @"JsonWebToken"
+#define KEY_MAX_PICTURE_WIDTH       @"MaxPictureWidth"
+#define KEY_JSON_WEB_TOKEN          @"JsonWebTokenV2"
+#define KEY_API_KEY                 @"ApiKeyV2"
+
+// Acuant facial recognition endpoint url.
+#define CFG_ACUANT_FRM_ENDPOINT @"https://frm.acuant.eu"
+
+// Acuant Document Authentication & Identity Verification endpoint url.
+#define CFG_ACUANT_ASSURE_ID_ENDPOINT @"https://services.assureid.eu"
+
+// Acuant mediscan endpoint url.
+#define CFG_ACUANT_MEDISCAN_ENDPOINT @"https://medicscan.acuant.eu"
 
 static KYCManager *sInstance = nil;
 
-@interface KYCManager() <InitializationDelegate>
+@interface KYCManager() <InitializationDelegate, IdCloudQrCodeReaderDelegate>
 
 @end
 
@@ -71,8 +83,8 @@ static KYCManager *sInstance = nil;
              KEY_KYC_ENROLLED             : [NSNumber numberWithBool:NO],
              
              // GeneralSettings
+             KEY_MAX_PICTURE_WIDTH        : [NSNumber numberWithInt:1024],
              KEY_FACIAL_RECOGNITION       : [NSNumber numberWithBool:YES],
-             KEY_JSON_WEB_TOKEN           : CFG_JSON_WEB_TOKEN_DEFAULT,
          }];
         
         // Available options in settings menu.
@@ -100,10 +112,10 @@ static KYCManager *sInstance = nil;
                             section:IdCloudOptionSectionVersion
                              target:self selectorGet:@selector(getStoredJWTExpiration)],
                 
-                [IdCloudOption button:TRANSLATE(@"STRING_KYC_OPTION_WEB_TOKEN")
+                [IdCloudOption button:TRANSLATE(@"STRING_KYC_OPTION_QR_CODE")
                               section:IdCloudOptionSectionVersion
                                target:self
-                             selector:@selector(openJsonWebTokenUpdate)],
+                             selector:@selector(displayQRcodeScannerForInit)],
                 
                 [IdCloudOption button:TRANSLATE(@"STRING_KYC_OPTION_PRIVACY_POLICY")
                               section:IdCloudOptionSectionVersion
@@ -157,6 +169,12 @@ static KYCManager *sInstance = nil;
 
 // MARK: - Public API
 
+- (void)displayQRcodeScannerForInit {
+    // Display QR code reader with current view as delegate.
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.rootViewController presentViewController:[IdCloudQrCodeReader readerWithDelegate:self] animated:YES completion:nil];
+}
+
 - (void)updateRootViewController {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.rootViewController switchToViewController:[SideMenuViewController kycVC]];
@@ -167,37 +185,6 @@ static KYCManager *sInstance = nil;
 - (void)openPrivacyPolicy {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.rootViewController.currentVC  presentViewController:[KYCPrivacyPolicyViewController viewController] animated:YES completion:nil];
-}
-
-- (void)openJsonWebTokenUpdate {
-    // Main alert builder.
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:TRANSLATE(@"STRING_JSON_WEB_TOKEN_CAP")
-                                                                   message:TRANSLATE(@"STRING_JSON_WEB_TOKEN_DES")
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = TRANSLATE(@"STRING_JSON_WEB_TOKEN_PLACEHOLDER");
-    }];
-    
-    // Add ok button with handler.
-    [alert addAction:[UIAlertAction actionWithTitle:TRANSLATE(@"STRING_COMMON_OK")
-                                              style:UIAlertActionStyleDestructive
-                                            handler:^(UIAlertAction * _Nonnull action) {
-        if ([self setJsonWebToken:alert.textFields.firstObject.text]) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDataLayerChanged object:nil];
-        } else {
-            notifyDisplay(TRANSLATE(@"STRING_JSON_WEB_TOKEN_INVALID"), NotifyTypeError);
-        }
-    }]];
-    
-    // Add cancel button.
-    [alert addAction:[UIAlertAction actionWithTitle:TRANSLATE(@"STRING_COMMON_CANCEL")
-                                              style:UIAlertActionStyleCancel
-                                            handler:nil]];
-    
-    // Present dialog.
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.rootViewController.currentVC presentViewController:alert animated:true completion:nil];
 }
 
 - (BOOL)setJsonWebToken:(NSString *)jsonWebToken {
@@ -230,11 +217,53 @@ static KYCManager *sInstance = nil;
     return [[NSUserDefaults standardUserDefaults] stringForKey:KEY_JSON_WEB_TOKEN];
 }
 
+- (void)setApiKey:(NSString *)apiKey {
+    [[NSUserDefaults standardUserDefaults] setObject:apiKey forKey:KEY_API_KEY];
+}
+
+- (NSString *)apiKey {
+    return [[NSUserDefaults standardUserDefaults] stringForKey:KEY_API_KEY];
+}
+
+- (void)setMaxImageWidth:(NSInteger)value {
+    [[NSUserDefaults standardUserDefaults] setInteger:value forKey:KEY_MAX_PICTURE_WIDTH];
+}
+
+- (NSInteger)maxImageWidth {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:KEY_MAX_PICTURE_WIDTH];
+}
+
 // MARK:  - InitializationDelegate 
 
 - (void)initializationFinishedWithError:(AcuantError *)error {
     if (error) {
         notifyDisplay(error.errorDescription, NotifyTypeError);
+    }
+}
+
+// MARK: - IdCloudQrCodeReaderDelegate
+
+- (void)onQRCodeProvided:(IdCloudQrCodeReader *)sender qrCode:(NSString *)qrCode {
+    // QR Code format is "kyc:<apikey>:<jwt>"
+    NSArray<NSString *> *elements = [qrCode componentsSeparatedByString:@":"];
+    if (elements.count == 3 && [elements[0] isEqualToString:@"kyc"]) {
+        if (!elements[1].length || !elements[2].length) {
+            notifyDisplay(TRANSLATE(@"STRING_QR_CODE_ERROR_INVALID_DATA"), NotifyTypeError);
+        } else if (![self setJsonWebToken:elements[2]]) {
+            notifyDisplay(TRANSLATE(@"STRING_QR_CODE_ERROR_INVALID_JWT"), NotifyTypeError);
+        } else {
+            // JWT is already set by previous IF case, now we have to store rest.
+            [self setApiKey:elements[1]];
+            // Notify UI to reload visuals.
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDataLayerChanged object:nil];
+            // Hide scanner.
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate.rootViewController dismissViewControllerAnimated:YES completion:nil];
+            // Display status information.
+            notifyDisplay(TRANSLATE(@"STRING_QR_CODE_INFO_DONE"), NotifyTypeInfo);
+        }
+    } else {
+        notifyDisplay(TRANSLATE(@"STRING_QR_CODE_ERROR_FAILED"), NotifyTypeError);
     }
 }
 
