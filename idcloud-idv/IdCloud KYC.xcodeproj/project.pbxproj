@@ -22,6 +22,10 @@
 		6D68F3882328F02A0076E51F /* IDV_Face_NT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D68F3842328EFE10076E51F /* IDV_Face_NT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D68F3892328F0400076E51F /* IDV_Doc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D68F3832328EFE00076E51F /* IDV_Doc.framework */; };
 		6D68F38A2328F0400076E51F /* IDV_Doc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D68F3832328EFE00076E51F /* IDV_Doc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D83D45E242D0F5A004F413D /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D83D44E242D0F47004F413D /* JWTDecode.framework */; };
+		6D83D45F242D0F5A004F413D /* JWTDecode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D83D44E242D0F47004F413D /* JWTDecode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D83D464242D14FE004F413D /* IdCloudQrCodeReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D83D462242D14FE004F413D /* IdCloudQrCodeReader.xib */; };
+		6D83D465242D14FE004F413D /* IdCloudQrCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D83D463242D14FE004F413D /* IdCloudQrCodeReader.m */; };
 		6DAA6C5923D5B5B2003E0BB1 /* IdCloudHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA6C3423D5B5B2003E0BB1 /* IdCloudHelper.m */; };
 		6DAA6C5A23D5B5B2003E0BB1 /* NotifyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA6C3823D5B5B2003E0BB1 /* NotifyAction.m */; };
 		6DAA6C5B23D5B5B2003E0BB1 /* IdCloudNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA6C3A23D5B5B2003E0BB1 /* IdCloudNotification.m */; };
@@ -65,8 +69,6 @@
 		6DB1FAB422E73E9F0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DB1FAC622E745FB0031B4F3 /* KYCSecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FAC522E745FB0031B4F3 /* KYCSecondStepViewController.m */; };
 		6DB1FACE22E746FA0031B4F3 /* KYCIdCardPassportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1FACD22E746FA0031B4F3 /* KYCIdCardPassportViewController.m */; };
-		6DBD343323E9860300232EAA /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBD343123E9852200232EAA /* JWTDecode.framework */; };
-		6DBD343423E9860300232EAA /* JWTDecode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBD343123E9852200232EAA /* JWTDecode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DBD343C23E9A73800232EAA /* IdCloudTextTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD343A23E9A73800232EAA /* IdCloudTextTVC.m */; };
 		6DBD343D23E9A73800232EAA /* IdCloudTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBD343B23E9A73800232EAA /* IdCloudTextTVC.xib */; };
 		6DD5EB5A2386D4E8001912C4 /* KYCDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5EB592386D4E8001912C4 /* KYCDocument.m */; };
@@ -86,6 +88,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D83D44D242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0068E21B3B46240048928E;
+			remoteInfo = "JWTDecode-iOS";
+		};
+		6D83D44F242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0068ED1B3B46240048928E;
+			remoteInfo = "JWTDecode-iOSTests";
+		};
+		6D83D451242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0069091B3B532E0048928E;
+			remoteInfo = "JWTDecode-OSX";
+		};
+		6D83D453242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0069131B3B532E0048928E;
+			remoteInfo = "JWTDecode-OSXTests";
+		};
+		6D83D455242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 918A8E5B1D63D2E1001F787B;
+			remoteInfo = "JWTDecode-tvOS";
+		};
+		6D83D457242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 918A8E6C1D63D4E5001F787B;
+			remoteInfo = "JWTDecode-tvOSTests";
+		};
+		6D83D459242D0F47004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E390BAE22288E6AF00780D6C;
+			remoteInfo = "JWTDecode-watchOS";
+		};
+		6D83D45B242D0F4F004F413D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F0068E11B3B46240048928E;
+			remoteInfo = "JWTDecode-iOS";
+		};
 		6DB1FAAF22E73E6E0031B4F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
@@ -109,7 +167,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6DBD343423E9860300232EAA /* JWTDecode.framework in Embed Frameworks */,
+				6D83D45F242D0F5A004F413D /* JWTDecode.framework in Embed Frameworks */,
 				6D68F38A2328F0400076E51F /* IDV_Doc.framework in Embed Frameworks */,
 				6DB1FAB422E73E9F0031B4F3 /* IdCloudDesignable.framework in Embed Frameworks */,
 				6D68F3882328F02A0076E51F /* IDV_Face_NT.framework in Embed Frameworks */,
@@ -154,6 +212,10 @@
 		6D40D99B210B517A003E6F48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		6D68F3832328EFE00076E51F /* IDV_Doc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDV_Doc.framework; path = Frameworks/Debug/IDV_Doc.framework; sourceTree = "<group>"; };
 		6D68F3842328EFE10076E51F /* IDV_Face_NT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDV_Face_NT.framework; path = Frameworks/Debug/IDV_Face_NT.framework; sourceTree = "<group>"; };
+		6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWTDecode.xcodeproj; path = Frameworks/JWTDecode/JWTDecode.xcodeproj; sourceTree = "<group>"; };
+		6D83D461242D14FE004F413D /* IdCloudQrCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdCloudQrCodeReader.h; sourceTree = "<group>"; };
+		6D83D462242D14FE004F413D /* IdCloudQrCodeReader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudQrCodeReader.xib; sourceTree = "<group>"; };
+		6D83D463242D14FE004F413D /* IdCloudQrCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdCloudQrCodeReader.m; sourceTree = "<group>"; };
 		6DAA6C3323D5B5B2003E0BB1 /* IdCloudHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdCloudHelper.h; sourceTree = "<group>"; };
 		6DAA6C3423D5B5B2003E0BB1 /* IdCloudHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdCloudHelper.m; sourceTree = "<group>"; };
 		6DAA6C3523D5B5B2003E0BB1 /* IdCloudStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdCloudStyle.h; sourceTree = "<group>"; };
@@ -199,7 +261,6 @@
 		6DB1FAC522E745FB0031B4F3 /* KYCSecondStepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCSecondStepViewController.m; sourceTree = "<group>"; };
 		6DB1FACC22E746FA0031B4F3 /* KYCIdCardPassportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYCIdCardPassportViewController.h; sourceTree = "<group>"; };
 		6DB1FACD22E746FA0031B4F3 /* KYCIdCardPassportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYCIdCardPassportViewController.m; sourceTree = "<group>"; };
-		6DBD343123E9852200232EAA /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Frameworks/debug/JWTDecode.framework; sourceTree = "<group>"; };
 		6DBD343923E9A73800232EAA /* IdCloudTextTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdCloudTextTVC.h; sourceTree = "<group>"; };
 		6DBD343A23E9A73800232EAA /* IdCloudTextTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdCloudTextTVC.m; sourceTree = "<group>"; };
 		6DBD343B23E9A73800232EAA /* IdCloudTextTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdCloudTextTVC.xib; sourceTree = "<group>"; };
@@ -256,7 +317,7 @@
 				6DB1FA2C22E6F9780031B4F3 /* LocalAuthentication.framework in Frameworks */,
 				6DB1FA2E22E6F9780031B4F3 /* UIKit.framework in Frameworks */,
 				6DB1FAB322E73E9F0031B4F3 /* IdCloudDesignable.framework in Frameworks */,
-				6DBD343323E9860300232EAA /* JWTDecode.framework in Frameworks */,
+				6D83D45E242D0F5A004F413D /* JWTDecode.framework in Frameworks */,
 				6DB1FA2F22E6F9780031B4F3 /* SystemConfiguration.framework in Frameworks */,
 				6DB1FA3022E6F9780031B4F3 /* Foundation.framework in Frameworks */,
 			);
@@ -299,6 +360,30 @@
 				6D2C857522F454D100204377 /* KYCScannerNotification.m */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		6D83D444242D0F47004F413D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D83D44E242D0F47004F413D /* JWTDecode.framework */,
+				6D83D450242D0F47004F413D /* JWTDecode-iOSTests.xctest */,
+				6D83D452242D0F47004F413D /* JWTDecode.framework */,
+				6D83D454242D0F47004F413D /* JWTDecode-OSXTests.xctest */,
+				6D83D456242D0F47004F413D /* JWTDecode.framework */,
+				6D83D458242D0F47004F413D /* JWTDecode-tvOSTests.xctest */,
+				6D83D45A242D0F47004F413D /* JWTDecode.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D83D460242D14FE004F413D /* IdCloudQRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				6D83D461242D14FE004F413D /* IdCloudQrCodeReader.h */,
+				6D83D462242D14FE004F413D /* IdCloudQrCodeReader.xib */,
+				6D83D463242D14FE004F413D /* IdCloudQrCodeReader.m */,
+			);
+			path = IdCloudQRCodeReader;
 			sourceTree = "<group>";
 		};
 		6DAA6C3623D5B5B2003E0BB1 /* IdCloudNotification */ = {
@@ -425,6 +510,7 @@
 				6DAA6C4E23D5B5B2003E0BB1 /* IdCloudIncomingMessage */,
 				6DAA6C5323D5B5B2003E0BB1 /* IdCloudLoadingIndicator */,
 				6DAA6C3623D5B5B2003E0BB1 /* IdCloudNotification */,
+				6D83D460242D14FE004F413D /* IdCloudQRCodeReader */,
 				6DAA6C3B23D5B5B2003E0BB1 /* TableCells */,
 				6DAA6C3323D5B5B2003E0BB1 /* IdCloudHelper.h */,
 				6DAA6C3423D5B5B2003E0BB1 /* IdCloudHelper.m */,
@@ -483,7 +569,7 @@
 		6DE0DA7320EB640B005A045F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6DBD343123E9852200232EAA /* JWTDecode.framework */,
+				6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */,
 				6D68F3832328EFE00076E51F /* IDV_Doc.framework */,
 				6D68F3842328EFE10076E51F /* IDV_Face_NT.framework */,
 				6DDBADD422F099A8009079C6 /* AudioToolbox.framework */,
@@ -556,6 +642,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6D83D45C242D0F4F004F413D /* PBXTargetDependency */,
 				6DB1FAB622E73E9F0031B4F3 /* PBXTargetDependency */,
 			);
 			name = "IdCloud KYC";
@@ -597,6 +684,10 @@
 					ProductGroup = 6DB1FAAC22E73E6E0031B4F3 /* Products */;
 					ProjectRef = 6DB1FAAB22E73E6E0031B4F3 /* IdCloudDesignable.xcodeproj */;
 				},
+				{
+					ProductGroup = 6D83D444242D0F47004F413D /* Products */;
+					ProjectRef = 6D83D443242D0F47004F413D /* JWTDecode.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -606,6 +697,55 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		6D83D44E242D0F47004F413D /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6D83D44D242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D83D450242D0F47004F413D /* JWTDecode-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JWTDecode-iOSTests.xctest";
+			remoteRef = 6D83D44F242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D83D452242D0F47004F413D /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6D83D451242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D83D454242D0F47004F413D /* JWTDecode-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JWTDecode-OSXTests.xctest";
+			remoteRef = 6D83D453242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D83D456242D0F47004F413D /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6D83D455242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D83D458242D0F47004F413D /* JWTDecode-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JWTDecode-tvOSTests.xctest";
+			remoteRef = 6D83D457242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D83D45A242D0F47004F413D /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6D83D459242D0F47004F413D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6DB1FAB022E73E6E0031B4F3 /* IdCloudDesignable.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -625,6 +765,7 @@
 				6DB1FA3522E6F9780031B4F3 /* Localizable.strings in Resources */,
 				6DAA6C6A23D5B5B2003E0BB1 /* IdCloudLoadingIndicator.xib in Resources */,
 				F47B273D2304200A00AC11AE /* KYCFace.storyboard in Resources */,
+				6D83D464242D14FE004F413D /* IdCloudQrCodeReader.xib in Resources */,
 				6DAA6C6623D5B5B2003E0BB1 /* IdCloudVersionTVC.xib in Resources */,
 				6DB1FA3A22E6F9780031B4F3 /* LaunchScreen.storyboard in Resources */,
 				6DB1FA3B22E6F9780031B4F3 /* Assets.xcassets in Resources */,
@@ -677,6 +818,7 @@
 				6D00E9DE22E89FFE0064B1F8 /* KYCScannerViewController.m in Sources */,
 				F4EFD5F3230589D300DB122C /* KYCFaceIdScannerViewController.m in Sources */,
 				6D2C857622F454D100204377 /* KYCScannerNotification.m in Sources */,
+				6D83D465242D14FE004F413D /* IdCloudQrCodeReader.m in Sources */,
 				6DAA6C5A23D5B5B2003E0BB1 /* NotifyAction.m in Sources */,
 				6DB1FA5C22E738990031B4F3 /* KYCFirstStepViewController.m in Sources */,
 				6DB1FA0522E6F9780031B4F3 /* AppDelegate.m in Sources */,
@@ -710,6 +852,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D83D45C242D0F4F004F413D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JWTDecode-iOS";
+			targetProxy = 6D83D45B242D0F4F004F413D /* PBXContainerItemProxy */;
+		};
 		6DB1FAB622E73E9F0031B4F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IdCloudDesignable;
@@ -769,7 +916,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8F83X2SF75;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -807,7 +954,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8F83X2SF75;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

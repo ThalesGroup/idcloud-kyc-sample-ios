@@ -27,7 +27,6 @@
 // Number of attempts before throwing timeout error.
 #define CFG_IDCLOUD_NUMBER_OF_RETRIES 30
 
-
 // Number of seconds between each verification attempt.
 #define CFG_IDCLOUD_RETRY_DELAY_SEC 2
 
@@ -36,9 +35,6 @@
 
 // IDV Face capture server URL.
 #define CFG_SERVER_URL @""
-
-// Default value for IdCloud communication web token. It can be updated from app menu.
-#define CFG_JSON_WEB_TOKEN_DEFAULT @""
 
 // URL to company privacy policy.
 #define CFG_PRIVACY_POLICY_URL [NSURL URLWithString:@""]

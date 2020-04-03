@@ -59,6 +59,8 @@ typedef NSArray<NSArray <IdCloudOption *> *> OptionArray;
 @property (nonatomic, strong, readonly) NSArray <NSString *>        *optionCaptions;
 @property (nonatomic, strong, readonly) OptionArray                 *options;
 @property (nonatomic, copy, readonly)   NSString                    *jsonWebToken;
+@property (nonatomic, copy, readonly)   NSString                    *apiKey;
+
 // Scanned elements
 @property (nonatomic, strong)           NSData *scannedDocFront;
 @property (nonatomic, strong)           NSData *scannedDocBack;
@@ -75,6 +77,8 @@ typedef NSArray<NSArray <IdCloudOption *> *> OptionArray;
  Release singletone together with all helper class inside.
  */
 + (void)end;
+
+- (void)displayQRcodeScannerForInit;
 
 - (NSArray<KYCScannerStep *> *)scanningStepsWithType:(KYCDocumentType)type;
 

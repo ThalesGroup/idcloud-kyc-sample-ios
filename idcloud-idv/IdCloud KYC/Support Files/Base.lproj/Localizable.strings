@@ -30,12 +30,16 @@
 "STRING_COMMON_CANCEL"                          = "Cancel";
 
 // MARK: - KYC
+"STRING_KYC_INTRO_BUTTON_SCANN"                 = "QR Code Scanner";
+"STRING_KYC_INTRO_BUTTON_NEXT"                  = "OnBoard";
+
 "STRING_KYC_FIRST_STEP_ID"                      = "Capture your ID card or Passport";
 "STRING_KYC_FIRST_STEP_FACE"                    = "Take a selfie for facial check";
 "STRING_KYC_FIRST_STEP_REVIEW"                  = "Review and submit your information";
 
 "STRING_KYC_OPTION_SECTION_GENERAL"             = "General settings";
-"STRING_KYC_OPTION_WEB_TOKEN"                   = "Update JSON Web Token";
+"STRING_KYC_OPTION_WEB_TOKEN"                   = "JSON Web Token validity";
+"STRING_KYC_OPTION_QR_CODE"                     = "Scan QR Code";
 "STRING_KYC_OPTION_FACE_REC_CAP"                = "Facial recognition";
 "STRING_KYC_OPTION_FACE_REC_DES"                = "Take a selfie after ID verification step.\nThe facial recognition is done by a server.";
 
@@ -134,3 +138,9 @@
 "STRING_JSON_WEB_TOKEN_INVALID"                 = "Invalid JWT. Value was not stored.";
 "STRING_JSON_WEB_TOKEN_EXPIRATION"              = "JWT Expiration";
 "STRING_JSON_WEB_TOKEN_NO_EXPIRATION"           = "Failed to get expiration date.";
+
+// MARK: - QR Code Parser
+"STRING_QR_CODE_ERROR_FAILED"                   = "Failed to parse QR Code";
+"STRING_QR_CODE_ERROR_INVALID_DATA"             = "Invalid QR Code data";
+"STRING_QR_CODE_ERROR_INVALID_JWT"              = "Invalid JWT";
+"STRING_QR_CODE_INFO_DONE"                      = "Values updated";

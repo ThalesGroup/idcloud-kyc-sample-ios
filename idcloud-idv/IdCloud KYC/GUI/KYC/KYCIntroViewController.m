@@ -23,17 +23,58 @@
 #import "KYCIntroViewController.h"
 #import "SideMenuViewController.h"
 
+#define kSequeNextPage      @"sequeOpenNextPage"
+
 @interface KYCIntroViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel        *labelInit;
+@property (weak, nonatomic) IBOutlet IdCloudButton  *buttonNext;
 
 @end
 
 @implementation KYCIntroViewController
+
+// MARK: - Life Cycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // Notifications about data layer change to reload table.
+    // Unregistration is done in base class.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadData)
+                                                 name:kNotificationDataLayerChanged
+                                               object:nil];
+    
+    [self reloadData];
+}
+
+// MARK: - Private Helpers
+
+- (void)reloadData {
+    // Web token is set.
+    if ([KYCManager sharedInstance].jsonWebToken) {
+        _labelInit.hidden = YES;
+        [_buttonNext setTitle:TRANSLATE(@"STRING_KYC_INTRO_BUTTON_NEXT") forState: UIControlStateNormal];
+    } else {
+        _labelInit.hidden = NO;
+        [_buttonNext setTitle:TRANSLATE(@"STRING_KYC_INTRO_BUTTON_SCANN") forState: UIControlStateNormal];
+    }
+}
 
 // MARK: - User Interface
 
 - (IBAction)onButtonPressedSettings:(UIButton *)sender {
     SideMenuViewController *sideMenu = (SideMenuViewController *)self.parentViewController;
     [sideMenu menuDisplay];
+}
+
+- (IBAction)onButtonPressedNext:(IdCloudButton *)sender {
+    if ([KYCManager sharedInstance].jsonWebToken) {
+        [self performSegueWithIdentifier:kSequeNextPage sender:nil];
+    } else {
+        [[KYCManager sharedInstance] displayQRcodeScannerForInit];
+    }
 }
 
 @end

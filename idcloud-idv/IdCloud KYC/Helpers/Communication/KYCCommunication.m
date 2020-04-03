@@ -138,7 +138,8 @@ Please make sure to review our IdCloud documentation, including security guideli
     configuration.HTTPAdditionalHeaders = @{
         @"Accept"           : @"application/json",
         @"Content-Type"     : @"application/json",
-        @"Authorization"    : [NSString stringWithFormat:@"Bearer %@", [KYCManager sharedInstance].jsonWebToken]
+        @"Authorization"    : [NSString stringWithFormat:@"Bearer %@", [KYCManager sharedInstance].jsonWebToken],
+        @"X-API-KEY"        : [KYCManager sharedInstance].apiKey
     };
     return [NSURLSession sessionWithConfiguration:configuration];
 }
