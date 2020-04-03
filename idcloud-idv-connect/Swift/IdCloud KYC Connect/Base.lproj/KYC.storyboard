@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nvY-ku-uF3">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -97,17 +98,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8F-ZZ-dlJ" userLabel="View Logo">
-                                <rect key="frame" x="27.5" y="16" width="265" height="464"/>
+                                <rect key="frame" x="27.5" y="16" width="265" height="414.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IdCloudLogo" translatesAutoresizingMaskIntoConstraints="NO" id="T8O-rA-eyS" userLabel="Image Logo">
-                                        <rect key="frame" x="16" y="202" width="60" height="60"/>
+                                        <rect key="frame" x="16" y="177.5" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Jy2-NE-7Hi"/>
                                             <constraint firstAttribute="height" constant="60" id="TUY-L2-iz2"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IdCloud KYC Connect" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33I-7a-cAc" userLabel="Label Logo">
-                                        <rect key="frame" x="92" y="222.5" width="157" height="19.5"/>
+                                        <rect key="frame" x="92" y="197.5" width="157" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" name="IdCloudRed"/>
                                         <nil key="highlightedColor"/>
@@ -121,23 +122,16 @@
                                     <constraint firstItem="T8O-rA-eyS" firstAttribute="centerY" secondItem="H8F-ZZ-dlJ" secondAttribute="centerY" id="kcO-WN-4b4"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TgA-qx-z7E" customClass="IdCloudButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgA-qx-z7E" customClass="IdCloudButton">
                                 <rect key="frame" x="64" y="496" width="192" height="48"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.56307768489999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="76A-C2-ydD"/>
                                     <constraint firstAttribute="height" constant="48" id="XrP-Hv-uid"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="OnBoard">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="20" name="HelveticaNeue-Light"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="OnBoard">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -161,7 +155,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="INc-g5-D7x" kind="show" id="Ko0-Sc-iu3"/>
+                                    <action selector="onButtonPressedNext:" destination="kG2-Hs-yiX" eventType="touchUpInside" id="lSh-LA-oN8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJL-Rx-2Ef" userLabel="button_settings">
@@ -172,20 +166,30 @@
                                     <action selector="onButtonPressedSettings:" destination="kG2-Hs-yiX" eventType="touchUpInside" id="uyU-by-MfU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application requires JWT and API key to be configured. Please scanne given QR Code." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7D-8C-QGp">
+                                <rect key="frame" x="19" y="446.5" width="282" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="IdCloudRed"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TgA-qx-z7E" firstAttribute="centerX" secondItem="Y21-4B-6mh" secondAttribute="centerX" id="2R4-w4-nhF"/>
                             <constraint firstItem="H8F-ZZ-dlJ" firstAttribute="top" secondItem="Y21-4B-6mh" secondAttribute="top" constant="16" id="4EK-mb-mpw"/>
                             <constraint firstItem="TgA-qx-z7E" firstAttribute="leading" secondItem="Y21-4B-6mh" secondAttribute="leading" priority="750" constant="64" id="K7L-fz-71y"/>
+                            <constraint firstItem="H7D-8C-QGp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y21-4B-6mh" secondAttribute="leading" constant="16" id="KV8-n2-T7R"/>
                             <constraint firstItem="H8F-ZZ-dlJ" firstAttribute="centerX" secondItem="Y21-4B-6mh" secondAttribute="centerX" id="UOj-DA-H2n"/>
                             <constraint firstItem="Y21-4B-6mh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H8F-ZZ-dlJ" secondAttribute="trailing" constant="16" id="Vdb-C1-HTB"/>
+                            <constraint firstItem="Y21-4B-6mh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H7D-8C-QGp" secondAttribute="trailing" constant="16" id="gbv-mm-L57"/>
                             <constraint firstItem="Y21-4B-6mh" firstAttribute="trailing" secondItem="TgA-qx-z7E" secondAttribute="trailing" priority="750" constant="64" id="hXi-WD-vsd"/>
                             <constraint firstItem="Y21-4B-6mh" firstAttribute="bottom" secondItem="TgA-qx-z7E" secondAttribute="bottom" constant="24" id="jiz-hX-xJf"/>
                             <constraint firstItem="H8F-ZZ-dlJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y21-4B-6mh" secondAttribute="leading" constant="16" id="s6E-sF-9uh"/>
+                            <constraint firstItem="H7D-8C-QGp" firstAttribute="top" secondItem="H8F-ZZ-dlJ" secondAttribute="bottom" constant="16" id="sMo-gV-JpJ"/>
                             <constraint firstItem="vJL-Rx-2Ef" firstAttribute="top" secondItem="Y21-4B-6mh" secondAttribute="top" id="sij-24-Hg1"/>
                             <constraint firstItem="vJL-Rx-2Ef" firstAttribute="leading" secondItem="Y21-4B-6mh" secondAttribute="leading" id="tcc-PB-ZSd"/>
-                            <constraint firstItem="TgA-qx-z7E" firstAttribute="top" secondItem="H8F-ZZ-dlJ" secondAttribute="bottom" constant="16" id="y5o-VP-hx4"/>
+                            <constraint firstItem="H7D-8C-QGp" firstAttribute="centerX" secondItem="Y21-4B-6mh" secondAttribute="centerX" id="we9-D0-LLz"/>
+                            <constraint firstItem="TgA-qx-z7E" firstAttribute="top" secondItem="H7D-8C-QGp" secondAttribute="bottom" constant="16" id="y5o-VP-hx4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y21-4B-6mh"/>
                         <userDefinedRuntimeAttributes>
@@ -200,10 +204,15 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="buttonNext" destination="TgA-qx-z7E" id="mTW-Oe-98s"/>
+                        <outlet property="labelInit" destination="H7D-8C-QGp" id="6bK-k7-LAD"/>
+                        <segue destination="INc-g5-D7x" kind="show" identifier="sequeOpenNextPage" id="Mqi-1A-qR0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0My-Jw-ah1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3666" y="1961"/>
+            <point key="canvasLocation" x="-3667.5" y="1960.5633802816901"/>
         </scene>
         <!--KYC First View Controller-->
         <scene sceneID="yt7-HT-N8d">
@@ -1061,28 +1070,28 @@ GDPR compliant solution, no data is stored on the device.</string>
             <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ButtonPrimaryTint">
-            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10599999874830246" green="0.10599999874830246" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ButtonPrimaryTintPressed">
             <color red="0.10599999874830246" green="0.10599999874830246" blue="0.38400000333786011" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="IdCloudRed">
-            <color red="0.91764705882352937" green="0.015686274509803921" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9179999828338623" green="0.016000000759959221" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryGradientEnd">
-            <color red="0.96078431372549022" green="0.96470588235294119" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.9649999737739563" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryGradientMiddle">
-            <color red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92199999094009399" green="0.92199999094009399" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryGradientStart">
-            <color red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.86299997568130493" green="0.86299997568130493" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextPrimary">
-            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10599999874830246" green="0.10599999874830246" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextPrimary">
-            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10599999874830246" green="0.10599999874830246" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

@@ -83,7 +83,7 @@ class IdCloudLoadingIndicator: IdCloudXibView {
             if show {
                 isHidden = false
             }
-            
+                        
             UIView.animate(withDuration: 0.5,
                            delay: 0.0,
                            options: UIView.AnimationOptions.curveEaseInOut,

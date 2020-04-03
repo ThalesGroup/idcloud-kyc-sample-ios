@@ -45,7 +45,7 @@ class KYCSettingsViewController: BaseViewController {
         // Notifications about data layer change to reload table.
         // Unregistration is done in base class.
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(UICollectionView.reloadData),
+                                               selector: #selector(KYCSettingsViewController.reloadData),
                                                name: Notification.Name.DataLayerChanged,
                                                object: nil)
         
@@ -55,7 +55,7 @@ class KYCSettingsViewController: BaseViewController {
     
     // MARK: - Private Helpers
     
-    private func reloadData() {
+    @objc private func reloadData() {
         tableSettings.reloadData()
     }
     

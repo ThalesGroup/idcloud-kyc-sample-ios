@@ -40,6 +40,10 @@ class BaseViewController: IdCloudAutorotationVC {
         reloadGUI()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Loading Indicator
     
     func loadingIndicatorShowWithCaption(_ caption: String) {

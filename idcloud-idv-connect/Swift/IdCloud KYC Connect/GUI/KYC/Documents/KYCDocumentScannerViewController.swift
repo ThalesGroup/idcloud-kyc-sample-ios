@@ -42,7 +42,7 @@ class KYCDocumentScannerViewController: BaseViewController {
     
     // MARK: - Private Helpers
     
-    func nextStepAfterDocumentScanning() {
+    private func nextStepAfterDocumentScanning() {
         if KYCManager.facialRecognition() {
             present(KYCFaceIdTutorialViewController.viewController(), animated: true, completion: nil)
         } else {
@@ -50,7 +50,7 @@ class KYCDocumentScannerViewController: BaseViewController {
         }
     }
     
-    func requestAccesSync(handler: @escaping ()->Void) {
+    private func requestAccesSync(handler: @escaping ()->Void) {
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { (granted:Bool) in
             DispatchQueue.main.async {
                 if granted {
@@ -62,7 +62,7 @@ class KYCDocumentScannerViewController: BaseViewController {
         }
     }
     
-    func getCameraOptions() -> AcuantCameraOptions! {
+    private func getCameraOptions() -> AcuantCameraOptions! {
         return AcuantCameraOptions(timeInMsPerDigit: 900,
                                    digitsToShow: 2,
                                    allowBox: true,
@@ -80,7 +80,7 @@ class KYCDocumentScannerViewController: BaseViewController {
                                    colorBracketCapture: UIColor.green.cgColor)
     }
     
-    func showDocumentCaptureCamera() {
+    private func showDocumentCaptureCamera() {
         requestAccesSync {
             let documentCameraController = DocumentCameraController.getCameraController(delegate: self, cameraOptions: self.getCameraOptions())
             documentCameraController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
@@ -88,17 +88,23 @@ class KYCDocumentScannerViewController: BaseViewController {
         }
     }
     
-    func getCropedImage(_ image: Image) -> Data! {
+    private func getCropedImage(_ image: Image) -> Image {
         let data:CroppingData! = CroppingData()
         data.image = image.image
-        
-        if var cropedImage = AcuantImagePreparation.crop(data: data).image {
-            // Scale image if needed
-            cropedImage = IdCloudHelper.imageScaleToWidth(sourceImage: cropedImage, scaledToWidth: 640.0)
-            return cropedImage.jpegData(compressionQuality: 0.8)
-        } else {
-            return nil
+                
+        return AcuantImagePreparation.crop(data: data)
+    }
+    
+    private func tryAgainWithMessage(message: String) {
+        displayOnCancelDialog(caption: "Try Again",
+                              message: message,
+                              okButton: "Try Again",
+                              cancelButton: "Cancel") { (result) in
+                                if (result) {
+                                    self.showDocumentCaptureCamera()
+                                }
         }
+        
     }
 }
 
@@ -112,19 +118,38 @@ extension KYCDocumentScannerViewController: CameraCaptureDelegate {
         
         // Get manager and encode image.
         let manager = KYCManager.sharedInstance
-        let imageData = getCropedImage(image)
+        let croppedImage = getCropedImage(image)
         
-        // Update current step.
-        if documentType == KYCDocumentType.idCard && manager.scannedDocFront != nil {
-            manager.scannedDocBack = imageData
-            nextStepAfterDocumentScanning()
+        if (croppedImage.image == nil || (croppedImage.error != nil && croppedImage.error!.errorCode == AcuantErrorCodes.ERROR_LowResolutionImage)) {
+            tryAgainWithMessage(message: croppedImage.error!.description)
         } else {
-            manager.scannedDocFront = imageData
-            if documentType == KYCDocumentType.passport {
-                nextStepAfterDocumentScanning()
+            var scaledImage = croppedImage.image!
+            if Int(scaledImage.size.width) > KYCManager.maxImageWidth() {
+                scaledImage = IdCloudHelper.imageScaleToWidth(sourceImage: scaledImage, scaledToWidth: KYCManager.maxImageWidth())
+            }
+                        
+            // Check image sharpness, glare and minimum DPI.
+            let sharpness = AcuantImagePreparation.sharpness(image: scaledImage)
+            let glare = AcuantImagePreparation.glare(image: croppedImage.image!)
+            if (sharpness < CaptureConstants.SHARPNESS_THRESHOLD || glare < CaptureConstants.GLARE_THRESHOLD ||
+                croppedImage.dpi < CaptureConstants.MANDATORY_RESOLUTION_THRESHOLD_SMALL) {
+                let message = "Image did not meet basic criteria.\nSharpness: \(sharpness)(\(CaptureConstants.SHARPNESS_THRESHOLD))\nGlare: \(glare)(\(CaptureConstants.GLARE_THRESHOLD))\nDPI: \(croppedImage.dpi)(\(CaptureConstants.MANDATORY_RESOLUTION_THRESHOLD_SMALL))"
+                tryAgainWithMessage(message: message)
             } else {
-                // First page is scanned continue with another one.
-                showDocumentCaptureCamera()
+                let coppedImageData = croppedImage.image!.jpegData(compressionQuality: 0.8)
+                // Update current step.
+                if documentType == KYCDocumentType.idCard && manager.scannedDocFront != nil {
+                    manager.scannedDocBack = coppedImageData
+                    nextStepAfterDocumentScanning()
+                } else {
+                    manager.scannedDocFront = coppedImageData
+                    if documentType == KYCDocumentType.passport {
+                        nextStepAfterDocumentScanning()
+                    } else {
+                        // First page is scanned continue with another one.
+                        showDocumentCaptureCamera()
+                    }
+                }
             }
         }
     }

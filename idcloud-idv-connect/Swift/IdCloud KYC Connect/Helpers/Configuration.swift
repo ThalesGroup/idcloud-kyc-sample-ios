@@ -23,9 +23,6 @@ Please make sure to review our IdCloud documentation, including security guideli
 // IdCloud demo endpoint url.
 let CFG_IDCLOUD_BASE_URL = ""
 
-// Default value for IdCloud communication web token. It can be updated from app menu.
-let CFG_JSON_WEB_TOKEN_DEFAULT = ""
-
 // Acuant account username.
 let CFG_ACUANT_USERNAME = ""
 
@@ -34,15 +31,6 @@ let CFG_ACUANT_PASSWORD = ""
 
 // Acuant account subscription id.
 let CFG_ACUANT_SUBSCRIPTION_ID = ""
-
-// Acuant facial recognition endpoint url.
-let CFG_ACUANT_FRM_ENDPOINT = ""
-
-// Acuant Document Authentication & Identity Verification endpoint url.
-let CFG_ACUANT_ASSURE_ID_ENDPOINT = ""
-
-// Acuant mediscan endpoint url.
-let CFG_ACUANT_MEDISCAN_ENDPOINT = ""
 
 // URL to company privacy policy.
 let CFG_PRIVACY_POLICY_URL = URL(string: "")

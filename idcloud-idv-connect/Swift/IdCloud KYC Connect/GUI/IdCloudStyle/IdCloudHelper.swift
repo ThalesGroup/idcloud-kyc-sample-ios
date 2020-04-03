@@ -85,9 +85,9 @@ class IdCloudHelper : NSObject {
         }
     }
 
-    class func imageScaleToWidth(sourceImage: UIImage, scaledToWidth width: CGFloat) -> UIImage {
+    class func imageScaleToWidth(sourceImage: UIImage, scaledToWidth width: Int) -> UIImage {
         let oldWidth = sourceImage.size.width
-        let scaleFactor = width / oldWidth
+        let scaleFactor = CGFloat(width) / oldWidth
 
         let newHeight = sourceImage.size.height * scaleFactor
         let newWidth = oldWidth * scaleFactor

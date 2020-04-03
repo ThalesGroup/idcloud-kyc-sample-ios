@@ -32,7 +32,18 @@ private let KEY_KYC_ENROLLED        = "KycPreferenceKeyEnrolled"
 
 // GeneralSettings
 private let KEY_FACIAL_RECOGNITION = "KycPreferenceKeyFacalRecognition"
-private let KEY_JSON_WEB_TOKEN     = "JsonWebToken"
+private let KEY_MAX_PICTURE_WIDTH  = "MaxPictureWidth"
+private let KEY_JSON_WEB_TOKEN     = "JsonWebTokenV2"
+private let KEY_API_KEY            = "ApiKeyV2"
+
+// Acuant facial recognition endpoint url.
+private let CFG_ACUANT_FRM_ENDPOINT = "https://frm.acuant.eu"
+
+// Acuant Document Authentication & Identity Verification endpoint url.
+private let CFG_ACUANT_ASSURE_ID_ENDPOINT = "https://services.assureid.eu"
+
+// Acuant mediscan endpoint url.
+private let CFG_ACUANT_MEDISCAN_ENDPOINT = "https://medicscan.acuant.eu"
 
 extension Notification.Name {
     static let DataLayerChanged = Notification.Name("DataLayerChanged")
@@ -42,8 +53,8 @@ class KYCManager : NSObject, InitializationDelegate {
     
     // MARK: - Static Helpers
     
-    private (set) var optionCaptions: [String]
-    private (set) var options: OptionArray
+    private (set) var optionCaptions: [String]!
+    private (set) var options: OptionArray!
     var scannedDocFront: Data?
     var scannedDocBack: Data?
     var scannedPortrait: Data?
@@ -55,14 +66,16 @@ class KYCManager : NSObject, InitializationDelegate {
     }()
     
     override init() {
+        super.init()
+        
         // Default settings
         UserDefaults.standard.register(defaults: [
             // KYC Generic values
             KEY_KYC_ENROLLED             : NSNumber(booleanLiteral: false),
             
             // GeneralSettings
-            KEY_FACIAL_RECOGNITION       : NSNumber(booleanLiteral: true),
-            KEY_JSON_WEB_TOKEN           : CFG_JSON_WEB_TOKEN_DEFAULT,
+            KEY_MAX_PICTURE_WIDTH        : NSNumber(integerLiteral: 1024),
+            KEY_FACIAL_RECOGNITION       : NSNumber(booleanLiteral: true)
         ])
         
         // Available options in settings menu.
@@ -89,10 +102,10 @@ class KYCManager : NSObject, InitializationDelegate {
                                        section:IdCloudOptionSection.version,
                                        methodGet:KYCManager.getStoredJWTExpiration),
                     
-                    IdCloudOption.button(caption: TRANSLATE("STRING_KYC_OPTION_WEB_TOKEN"),
+                    IdCloudOption.button(caption: TRANSLATE("STRING_KYC_OPTION_QR_CODE"),
                                          section: IdCloudOptionSection.version,
-                                         method: KYCManager.openJsonWebTokenUpdate),
-                    
+                                         method: displayQRcodeScannerForInit),
+
                     IdCloudOption.button(caption: TRANSLATE("STRING_KYC_OPTION_PRIVACY_POLICY"),
                                          section: IdCloudOptionSection.version,
                                          method: KYCManager.openPrivacyPolicy)
@@ -114,9 +127,7 @@ class KYCManager : NSObject, InitializationDelegate {
         Credential.setPassword(password: CFG_ACUANT_PASSWORD)
         Credential.setSubscription(subscription: CFG_ACUANT_SUBSCRIPTION_ID)
         Credential.setEndpoints(endpoints: endpoints)
-        
-        super.init()
-        
+                
         AcuantImagePreparation.initialize(delegate: self)
     }
     
@@ -141,40 +152,21 @@ class KYCManager : NSObject, InitializationDelegate {
         return UserDefaults.standard.bool(forKey: KEY_FACIAL_RECOGNITION)
     }
     
+    // MARK: - Public API
+    
+    func displayQRcodeScannerForInit() {
+        // Display QR code reader with current view as delegate.
+        let viewController = UIApplication.shared.windows.first!.rootViewController
+        viewController?.present(IdCloudQrCodeReader.readerWithDelegate(delegate: self), animated: true, completion: nil)
+    }
+    
     // MARK: - Private Helpers
     
     class private func openPrivacyPolicy() {
         let viewController = UIApplication.shared.windows.first!.rootViewController
         viewController?.present(KYCPrivacyPolicyViewController.viewController(), animated: true, completion: nil)
     }
-    
-    class private func openJsonWebTokenUpdate() {
-        // Main alert builder.
-        let alert = UIAlertController(title: TRANSLATE("STRING_JSON_WEB_TOKEN_CAP"),
-                                      message: TRANSLATE("STRING_JSON_WEB_TOKEN_DES"),
-                                      preferredStyle: UIAlertController.Style.alert)
         
-        alert.addTextField { (textfield: UITextField) in
-            textfield.placeholder = TRANSLATE("STRING_JSON_WEB_TOKEN_PLACEHOLDER")
-        }
-        
-        // Add ok button with handler.
-        alert.addAction(UIAlertAction(title: TRANSLATE("STRING_COMMON_OK"), style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) in
-            if (self.setJsonWebToken(alert.textFields?.first?.text ?? "")) {
-                NotificationCenter.default.post(name: NSNotification.Name.DataLayerChanged, object: nil)
-            } else {
-                notifyDisplay(TRANSLATE("STRING_JSON_WEB_TOKEN_INVALID"), type: NotifyType.error)
-            }
-        }))
-        
-        // Add cancel button.
-        alert.addAction(UIAlertAction(title: TRANSLATE("STRING_COMMON_CANCEL"), style: UIAlertAction.Style.cancel, handler: nil))
-        
-        // Present dialog.
-        let viewController = UIApplication.shared.windows.first!.rootViewController
-        viewController?.present(alert, animated: true, completion: nil)
-    }
-    
     class private func setJsonWebToken(_ jsonWebToken: String) -> Bool {
         // Do not store invalid token
         let retValue = KYCManager.getJWTExpiration(jsonWebToken) != nil
@@ -186,12 +178,12 @@ class KYCManager : NSObject, InitializationDelegate {
     }
     
     class private func getStoredJWTExpiration() -> String {
-        return KYCManager.getJWTExpiration(KYCManager.jsonWebToken())
+        return KYCManager.getJWTExpiration(KYCManager.jsonWebToken()) ?? "JWT not set"
     }
     
-    class private func getJWTExpiration(_ token: String) -> String! {
+    class private func getJWTExpiration(_ token: String?) -> String? {
         do {
-            let jsonToken:_JWT? = try _JWT.decode(jwt: token)
+            let jsonToken:_JWT? = try _JWT.decode(jwt: token ?? "")
             if let expires = jsonToken?.expiresAt {
                 return DateFormatter.localizedString(from: expires,
                                                      dateStyle: DateFormatter.Style.short,
@@ -204,14 +196,59 @@ class KYCManager : NSObject, InitializationDelegate {
         }
     }
     
-    class func jsonWebToken() -> String {
-        return UserDefaults.standard.string(forKey: KEY_JSON_WEB_TOKEN)!
+    class func jsonWebToken() -> String? {
+        return UserDefaults.standard.string(forKey: KEY_JSON_WEB_TOKEN)
     }
     
-    // MARK:  - InitializationDelegate 
+    class private func setApiKey(_ apiKey: String) {
+        UserDefaults.standard.set(apiKey, forKey: KEY_API_KEY)
+    }
+    
+    class func apiKey() -> String {
+        return UserDefaults.standard.string(forKey: KEY_API_KEY)!
+    }
+    
+    class private func setMaxImageWidth(_ value: Int) {
+        UserDefaults.standard.set(value, forKey: KEY_MAX_PICTURE_WIDTH)
+    }
+    
+    class func maxImageWidth() -> Int {
+        return UserDefaults.standard.integer(forKey: KEY_MAX_PICTURE_WIDTH)
+    }
+    
+    // MARK:  - InitializationDelegate
+    
     func initializationFinished(error: AcuantError?) {
         if let errDest = error?.errorDescription {
             notifyDisplay(errDest, type: NotifyType.error)
+        }
+    }
+}
+
+// MARK: - IdCloudQrCodeReaderDelegate
+
+extension KYCManager: IdCloudQrCodeReaderDelegate {
+    func onQRCodeProvided(sender: IdCloudQrCodeReader, qrCode: String) {
+        // QR Code format is "kyc:<apikey>:<jwt>"
+        let elements = qrCode.components(separatedBy: ":")
+        if elements.count == 3 && elements[0] == "kyc" {
+            if elements[1].isEmpty || elements[2].isEmpty {
+                notifyDisplay(TRANSLATE("STRING_QR_CODE_ERROR_INVALID_DATA"), type: NotifyType.error)
+            } else if !KYCManager.setJsonWebToken(elements[2]) {
+                notifyDisplay(TRANSLATE("STRING_QR_CODE_ERROR_INVALID_JWT"), type: NotifyType.error)
+            } else {
+                // JWT is already set by previous IF case, now we have to store rest.
+                KYCManager.setApiKey(elements[1])
+                // Notify UI to reload visuals.
+                NotificationCenter.default.post(name: NSNotification.Name.DataLayerChanged, object: nil)
+                // Hide scanner.
+                let viewController = UIApplication.shared.windows.first!.rootViewController
+                viewController?.dismiss(animated: true, completion: nil)
+                // Display status information.
+                notifyDisplay(TRANSLATE("STRING_QR_CODE_INFO_DONE"), type: NotifyType.info)
+            }
+        } else {
+            notifyDisplay(TRANSLATE("STRING_QR_CODE_ERROR_FAILED"), type: NotifyType.error)
         }
     }
 }

@@ -22,10 +22,52 @@
 
 class KYCIntroViewController: BaseViewController {
     
+    private let SequeNextPage = "sequeOpenNextPage"
+    
+    @IBOutlet weak var labelInit: UILabel!
+    @IBOutlet weak var buttonNext: IdCloudButton!
+    
+    // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Notifications about data layer change to reload table.
+        // Unregistration is done in base class.
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(KYCIntroViewController.reloadData),
+                                               name: Notification.Name.DataLayerChanged,
+                                               object: nil)
+        
+        reloadData()
+    }
+    
+    // MARK: - Private Helpers
+    
+    @objc private func reloadData() {
+        // Web token is set.
+        if KYCManager.jsonWebToken() != nil {
+            labelInit.isHidden = true
+            buttonNext.setTitle(TRANSLATE("STRING_KYC_INTRO_BUTTON_NEXT"), for: UIControl.State.normal)
+        } else {
+            labelInit.isHidden = false
+            buttonNext.setTitle(TRANSLATE("STRING_KYC_INTRO_BUTTON_SCANN"), for: UIControl.State.normal)
+        }
+    }
+    
     // MARK: - User Interface
+    
     @IBAction private func onButtonPressedSettings(_ sender: UIButton) {
         if let sideMenu = parent as? SideMenuViewController {
             sideMenu.menuDisplay()
+        }
+    }
+    
+    @IBAction func onButtonPressedNext(_ sender: IdCloudButton) {
+        if (KYCManager.jsonWebToken() != nil) {
+            performSegue(withIdentifier: SequeNextPage, sender: nil)
+        } else {
+            KYCManager.sharedInstance.displayQRcodeScannerForInit()
         }
     }
 }

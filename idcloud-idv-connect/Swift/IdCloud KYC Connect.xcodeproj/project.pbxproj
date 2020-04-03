@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D22D22C24375921003C8DC8 /* AcuantImagePreparation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22024375920003C8DC8 /* AcuantImagePreparation.framework */; };
+		6D22D22D24375921003C8DC8 /* AcuantIPLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22124375921003C8DC8 /* AcuantIPLiveness.framework */; };
+		6D22D22E24375921003C8DC8 /* AcuantPassiveLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22224375921003C8DC8 /* AcuantPassiveLiveness.framework */; };
+		6D22D22F24375921003C8DC8 /* AcuantCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22324375921003C8DC8 /* AcuantCommon.framework */; };
+		6D22D23024375921003C8DC8 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22424375921003C8DC8 /* KeychainAccess.framework */; };
+		6D22D23124375921003C8DC8 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22524375921003C8DC8 /* SocketIO.framework */; };
+		6D22D23224375921003C8DC8 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22624375921003C8DC8 /* Starscream.framework */; };
+		6D22D23324375921003C8DC8 /* AcuantFaceMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22724375921003C8DC8 /* AcuantFaceMatch.framework */; };
+		6D22D23424375921003C8DC8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22824375921003C8DC8 /* SwiftyJSON.framework */; };
+		6D22D23524375921003C8DC8 /* AcuantHGLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22924375921003C8DC8 /* AcuantHGLiveness.framework */; };
+		6D22D23624375921003C8DC8 /* AcuantDocumentProcessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22A24375921003C8DC8 /* AcuantDocumentProcessing.framework */; };
+		6D22D23724375921003C8DC8 /* iProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D22B24375921003C8DC8 /* iProov.framework */; };
 		6D98E286240025AC00243663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E285240025AC00243663 /* AppDelegate.swift */; };
 		6D98E28A240025AC00243663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E289240025AC00243663 /* ViewController.swift */; };
 		6D98E28F240025AE00243663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D98E28E240025AE00243663 /* Assets.xcassets */; };
@@ -29,6 +41,14 @@
 		6D98E35B2403F3F100243663 /* KYCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E3542403F3F100243663 /* KYCAlert.swift */; };
 		6D98E35D2404013E00243663 /* KYCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E35C2404013E00243663 /* KYCResponse.swift */; };
 		6D98E35F2404059800243663 /* KYCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D98E35E2404059800243663 /* KYCSession.swift */; };
+		6DD891002427BE80005EFCFA /* IdCloudQrCodeReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD890FE2427BE80005EFCFA /* IdCloudQrCodeReader.xib */; };
+		6DD891012427BE80005EFCFA /* IdCloudQrCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD890FF2427BE80005EFCFA /* IdCloudQrCodeReader.swift */; };
+		6DE1CC762419063200CBC60B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE1CC662419061A00CBC60B /* JWTDecode.framework */; };
+		6DE1CC772419063200CBC60B /* JWTDecode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE1CC662419061A00CBC60B /* JWTDecode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE3256C243766490015472E /* AcuantCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D2432437592F003C8DC8 /* AcuantCamera.framework */; };
+		6DE3256D243766490015472E /* AcuantCamera.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D2432437592F003C8DC8 /* AcuantCamera.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DE3256E2437664D0015472E /* AcuantFaceCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D23D2437592C003C8DC8 /* AcuantFaceCapture.framework */; };
+		6DE3256F2437664D0015472E /* AcuantFaceCapture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22D23D2437592C003C8DC8 /* AcuantFaceCapture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DE55BA824042B9900D7BA38 /* KYCIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BA724042B9900D7BA38 /* KYCIntroViewController.swift */; };
 		6DE55BAA24042D0700D7BA38 /* KYCFirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BA924042D0700D7BA38 /* KYCFirstStepViewController.swift */; };
 		6DE55BAC2405232E00D7BA38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DE55BAB2405232E00D7BA38 /* Localizable.strings */; };
@@ -36,33 +56,6 @@
 		6DE55BB02405253100D7BA38 /* KYCTermsOfUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BAF2405253100D7BA38 /* KYCTermsOfUseViewController.swift */; };
 		6DE55BB2240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BB1240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift */; };
 		6DE55BBD240526ED00D7BA38 /* KYCDocumentScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BBC240526ED00D7BA38 /* KYCDocumentScannerViewController.swift */; };
-		6DE55BD124052C1B00D7BA38 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC324052C1B00D7BA38 /* KeychainAccess.framework */; };
-		6DE55BDB24052C2E00D7BA38 /* AcuantCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */; };
-		6DE55BDC24052C2E00D7BA38 /* AcuantCamera.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BDD24052C3300D7BA38 /* AcuantCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */; };
-		6DE55BDE24052C3300D7BA38 /* AcuantCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BDF24052C4300D7BA38 /* AcuantDocumentProcessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */; };
-		6DE55BE024052C4300D7BA38 /* AcuantDocumentProcessing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BE124052C4600D7BA38 /* AcuantFaceMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */; };
-		6DE55BE224052C4600D7BA38 /* AcuantFaceMatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BE324052C4700D7BA38 /* AcuantHGLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */; };
-		6DE55BE424052C4700D7BA38 /* AcuantHGLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BE524052C4A00D7BA38 /* AcuantImagePreparation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */; };
-		6DE55BE624052C4A00D7BA38 /* AcuantImagePreparation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BE724052C5000D7BA38 /* AcuantIPLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */; };
-		6DE55BE824052C5000D7BA38 /* AcuantIPLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BE924052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */; };
-		6DE55BEA24052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BEB24052C6100D7BA38 /* iProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCC24052C1B00D7BA38 /* iProov.framework */; };
-		6DE55BEC24052C6100D7BA38 /* iProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BCC24052C1B00D7BA38 /* iProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BED24052C6300D7BA38 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */; };
-		6DE55BEE24052C6300D7BA38 /* JWTDecode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BEF24052C6A00D7BA38 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC724052C1B00D7BA38 /* SocketIO.framework */; };
-		6DE55BF024052C6A00D7BA38 /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC724052C1B00D7BA38 /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BF124052C6E00D7BA38 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC924052C1B00D7BA38 /* Starscream.framework */; };
-		6DE55BF224052C6E00D7BA38 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC924052C1B00D7BA38 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6DE55BF324052C7000D7BA38 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */; };
-		6DE55BF424052C7000D7BA38 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DE55BF724052E4900D7BA38 /* KYCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BF624052E4900D7BA38 /* KYCManager.swift */; };
 		6DE55BF924052E6100D7BA38 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BF824052E6100D7BA38 /* Configuration.swift */; };
 		6DE55BFB240541F200D7BA38 /* IdCloudLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE55BFA240541F200D7BA38 /* IdCloudLoadingIndicator.swift */; };
@@ -90,6 +83,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D22D23C2437592C003C8DC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D22D2382437592C003C8DC8 /* AcuantFaceCapture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83F0BF7123D8B28E00140A06;
+			remoteInfo = AcuantFaceCapture;
+		};
+		6D22D2422437592F003C8DC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D22D23E2437592F003C8DC8 /* AcuantCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134F59D221FA0BA600CEDBFC;
+			remoteInfo = AcuantCamera;
+		};
+		6D22D24624375B07003C8DC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D22D2382437592C003C8DC8 /* AcuantFaceCapture.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F0BF7023D8B28E00140A06;
+			remoteInfo = AcuantFaceCapture;
+		};
 		6D98E30E2403CC2E00243663 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */;
@@ -104,6 +118,62 @@
 			remoteGlobalIDString = 6DB1FA6622E73C720031B4F3;
 			remoteInfo = IdCloudDesignable;
 		};
+		6DE1CC652419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0068E21B3B46240048928E;
+			remoteInfo = "JWTDecode-iOS";
+		};
+		6DE1CC672419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0068ED1B3B46240048928E;
+			remoteInfo = "JWTDecode-iOSTests";
+		};
+		6DE1CC692419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0069091B3B532E0048928E;
+			remoteInfo = "JWTDecode-OSX";
+		};
+		6DE1CC6B2419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0069131B3B532E0048928E;
+			remoteInfo = "JWTDecode-OSXTests";
+		};
+		6DE1CC6D2419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 918A8E5B1D63D2E1001F787B;
+			remoteInfo = "JWTDecode-tvOS";
+		};
+		6DE1CC6F2419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 918A8E6C1D63D4E5001F787B;
+			remoteInfo = "JWTDecode-tvOSTests";
+		};
+		6DE1CC712419061A00CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E390BAE22288E6AF00780D6C;
+			remoteInfo = "JWTDecode-watchOS";
+		};
+		6DE1CC732419062400CBC60B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F0068E11B3B46240048928E;
+			remoteInfo = "JWTDecode-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,20 +183,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6DE55BE424052C4700D7BA38 /* AcuantHGLiveness.framework in Embed Frameworks */,
+				6DE3256D243766490015472E /* AcuantCamera.framework in Embed Frameworks */,
 				6D98E3122403CC5D00243663 /* IdCloudDesignable.framework in Embed Frameworks */,
-				6DE55BDC24052C2E00D7BA38 /* AcuantCamera.framework in Embed Frameworks */,
-				6DE55BF024052C6A00D7BA38 /* SocketIO.framework in Embed Frameworks */,
-				6DE55BF424052C7000D7BA38 /* SwiftyJSON.framework in Embed Frameworks */,
-				6DE55BE624052C4A00D7BA38 /* AcuantImagePreparation.framework in Embed Frameworks */,
-				6DE55BE824052C5000D7BA38 /* AcuantIPLiveness.framework in Embed Frameworks */,
-				6DE55BEC24052C6100D7BA38 /* iProov.framework in Embed Frameworks */,
-				6DE55BE024052C4300D7BA38 /* AcuantDocumentProcessing.framework in Embed Frameworks */,
-				6DE55BE224052C4600D7BA38 /* AcuantFaceMatch.framework in Embed Frameworks */,
-				6DE55BEE24052C6300D7BA38 /* JWTDecode.framework in Embed Frameworks */,
-				6DE55BDE24052C3300D7BA38 /* AcuantCommon.framework in Embed Frameworks */,
-				6DE55BEA24052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Embed Frameworks */,
-				6DE55BF224052C6E00D7BA38 /* Starscream.framework in Embed Frameworks */,
+				6DE3256F2437664D0015472E /* AcuantFaceCapture.framework in Embed Frameworks */,
+				6DE1CC772419063200CBC60B /* JWTDecode.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +194,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D22D22024375920003C8DC8 /* AcuantImagePreparation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantImagePreparation.framework; sourceTree = "<group>"; };
+		6D22D22124375921003C8DC8 /* AcuantIPLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantIPLiveness.framework; sourceTree = "<group>"; };
+		6D22D22224375921003C8DC8 /* AcuantPassiveLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantPassiveLiveness.framework; sourceTree = "<group>"; };
+		6D22D22324375921003C8DC8 /* AcuantCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCommon.framework; sourceTree = "<group>"; };
+		6D22D22424375921003C8DC8 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
+		6D22D22524375921003C8DC8 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketIO.framework; sourceTree = "<group>"; };
+		6D22D22624375921003C8DC8 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
+		6D22D22724375921003C8DC8 /* AcuantFaceMatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantFaceMatch.framework; sourceTree = "<group>"; };
+		6D22D22824375921003C8DC8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		6D22D22924375921003C8DC8 /* AcuantHGLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantHGLiveness.framework; sourceTree = "<group>"; };
+		6D22D22A24375921003C8DC8 /* AcuantDocumentProcessing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantDocumentProcessing.framework; sourceTree = "<group>"; };
+		6D22D22B24375921003C8DC8 /* iProov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iProov.framework; sourceTree = "<group>"; };
+		6D22D2382437592C003C8DC8 /* AcuantFaceCapture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AcuantFaceCapture.xcodeproj; path = AcuantFaceCapture/AcuantFaceCapture.xcodeproj; sourceTree = "<group>"; };
+		6D22D23E2437592F003C8DC8 /* AcuantCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AcuantCamera.xcodeproj; path = AcuantCamera/AcuantCamera.xcodeproj; sourceTree = "<group>"; };
 		6D98E282240025AC00243663 /* IdCloud KYC Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IdCloud KYC Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D98E285240025AC00243663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D98E289240025AC00243663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +232,9 @@
 		6D98E3542403F3F100243663 /* KYCAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCAlert.swift; sourceTree = "<group>"; };
 		6D98E35C2404013E00243663 /* KYCResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCResponse.swift; sourceTree = "<group>"; };
 		6D98E35E2404059800243663 /* KYCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCSession.swift; sourceTree = "<group>"; };
+		6DD890FE2427BE80005EFCFA /* IdCloudQrCodeReader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdCloudQrCodeReader.xib; sourceTree = "<group>"; };
+		6DD890FF2427BE80005EFCFA /* IdCloudQrCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudQrCodeReader.swift; sourceTree = "<group>"; };
+		6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWTDecode.xcodeproj; path = Frameworks/JWTDecode/JWTDecode.xcodeproj; sourceTree = "<group>"; };
 		6DE55BA724042B9900D7BA38 /* KYCIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCIntroViewController.swift; sourceTree = "<group>"; };
 		6DE55BA924042D0700D7BA38 /* KYCFirstStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCFirstStepViewController.swift; sourceTree = "<group>"; };
 		6DE55BAB2405232E00D7BA38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -165,20 +242,6 @@
 		6DE55BAF2405253100D7BA38 /* KYCTermsOfUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCTermsOfUseViewController.swift; sourceTree = "<group>"; };
 		6DE55BB1240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCPrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		6DE55BBC240526ED00D7BA38 /* KYCDocumentScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCDocumentScannerViewController.swift; sourceTree = "<group>"; };
-		6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Frameworks/JWTDecode.framework; sourceTree = "<group>"; };
-		6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
-		6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantFaceMatch.framework; sourceTree = "<group>"; };
-		6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCamera.framework; sourceTree = "<group>"; };
-		6DE55BC324052C1B00D7BA38 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
-		6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantIPLiveness.framework; sourceTree = "<group>"; };
-		6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantDocumentProcessing.framework; sourceTree = "<group>"; };
-		6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantHGLiveness.framework; sourceTree = "<group>"; };
-		6DE55BC724052C1B00D7BA38 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketIO.framework; sourceTree = "<group>"; };
-		6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantImagePreparation.framework; sourceTree = "<group>"; };
-		6DE55BC924052C1B00D7BA38 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
-		6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantPassiveLiveness.framework; sourceTree = "<group>"; };
-		6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcuantCommon.framework; sourceTree = "<group>"; };
-		6DE55BCC24052C1B00D7BA38 /* iProov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iProov.framework; sourceTree = "<group>"; };
 		6DE55BF624052E4900D7BA38 /* KYCManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCManager.swift; sourceTree = "<group>"; };
 		6DE55BF824052E6100D7BA38 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		6DE55BFA240541F200D7BA38 /* IdCloudLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdCloudLoadingIndicator.swift; sourceTree = "<group>"; };
@@ -210,27 +273,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE55BEB24052C6100D7BA38 /* iProov.framework in Frameworks */,
-				6DE55BD124052C1B00D7BA38 /* KeychainAccess.framework in Frameworks */,
-				6DE55BDD24052C3300D7BA38 /* AcuantCommon.framework in Frameworks */,
-				6DE55BEF24052C6A00D7BA38 /* SocketIO.framework in Frameworks */,
-				6DE55BE524052C4A00D7BA38 /* AcuantImagePreparation.framework in Frameworks */,
-				6DE55BE724052C5000D7BA38 /* AcuantIPLiveness.framework in Frameworks */,
-				6DE55BDF24052C4300D7BA38 /* AcuantDocumentProcessing.framework in Frameworks */,
-				6DE55BE924052C5B00D7BA38 /* AcuantPassiveLiveness.framework in Frameworks */,
+				6D22D23424375921003C8DC8 /* SwiftyJSON.framework in Frameworks */,
+				6D22D23524375921003C8DC8 /* AcuantHGLiveness.framework in Frameworks */,
+				6D22D22D24375921003C8DC8 /* AcuantIPLiveness.framework in Frameworks */,
+				6D22D22C24375921003C8DC8 /* AcuantImagePreparation.framework in Frameworks */,
 				6D98E3112403CC5D00243663 /* IdCloudDesignable.framework in Frameworks */,
-				6DE55BDB24052C2E00D7BA38 /* AcuantCamera.framework in Frameworks */,
-				6DE55BE324052C4700D7BA38 /* AcuantHGLiveness.framework in Frameworks */,
-				6DE55BED24052C6300D7BA38 /* JWTDecode.framework in Frameworks */,
-				6DE55BE124052C4600D7BA38 /* AcuantFaceMatch.framework in Frameworks */,
-				6DE55BF124052C6E00D7BA38 /* Starscream.framework in Frameworks */,
-				6DE55BF324052C7000D7BA38 /* SwiftyJSON.framework in Frameworks */,
+				6D22D23324375921003C8DC8 /* AcuantFaceMatch.framework in Frameworks */,
+				6DE3256E2437664D0015472E /* AcuantFaceCapture.framework in Frameworks */,
+				6DE3256C243766490015472E /* AcuantCamera.framework in Frameworks */,
+				6D22D23024375921003C8DC8 /* KeychainAccess.framework in Frameworks */,
+				6D22D23224375921003C8DC8 /* Starscream.framework in Frameworks */,
+				6D22D22E24375921003C8DC8 /* AcuantPassiveLiveness.framework in Frameworks */,
+				6D22D23724375921003C8DC8 /* iProov.framework in Frameworks */,
+				6D22D23624375921003C8DC8 /* AcuantDocumentProcessing.framework in Frameworks */,
+				6DE1CC762419063200CBC60B /* JWTDecode.framework in Frameworks */,
+				6D22D22F24375921003C8DC8 /* AcuantCommon.framework in Frameworks */,
+				6D22D23124375921003C8DC8 /* SocketIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D22D2392437592C003C8DC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D22D23D2437592C003C8DC8 /* AcuantFaceCapture.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D22D23F2437592F003C8DC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D22D2432437592F003C8DC8 /* AcuantCamera.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6D98E279240025AC00243663 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +363,7 @@
 				6D98E2C42403CA2E00243663 /* IdCloudDesignable */,
 				6D98E29C2403CA2E00243663 /* IdCloudLoadingIndicator */,
 				6D98E2BA2403CA2E00243663 /* IdCloudNotification */,
+				6DD890FD2427BE80005EFCFA /* IdCloudQRCodeReader */,
 				6D98E2A22403CA2E00243663 /* TableCells */,
 				6D98E31E2403D0EF00243663 /* IdCloudHelper.swift */,
 			);
@@ -348,7 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				6DE55BBF24052C1A00D7BA38 /* Acuant */,
-				6DE55BBE24052C1A00D7BA38 /* JWTDecode.framework */,
+				6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -404,6 +485,29 @@
 			path = Structures;
 			sourceTree = "<group>";
 		};
+		6DD890FD2427BE80005EFCFA /* IdCloudQRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				6DD890FE2427BE80005EFCFA /* IdCloudQrCodeReader.xib */,
+				6DD890FF2427BE80005EFCFA /* IdCloudQrCodeReader.swift */,
+			);
+			path = IdCloudQRCodeReader;
+			sourceTree = "<group>";
+		};
+		6DE1CC5C2419061A00CBC60B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DE1CC662419061A00CBC60B /* JWTDecode.framework */,
+				6DE1CC682419061A00CBC60B /* JWTDecode-iOSTests.xctest */,
+				6DE1CC6A2419061A00CBC60B /* JWTDecode.framework */,
+				6DE1CC6C2419061A00CBC60B /* JWTDecode-OSXTests.xctest */,
+				6DE1CC6E2419061A00CBC60B /* JWTDecode.framework */,
+				6DE1CC702419061A00CBC60B /* JWTDecode-tvOSTests.xctest */,
+				6DE1CC722419061A00CBC60B /* JWTDecode.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6DE55BB3240526A000D7BA38 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,19 +520,20 @@
 		6DE55BBF24052C1A00D7BA38 /* Acuant */ = {
 			isa = PBXGroup;
 			children = (
-				6DE55BC024052C1A00D7BA38 /* SwiftyJSON.framework */,
-				6DE55BC124052C1A00D7BA38 /* AcuantFaceMatch.framework */,
-				6DE55BC224052C1B00D7BA38 /* AcuantCamera.framework */,
-				6DE55BC324052C1B00D7BA38 /* KeychainAccess.framework */,
-				6DE55BC424052C1B00D7BA38 /* AcuantIPLiveness.framework */,
-				6DE55BC524052C1B00D7BA38 /* AcuantDocumentProcessing.framework */,
-				6DE55BC624052C1B00D7BA38 /* AcuantHGLiveness.framework */,
-				6DE55BC724052C1B00D7BA38 /* SocketIO.framework */,
-				6DE55BC824052C1B00D7BA38 /* AcuantImagePreparation.framework */,
-				6DE55BC924052C1B00D7BA38 /* Starscream.framework */,
-				6DE55BCA24052C1B00D7BA38 /* AcuantPassiveLiveness.framework */,
-				6DE55BCB24052C1B00D7BA38 /* AcuantCommon.framework */,
-				6DE55BCC24052C1B00D7BA38 /* iProov.framework */,
+				6D22D23E2437592F003C8DC8 /* AcuantCamera.xcodeproj */,
+				6D22D2382437592C003C8DC8 /* AcuantFaceCapture.xcodeproj */,
+				6D22D22324375921003C8DC8 /* AcuantCommon.framework */,
+				6D22D22A24375921003C8DC8 /* AcuantDocumentProcessing.framework */,
+				6D22D22724375921003C8DC8 /* AcuantFaceMatch.framework */,
+				6D22D22924375921003C8DC8 /* AcuantHGLiveness.framework */,
+				6D22D22024375920003C8DC8 /* AcuantImagePreparation.framework */,
+				6D22D22124375921003C8DC8 /* AcuantIPLiveness.framework */,
+				6D22D22224375921003C8DC8 /* AcuantPassiveLiveness.framework */,
+				6D22D22B24375921003C8DC8 /* iProov.framework */,
+				6D22D22424375921003C8DC8 /* KeychainAccess.framework */,
+				6D22D22524375921003C8DC8 /* SocketIO.framework */,
+				6D22D22624375921003C8DC8 /* Starscream.framework */,
+				6D22D22824375921003C8DC8 /* SwiftyJSON.framework */,
 			);
 			name = Acuant;
 			path = Frameworks/Acuant;
@@ -459,6 +564,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6DE1CC742419062400CBC60B /* PBXTargetDependency */,
+				6D22D24724375B07003C8DC8 /* PBXTargetDependency */,
 				6D98E31A2403CD6F00243663 /* PBXTargetDependency */,
 			);
 			name = "IdCloud KYC Connect";
@@ -494,8 +601,20 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 6D22D23F2437592F003C8DC8 /* Products */;
+					ProjectRef = 6D22D23E2437592F003C8DC8 /* AcuantCamera.xcodeproj */;
+				},
+				{
+					ProductGroup = 6D22D2392437592C003C8DC8 /* Products */;
+					ProjectRef = 6D22D2382437592C003C8DC8 /* AcuantFaceCapture.xcodeproj */;
+				},
+				{
 					ProductGroup = 6D98E30B2403CC2E00243663 /* Products */;
 					ProjectRef = 6D98E30A2403CC2E00243663 /* IdCloudDesignable.xcodeproj */;
+				},
+				{
+					ProductGroup = 6DE1CC5C2419061A00CBC60B /* Products */;
+					ProjectRef = 6DE1CC5B2419061A00CBC60B /* JWTDecode.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -506,11 +625,74 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		6D22D23D2437592C003C8DC8 /* AcuantFaceCapture.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AcuantFaceCapture.framework;
+			remoteRef = 6D22D23C2437592C003C8DC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6D22D2432437592F003C8DC8 /* AcuantCamera.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AcuantCamera.framework;
+			remoteRef = 6D22D2422437592F003C8DC8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6D98E30F2403CC2E00243663 /* IdCloudDesignable.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = IdCloudDesignable.framework;
 			remoteRef = 6D98E30E2403CC2E00243663 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC662419061A00CBC60B /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6DE1CC652419061A00CBC60B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC682419061A00CBC60B /* JWTDecode-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JWTDecode-iOSTests.xctest";
+			remoteRef = 6DE1CC672419061A00CBC60B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC6A2419061A00CBC60B /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6DE1CC692419061A00CBC60B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC6C2419061A00CBC60B /* JWTDecode-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JWTDecode-OSXTests.xctest";
+			remoteRef = 6DE1CC6B2419061A00CBC60B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC6E2419061A00CBC60B /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6DE1CC6D2419061A00CBC60B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC702419061A00CBC60B /* JWTDecode-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "JWTDecode-tvOSTests.xctest";
+			remoteRef = 6DE1CC6F2419061A00CBC60B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6DE1CC722419061A00CBC60B /* JWTDecode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JWTDecode.framework;
+			remoteRef = 6DE1CC712419061A00CBC60B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -528,6 +710,7 @@
 				6D98E3462403E73200243663 /* KYC.storyboard in Resources */,
 				6DE55C0A240564D400D7BA38 /* KYCFace.storyboard in Resources */,
 				6DE55C3024081DE700D7BA38 /* IdCloudTextTVC.xib in Resources */,
+				6DD891002427BE80005EFCFA /* IdCloudQrCodeReader.xib in Resources */,
 				6DE55C292408174900D7BA38 /* IdCloudNumberTVC.xib in Resources */,
 				6D98E28F240025AE00243663 /* Assets.xcassets in Resources */,
 				6D98E2EC2403CA2F00243663 /* IdCloudBoolenTVC.xib in Resources */,
@@ -546,7 +729,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Frameworks/Acuant/AcuantCommon.framework",
+				"$(SRCROOT)/Frameworks/Acuant/AcuantDocumentProcessing.framework",
+				"$(SRCROOT)/Frameworks/Acuant/AcuantFaceMatch.framework",
+				"$(SRCROOT)/Frameworks/Acuant/AcuantHGLiveness.framework",
+				"$(SRCROOT)/Frameworks/Acuant/AcuantImagePreparation.framework",
+				"$(SRCROOT)/Frameworks/Acuant/AcuantIPLiveness.framework",
+				"$(SRCROOT)/Frameworks/Acuant/AcuantPassiveLiveness.framework",
+				"$(SRCROOT)/Frameworks/Acuant/iProov.framework",
 				"$(SRCROOT)/Frameworks/Acuant/KeychainAccess.framework",
+				"$(SRCROOT)/Frameworks/Acuant/SocketIO.framework",
+				"$(SRCROOT)/Frameworks/Acuant/Starscream.framework",
+				"$(SRCROOT)/Frameworks/Acuant/SwiftyJSON.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -564,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D98E35B2403F3F100243663 /* KYCAlert.swift in Sources */,
+				6DD891012427BE80005EFCFA /* IdCloudQrCodeReader.swift in Sources */,
 				6DE55BF724052E4900D7BA38 /* KYCManager.swift in Sources */,
 				6DE55BB2240525B700D7BA38 /* KYCPrivacyPolicyViewController.swift in Sources */,
 				6D98E31F2403D0EF00243663 /* IdCloudHelper.swift in Sources */,
@@ -608,10 +803,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D22D24724375B07003C8DC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AcuantFaceCapture;
+			targetProxy = 6D22D24624375B07003C8DC8 /* PBXContainerItemProxy */;
+		};
 		6D98E31A2403CD6F00243663 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IdCloudDesignable;
 			targetProxy = 6D98E3192403CD6F00243663 /* PBXContainerItemProxy */;
+		};
+		6DE1CC742419062400CBC60B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JWTDecode-iOS";
+			targetProxy = 6DE1CC732419062400CBC60B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

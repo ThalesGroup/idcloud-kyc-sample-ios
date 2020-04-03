@@ -263,9 +263,10 @@ class KYCCommunication : NSObject {
     private class func createUrlSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
-            "Accept"           : "application/json",
-            "Content-Type"     : "application/json",
-            "Authorization"    : String(format:"Bearer %@", KYCManager.jsonWebToken())
+            "Accept"            : "application/json",
+            "Content-Type"      : "application/json",
+            "Authorization"     : String(format:"Bearer %@", KYCManager.jsonWebToken()!),
+            "X-API-KEY"         : KYCManager.apiKey()
         ]
         return URLSession(configuration: configuration)
     }
